@@ -1,0 +1,41 @@
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Tesis.exe.config
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Tesis.exe
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Tesis.pdb
+C:\000 Archivos\Códigos\Tesis\obj\Debug\Tester.csprojAssemblyReference.cache
+C:\000 Archivos\Códigos\Tesis\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+C:\000 Archivos\Códigos\Tesis\obj\Debug\Tesis.exe
+C:\000 Archivos\Códigos\Tesis\obj\Debug\Tesis.pdb
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Generator.dll
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Implementations.dll
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Generator.pdb
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Implementations.pdb
+C:\000 Archivos\Códigos\Tesis\bin\Debug\Implementations.dll.config
+C:\000 Archivos\Códigos\Tesis\obj\Debug\Tester.csproj.CopyComplete
+C:\000 Archivos\Códigos\Tester\bin\Debug\Tesis.exe.config
+C:\000 Archivos\Códigos\Tester\bin\Debug\Tesis.exe
+C:\000 Archivos\Códigos\Tester\bin\Debug\Tesis.pdb
+C:\000 Archivos\Códigos\Tester\bin\Debug\Generator.dll
+C:\000 Archivos\Códigos\Tester\bin\Debug\Implementations.dll
+C:\000 Archivos\Códigos\Tester\bin\Debug\Generator.pdb
+C:\000 Archivos\Códigos\Tester\bin\Debug\Implementations.pdb
+C:\000 Archivos\Códigos\Tester\bin\Debug\Implementations.dll.config
+C:\000 Archivos\Códigos\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+C:\000 Archivos\Códigos\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+C:\000 Archivos\Códigos\Tester\obj\Debug\Tester.csproj.CopyComplete
+C:\000 Archivos\Códigos\Tester\obj\Debug\Tesis.exe
+C:\000 Archivos\Códigos\Tester\obj\Debug\Tesis.pdb
+D:\Códigos\Tester\bin\Debug\Tesis.exe.config
+D:\Códigos\Tester\bin\Debug\Tesis.exe
+D:\Códigos\Tester\bin\Debug\Tesis.pdb
+D:\Códigos\Tester\bin\Debug\Generator.dll
+D:\Códigos\Tester\bin\Debug\Implementations.dll
+D:\Códigos\Tester\bin\Debug\Generator.pdb
+D:\Códigos\Tester\bin\Debug\Implementations.pdb
+D:\Códigos\Tester\bin\Debug\Implementations.dll.config
+D:\Códigos\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
+D:\Códigos\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
+D:\Códigos\Tester\obj\Debug\Tester.csproj.CopyComplete
+D:\Códigos\Tester\obj\Debug\Tesis.exe
+D:\Códigos\Tester\obj\Debug\Tesis.pdb
+D:\Códigos\Tester\bin\Debug\Model.dll
+D:\Códigos\Tester\bin\Debug\Model.pdb
