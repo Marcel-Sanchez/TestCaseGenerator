@@ -16,68 +16,133 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            int[] case0 = { 0};
-            int[] caseX = { 1, 2, 3 };
-            int[][] aux = { case0, caseX };
-
+            // Generador de casos de prueba aleatorios.
             var generator = new Generator.Generator();
+            // Método que me genera n casos de prueba.
             var cases = generator.GenerateCases(500);
-            //List<dynamic> results = new List<dynamic>();
-            Console.WriteLine("---");
 
+            // Array de tamaño cantidad de implementaciones pasadas. En este caso, en la dll hay una implementación de 3, 4 y 5.
             var models = new Model.Model[Setting.MethodNames.Length];
 
+            // Inicializo cada Modelo (clase auxiliar para guardar datos de las implementaciones).
             for (int i = 0; i < Setting.MethodNames.Length; i++)
             {
-                models[i] = new Model.Model(Setting.MethodNames[i]);
+                models[i] = new Model.Model(Setting.MethodNames[i], SolutionComparer.F);
             }
 
             // Por cada caso de prueba generado.
             foreach (var cas in cases)
             {
 
-                // Escribo el caso de prueba actual.
-                foreach (var pol in cas)
-                {
-                    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
-                }
-                // Llamo a cada método que tenga con el caso de prueba actual.
+                ////Escribo el caso de prueba actual.
+                //foreach (var pol in cas)
+                //{
+                //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
+                //}
                 int posModel = 0;
                 foreach (var methodName in Setting.MethodNames)
                 {
+                    // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
                     dynamic result = CallDllMethod(Directory.GetCurrentDirectory(), Setting.DllName, Setting.ClassName, methodName, cas.ToArray(), new List<object>().ToArray());
 
-                    Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
+                    //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
 
-                    //results.Add(result);
+                    // Añado la solución obtenida.
                     models[posModel++].Sols.Enqueue(result);
                 }
-                Console.WriteLine("---");
+                //Console.WriteLine("---");
             }
-            //foreach (var pol in aux)
-            //{
-            //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
-            //}
-            //// Llamo a cada método que tenga con el caso de prueba actual.
-            //int posModel2 = 0;
-            //foreach (var methodName in Setting.MethodNames)
-            //{
-            //    dynamic result = CallDllMethod(Setting.DllImplPath, Setting.DllName, Setting.ClassName, methodName, aux.ToArray(), new List<object>().ToArray());
+            //Console.WriteLine("---");
 
-            //    Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
+            // Separo en casos de acierto y en casos de error para cada implementación.
+            models[0].SplitCases(models[Setting.PosSolution5].Sols);
+            models[1].SplitCases(models[Setting.PosSolution5].Sols);
 
-            //    //results.Add(result);
-            //    models[posModel2++].Sols.Enqueue(result);
-            //}
-            Console.WriteLine("---");
+            // Calculo el % de acierto.
+            int obtained3 = models[0].Percentaje;
+            int obtained4 = models[1].Percentaje;
 
-            models[0].SplitCases(models[Setting.PosSolution5].Sols, SolutionComparer.F);
-            models[1].SplitCases(models[Setting.PosSolution5].Sols, SolutionComparer.F);
-
-            Console.WriteLine($"Model 3: {models[0].Percentaje}%");
-            Console.WriteLine($"Model 4: {models[1].Percentaje}%");
+            Console.WriteLine($"Model 3: {obtained3}%");
+            Console.WriteLine($"Model 4: {obtained4}%");
             //Console.WriteLine($"Model 5: 100%");
+
+            // Calculo las diferencias con los valores esperados.
+            int dif3 = Setting.excepted3 - obtained3;
+            int dif4 = Setting.excepted4 - obtained4;
+
+            Console.WriteLine($"Diference 3: {dif3}");
+            Console.WriteLine($"Diference 4: {dif4}");
+
+            // Evaluación de la función objetivo a minimizar.
+            int targetFunEvaluation = Setting.TargetFunc(obtained3, obtained4);
+            Console.WriteLine($"Total diference: {targetFunEvaluation}");
+
+            Console.WriteLine();
+
+            // Aplico una versión de Greedy Randomized Adaptive Search Procedures
+            GRASP(models);
         }
+
+        private static void GRASP(Model.Model[] models)
+        {
+            Console.WriteLine();
+            // Obtengo la lista de canditados a eliminar de los casos de prueba.
+            // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
+            var funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
+            List<dynamic> candidates = GetCandidates(models, funcEval);
+            
+            Console.WriteLine($"Count candidates: {candidates.Count}");
+
+            // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
+            while (candidates.Count > 0 && funcEval != 0)
+            {
+                // Selecciono un candidato random a eliminar.
+                var caseToDelete = candidates[new Random().Next(candidates.Count)];
+                candidates.Remove(caseToDelete);
+                
+                Console.WriteLine($"Antes de eliminar: {funcEval}");
+                
+                // Elimino el caso y actualizo la evaluación de la función objetivo.
+                models[0].RemoveCase(caseToDelete);
+                models[1].RemoveCase(caseToDelete);
+                funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
+                
+                Console.WriteLine($"Después de eliminar: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
+                //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
+                Console.WriteLine();
+                
+                // Obtengo la nueva lista de candidatos.
+                candidates = GetCandidates(models, funcEval);
+                Console.WriteLine($"Count candidates: {candidates.Count}");
+            }
+            Console.WriteLine($"Final diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
+        }
+
+        private static List<dynamic> GetCandidates(Model.Model[] models, int targetFunEvaluation)
+        {
+            List<dynamic> candidates = new List<dynamic>();
+            int obtained3 = models[0].Percentaje;
+            int obtained4 = models[1].Percentaje;
+
+            // Recorro la lista total de casos de prueba.
+            foreach (var caseToRemove in models[2].Sols.ToArray())
+            {
+                // Verifio si mejora la evaluación de la función objetivo.
+                int ifRemove3 = models[0].DiferenceIfRemoveCase(caseToRemove);
+                int ifRemove4 = models[1].DiferenceIfRemoveCase(caseToRemove);
+                //Console.WriteLine($"Diference if remove case {k} in 3: {ifRemove3}");
+                //Console.WriteLine($"Diference if remove case {k} in 4: {ifRemove4}");
+                int newTargetFunEvaluation = Setting.TargetFunc(obtained3 + ifRemove3, obtained4 + ifRemove4);
+                //Console.WriteLine($"New total diference = {newTargetFunEvaluation}");
+                //Console.WriteLine();
+
+                // Si la mejora entonces es candidato
+                if (newTargetFunEvaluation < targetFunEvaluation)
+                    candidates.Add(caseToRemove);
+            }
+            return candidates;
+        }
+
         static object CallDllMethod(string dllPath, string dllName, string className, string methodName,
                                     object[] methodArgs, object[] contructorArgs)
         {

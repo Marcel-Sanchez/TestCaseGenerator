@@ -11,7 +11,6 @@ D:\Códigos\Generator\bin\Debug\netstandard2.0\Generator.deps.json
 D:\Códigos\Generator\bin\Debug\netstandard2.0\Generator.dll
 D:\Códigos\Generator\bin\Debug\netstandard2.0\Generator.pdb
 D:\Códigos\Generator\obj\Debug\netstandard2.0\Generator.csprojAssemblyReference.cache
-D:\Códigos\Generator\obj\Debug\netstandard2.0\Generator.csproj.CoreCompileInputs.cache
 D:\Códigos\Generator\obj\Debug\netstandard2.0\Generator.AssemblyInfoInputs.cache
 D:\Códigos\Generator\obj\Debug\netstandard2.0\Generator.AssemblyInfo.cs
 D:\Códigos\Generator\obj\Debug\netstandard2.0\Generator.dll

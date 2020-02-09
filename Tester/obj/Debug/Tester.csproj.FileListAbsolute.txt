@@ -33,7 +33,6 @@ D:\Códigos\Tester\bin\Debug\Generator.pdb
 D:\Códigos\Tester\bin\Debug\Implementations.pdb
 D:\Códigos\Tester\bin\Debug\Implementations.dll.config
 D:\Códigos\Tester\obj\Debug\Tester.csprojAssemblyReference.cache
-D:\Códigos\Tester\obj\Debug\Tester.csproj.CoreCompileInputs.cache
 D:\Códigos\Tester\obj\Debug\Tester.csproj.CopyComplete
 D:\Códigos\Tester\obj\Debug\Tesis.exe
 D:\Códigos\Tester\obj\Debug\Tesis.pdb

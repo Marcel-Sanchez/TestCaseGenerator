@@ -9,6 +9,5 @@ D:\Códigos\Implementations\bin\Debug\Implementations.dll.config
 D:\Códigos\Implementations\bin\Debug\Implementations.dll
 D:\Códigos\Implementations\bin\Debug\Implementations.pdb
 D:\Códigos\Implementations\obj\Debug\Implementations.csprojAssemblyReference.cache
-D:\Códigos\Implementations\obj\Debug\Implementations.csproj.CoreCompileInputs.cache
 D:\Códigos\Implementations\obj\Debug\Implementations.dll
 D:\Códigos\Implementations\obj\Debug\Implementations.pdb
