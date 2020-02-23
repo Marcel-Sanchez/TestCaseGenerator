@@ -19,7 +19,7 @@ namespace Tester
             // Generador de casos de prueba aleatorios.
             var generator = new Generator.Generator();
             // Método que me genera n casos de prueba.
-            var cases = generator.GenerateCases(500);
+            var cases = generator.GenerateCases(1000);
 
             // Array de tamaño cantidad de implementaciones pasadas. En este caso, en la dll hay una implementación de 3, 4 y 5.
             var models = new Model.Model[Setting.MethodNames.Length];
@@ -48,7 +48,7 @@ namespace Tester
                     //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
 
                     // Añado la solución obtenida.
-                    models[posModel++].Sols.Enqueue(result);
+                    models[posModel++].Sols.Add(result);
                 }
                 //Console.WriteLine("---");
             }
@@ -89,6 +89,9 @@ namespace Tester
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
             var funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
+
+            //var cases = models[Setting.PosSolution5].Sols.ToList();
+
             List<dynamic> candidates = GetCandidates(models, funcEval);
             
             Console.WriteLine($"Count candidates: {candidates.Count}");
@@ -97,7 +100,7 @@ namespace Tester
             while (candidates.Count > 0 && funcEval != 0)
             {
                 // Selecciono un candidato random a eliminar.
-                var caseToDelete = candidates[new Random().Next(candidates.Count)];
+                var caseToDelete = candidates[Setting.Rnd.Next(candidates.Count)];
                 candidates.Remove(caseToDelete);
                 
                 Console.WriteLine($"Antes de eliminar: {funcEval}");
@@ -105,6 +108,8 @@ namespace Tester
                 // Elimino el caso y actualizo la evaluación de la función objetivo.
                 models[0].RemoveCase(caseToDelete);
                 models[1].RemoveCase(caseToDelete);
+                models[2].RemoveCase(caseToDelete);
+                
                 funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
                 
                 Console.WriteLine($"Después de eliminar: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
@@ -125,14 +130,18 @@ namespace Tester
             int obtained4 = models[1].Percentaje;
 
             // Recorro la lista total de casos de prueba.
-            foreach (var caseToRemove in models[2].Sols.ToArray())
+            foreach (var caseToRemove in models[Setting.PosSolution5].Sols.ToArray())
             {
                 // Verifio si mejora la evaluación de la función objetivo.
                 int ifRemove3 = models[0].DiferenceIfRemoveCase(caseToRemove);
                 int ifRemove4 = models[1].DiferenceIfRemoveCase(caseToRemove);
                 //Console.WriteLine($"Diference if remove case {k} in 3: {ifRemove3}");
                 //Console.WriteLine($"Diference if remove case {k} in 4: {ifRemove4}");
-                int newTargetFunEvaluation = Setting.TargetFunc(obtained3 + ifRemove3, obtained4 + ifRemove4);
+                
+                int newObtained3 = obtained3 + ifRemove3;
+                int newObtained4 = obtained4 + ifRemove4;
+
+                int newTargetFunEvaluation = Setting.TargetFunc(newObtained3, newObtained4);
                 //Console.WriteLine($"New total diference = {newTargetFunEvaluation}");
                 //Console.WriteLine();
 

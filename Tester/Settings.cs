@@ -27,5 +27,7 @@ namespace Settings
         {
             return Math.Abs(excepted3 - obtained3) + Math.Abs(excepted4 - obtained4);
         }
+
+        public static Random Rnd = new Random();
     }
 }

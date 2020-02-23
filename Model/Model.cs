@@ -7,7 +7,7 @@ namespace Model
     public class Model
     {
         public string Method;
-        public Queue<dynamic> Sols;
+        public List<dynamic> Sols;
         public List<dynamic> OkSols;
         public List<dynamic> BadSols;
         // Comparador de 2 soluciones.
@@ -17,7 +17,7 @@ namespace Model
         public Model(string methodName, Func<dynamic, dynamic, bool> eq)
         {
             Method = methodName;
-            Sols = new Queue<dynamic>();
+            Sols = new List<dynamic>();
             OkSols = new List<dynamic>();
             BadSols = new List<dynamic>();
             Eq = eq;
@@ -25,9 +25,10 @@ namespace Model
         // Separa en soluciones correctas y erradas.
         public void SplitCases(IEnumerable<dynamic> correctAnswers)
         {
+            int i = 0;
             foreach (var answer in correctAnswers)
             {
-                var solution = Sols.Dequeue();
+                var solution = Sols[i++];
                 if (Eq(solution, answer))
                     OkSols.Add(solution);
                 else
@@ -37,6 +38,15 @@ namespace Model
 
         public void RemoveCase(dynamic caseToRemove)
         {
+            // Para eliminar de los ejemplos totales.
+            for (int i = 0; i < Sols.Count; i++)
+            {
+                if (Eq(Sols[i], caseToRemove))
+                {
+                    Sols.RemoveAt(i);
+                }
+            }
+            // Para eliminar de las listas de acierto o error.
             for (int i = 0; i < OkSols.Count; i++)
             {
                 if (Eq(OkSols[i], caseToRemove))
@@ -53,6 +63,7 @@ namespace Model
                     return;
                 }
             }
+
         }
         public int DiferenceIfRemoveCase(dynamic caseToRemove)
         {
