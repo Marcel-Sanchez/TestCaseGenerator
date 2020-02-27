@@ -59,22 +59,22 @@ namespace Tester
             models[1].SplitCases(models[Setting.PosSolution5].Sols);
 
             // Calculo el % de acierto.
-            int obtained3 = models[0].Percentaje;
-            int obtained4 = models[1].Percentaje;
+            float obtained3 = models[0].Percentaje;
+            float obtained4 = models[1].Percentaje;
 
             Console.WriteLine($"Model 3: {obtained3}%");
             Console.WriteLine($"Model 4: {obtained4}%");
             //Console.WriteLine($"Model 5: 100%");
 
             // Calculo las diferencias con los valores esperados.
-            int dif3 = Setting.excepted3 - obtained3;
-            int dif4 = Setting.excepted4 - obtained4;
+            float dif3 = Setting.excepted3 - obtained3;
+            float dif4 = Setting.excepted4 - obtained4;
 
             Console.WriteLine($"Diference 3: {dif3}");
             Console.WriteLine($"Diference 4: {dif4}");
 
             // Evaluación de la función objetivo a minimizar.
-            int targetFunEvaluation = Setting.TargetFunc(obtained3, obtained4);
+            float targetFunEvaluation = Setting.TargetFunc(obtained3, obtained4);
             Console.WriteLine($"Total diference: {targetFunEvaluation}");
 
             Console.WriteLine();
@@ -88,12 +88,12 @@ namespace Tester
             Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
-            var funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
+            float funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
 
             //var cases = models[Setting.PosSolution5].Sols.ToList();
 
             List<dynamic> candidates = GetCandidates(models, funcEval);
-            
+
             Console.WriteLine($"Count candidates: {candidates.Count}");
 
             // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
@@ -102,20 +102,20 @@ namespace Tester
                 // Selecciono un candidato random a eliminar.
                 var caseToDelete = candidates[Setting.Rnd.Next(candidates.Count)];
                 candidates.Remove(caseToDelete);
-                
+
                 Console.WriteLine($"Antes de eliminar: {funcEval}");
-                
+
                 // Elimino el caso y actualizo la evaluación de la función objetivo.
                 models[0].RemoveCase(caseToDelete);
                 models[1].RemoveCase(caseToDelete);
                 models[2].RemoveCase(caseToDelete);
-                
+
                 funcEval = Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje);
-                
+
                 Console.WriteLine($"Después de eliminar: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
                 Console.WriteLine();
-                
+
                 // Obtengo la nueva lista de candidatos.
                 candidates = GetCandidates(models, funcEval);
                 Console.WriteLine($"Count candidates: {candidates.Count}");
@@ -123,25 +123,25 @@ namespace Tester
             Console.WriteLine($"Final diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
         }
 
-        private static List<dynamic> GetCandidates(Model.Model[] models, int targetFunEvaluation)
+        private static List<dynamic> GetCandidates(Model.Model[] models, float targetFunEvaluation)
         {
             List<dynamic> candidates = new List<dynamic>();
-            int obtained3 = models[0].Percentaje;
-            int obtained4 = models[1].Percentaje;
+            var obtained3 = models[0].Percentaje;
+            var obtained4 = models[1].Percentaje;
 
             // Recorro la lista total de casos de prueba.
             foreach (var caseToRemove in models[Setting.PosSolution5].Sols.ToArray())
             {
                 // Verifio si mejora la evaluación de la función objetivo.
-                int ifRemove3 = models[0].DiferenceIfRemoveCase(caseToRemove);
-                int ifRemove4 = models[1].DiferenceIfRemoveCase(caseToRemove);
+                float ifRemove3 = models[0].DiferenceIfRemoveCase(caseToRemove);
+                float ifRemove4 = models[1].DiferenceIfRemoveCase(caseToRemove);
                 //Console.WriteLine($"Diference if remove case {k} in 3: {ifRemove3}");
                 //Console.WriteLine($"Diference if remove case {k} in 4: {ifRemove4}");
-                
-                int newObtained3 = obtained3 + ifRemove3;
-                int newObtained4 = obtained4 + ifRemove4;
 
-                int newTargetFunEvaluation = Setting.TargetFunc(newObtained3, newObtained4);
+                var newObtained3 = obtained3 + ifRemove3;
+                var newObtained4 = obtained4 + ifRemove4;
+
+                float newTargetFunEvaluation = Setting.TargetFunc(newObtained3, newObtained4);
                 //Console.WriteLine($"New total diference = {newTargetFunEvaluation}");
                 //Console.WriteLine();
 

@@ -12,7 +12,7 @@ namespace Model
         public List<dynamic> BadSols;
         // Comparador de 2 soluciones.
         public Func<dynamic, dynamic, bool> Eq;
-        public int Percentaje { get { return (int)(OkSols.Count / ((float)OkSols.Count + BadSols.Count) * 100); } }
+        public float Percentaje { get { return (OkSols.Count / ((float)OkSols.Count + BadSols.Count) * 100); } }
 
         public Model(string methodName, Func<dynamic, dynamic, bool> eq)
         {
@@ -65,7 +65,7 @@ namespace Model
             }
 
         }
-        public int DiferenceIfRemoveCase(dynamic caseToRemove)
+        public float DiferenceIfRemoveCase(dynamic caseToRemove)
         {
             int ok = OkSols.Count;
             int bad = BadSols.Count;
@@ -86,7 +86,7 @@ namespace Model
                     break;
                 }
             }
-            return (int)(ok / ((float)ok + bad) * 100) - Percentaje;
+            return (ok / ((float)ok + bad) * 100) - Percentaje;
         }
     }
 }

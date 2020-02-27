@@ -23,7 +23,7 @@ namespace Settings
         public const int excepted3 = 30;
         public const int excepted4 = 90;
 
-        public static int TargetFunc(int obtained3, int obtained4)
+        public static float TargetFunc(float obtained3, float obtained4)
         {
             return Math.Abs(excepted3 - obtained3) + Math.Abs(excepted4 - obtained4);
         }
