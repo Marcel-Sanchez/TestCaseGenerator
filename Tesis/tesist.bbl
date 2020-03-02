@@ -12,4 +12,14 @@ B.~Kontsevoi, ``The ultimate way to effective software evaluation,'' {\em
 J.~P. García, ``Optimizacioncombinatoria,'' {\em Universidad Politécnica de
   Valencia}, 2006.
 
+\bibitem{GRASP}
+T.~Feo and M.~Resende, ``Greedy randomized adaptive search procedures,'' {\em
+  Journal of Global Optimization}, vol.~6, pp.~109--133, 03 1995.
+
+\bibitem{RecocidoSimulado}
+D.~S. Johnson, C.~R. Aragon, L.~A. McGeoch, and C.~Schevon, ``Optimization by
+  simulated annealing: An experimental evaluation; part i, graph
+  partitioning,'' {\em Operations research}, vol.~37, no.~6, pp.~865--892,
+  1989.
+
 \end{thebibliography}

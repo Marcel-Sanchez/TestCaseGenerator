@@ -115,21 +115,20 @@
 	En este ejemplo, nuestra propuesta debería generar un conjunto de entrada lo suficientemente abarcador, que permita evaluar de forma justa el algoritmo. Por ejemplo, la entrada debería contemplar el cero, los números primos, negativos, de Fibonacci, entre otros.
 
 \chapter{Marco Teórico}
-	Los problemas de optimización combinatoria que involucran una extensa pero finita, lista de posibles soluciones son muy comunes en la vida diaria. Por mencionar algunos, entre los problemas más destacados se encuentran el diseño de redes de comunicación y la planificación de rutas de vuelo. Debido a la gran envergadura de estos problemas en cuanto a la cantidad de datos, resulta imposible enumerar las posibles soluciones y quedarnos con la mejor, pues es infactible en tiempo tal enumeración; incluso con los poderes de cómputo actuales, pues dicha lista crece de manera exponencial respecto al tamaño del problema.
+	Los problemas de optimización combinatoria que involucran una extensa, pero finita, lista de posibles soluciones son muy comunes en la vida diaria. Por mencionar algunos, entre los más destacados se encuentran el diseño de redes de comunicación y la planificación de rutas de vuelo. Debido a la gran envergadura de estos problemas en cuanto a la cantidad de datos, resulta imposible enumerar las posibles soluciones y quedarnos con la mejor, pues es infactible en tiempo tal enumeración; incluso con los poderes de cómputo actuales, pues dicha lista crece de manera exponencial respecto al tamaño del problema.
 	
-	En los últimos 50 años se han desarrollado varios métodos de búsqueda, los cuales arrojan una solución factible cercana al óptimo del problema sin necesidad de explorar cada alternativa. Esto es lo que se conoce como Optimización Combinatoria. Debido a esto, se han notado avances significativos en problemas que resultan de importancia para ciencia como lo son el viajante y el enrutamiento de vehículos.
+	En los últimos 50 años se han desarrollado varios métodos de búsqueda, los cuales arrojan una solución factible cercana al óptimo del problema sin necesidad de explorar cada alternativa. Esto es lo que se conoce como Optimización Combinatoria. Los resultados han sido notorios, avances significativos en problemas de importancia para ciencia como lo son el viajante y el enrutamiento de vehículos ya son palpables.
 	
 	Sin embargo, una buena parte de los problemas encontrados son computacionalmente intratables por su naturaleza o porque son lo suficientemente grandes como para impedir el uso de algoritmos exactos. En tales casos, los métodos heurísticos generalmente se emplean para encontrar soluciones buenas, pero no necesariamente óptimas. La efectividad de estos métodos depende de su capacidad para adaptarse a un ambiente particular, evitar el atrapamiento en los óptimos locales y explotar la estructura básica del problema.
 	
-	Sobre la base de estas nociones, se han desarrollado diversas técnicas de búsqueda basadas en heurísticas, las cuales han mejorado la capacidad de obtener buenas soluciones a los difíciles problemas de optimización combinatoria. Algunos de los principales métodos son: Recocido Simulado, Búsqueda Tabú, Algoritmos Genéticos y GRASP (Procedimientos de Búsqueda Adaptativa Aleatoria Codiciosos).
+	Sobre la base de estas nociones, se han desarrollado diversas técnicas de búsqueda basadas en heurísticas, las cuales han mejorado la capacidad de obtener buenas soluciones a diversos problemas de optimización combinatoria. Algunos de los principales métodos son: Recocido Simulado, Búsqueda Tabú, Algoritmos Genéticos y GRASP (Procedimientos de Búsqueda Adaptativa Aleatoria Codiciosos).
 	
 	\section{Metaheurísticas}
-	Algunas de las metaheútistcias que pueden dar solución al problema
-		\subsection{Greedy Randomized Adaptive Search Procedures}
-		GRASP es una técnica de muestreo aleatorio iterativo. Tiene la invariante de que en cada iteración proporciona una solución factible al problema en cuestión. Hay dos fases dentro de cada iteración del algoritmo: la primera construye inteligentemente una solución a través de una función codiciosa aleatoria; la segunda aplica un procedimiento de búsqueda local a la solución construida con la esperanza de encontrar una mejora.
+	Algunas de las metaheútistcias que pueden dar solución al problema.
+		\subsection{Greedy Randomized Adaptive Search Procedures } 
+		GRASP \cite{GRASP} es una técnica de muestreo aleatorio iterativo. Tiene la invariante de que en cada iteración proporciona una solución factible al problema en cuestión. Hay dos fases dentro de cada iteración del algoritmo: la primera construye inteligentemente una solución a través de una función codiciosa aleatoria; la segunda aplica un procedimiento de búsqueda local a la solución construida con la esperanza de encontrar una mejora. Esto se repite mientras no se alcance una condición de parada, que pudiera ser el cumplimiento de un número de iteraciones o el alcance de un valor en la función objetivo.
 		
-		En la Figura \ref{GRASPgeneral} se muestra el esqueleto general del GRASP%: mientras no se cumpla la condición de parada (línea 2), se construye una solución factible (línea 3), se hace una búsqueda local (línea 4) y se actualiza la solución actual (línea 5).
-		
+		En la Figura \ref{GRASPgeneral} se muestra el procedimiento general del GRASP
 		
 		\begin{figure}[h]
 			\centering
@@ -137,11 +136,7 @@
 			\caption{Algoritmo General GRASP}
 			\label{GRASPgeneral}
 		\end{figure}
-	
-		Criterios de parada podrían ser el cumplimiento de un número de iteraciones o el alcance de un valor en la función objetivo. \\
 		
-		
-	
 		Ahora se construye iterativamente una solución factible. En cada iteración de construcción, la elección del siguiente elemento a agregar se determina respecto a una función codiciosa. Para reflejar los cambios provocados por la selección del elemento anterior, los beneficios asociados con cada elemento se actualizan en cada iteración. El componente probabilístico de un GRASP se caracteriza por elegir aleatoriamente uno de los candidatos de la lista, pero no necesariamente el mejor candidato. La lista de los candidatos se denomina lista de candidatos restringidos (RCL). Esta técnica de elección permite obtener diferentes soluciones en cada iteración GRASP.
 		
 		La Figura \ref{GRASPconstructionphase} muestra el pseudocódigo para la fase de construcción de GRASP.
@@ -163,6 +158,32 @@
 			\caption{Búsqueda local GRASP}
 			\label{GRASPlocal}
 		\end{figure}
+	
+	\subsection{Recocido Simulado}
+		Kirkpatrick, Gelatt y Vecchi (1983) e independientemente Cerny (1985) propusieron un nuevo enfoque para la solución aproximada de problemas de optimización combinatoria. Este enfoque, Recocido Simulado \cite{RecocidoSimulado} (Simulated Annealing) está motivado por una analogía con el comportamiento de los sistemas físicos en presencia de un baño de calor. El enfoque no físico puede verse como una versión mejorada de la técnica de optimización local o mejora iterativa, en la que una solución inicial se mejora repetidamente haciendo pequeñas alteraciones locales hasta que dicha alteración no produzca una mejor solución. El Recocido Simulado aleatoriza este procedimiento de una manera que permite movimientos ascendentes ocasionales (cambios que empeoran la solución), en un intento de reducir la probabilidad de quedar atrapado en una solución localmente óptima. El Recocido Simulado se puede adaptar fácilmente a nuevos problemas (incluso en ausencia de una comprensión profunda de los problemas mismos) y, debido a su aparente capacidad para evitar los óptimos locales deficientes, ofrece la esperanza de obtener resultados significativamente mejores.
+		
+		Para comprender el Recocido Simulado, primero se debe entender la optimización local. Se puede especificar un problema de optimización combinatoria identificando un conjunto de soluciones junto con una función de costo que asigna un valor numérico a cada solución. Una solución óptima es una solución con el mínimo costo posible (puede haber más de una solución de este tipo). Dada una solución arbitraria a tal problema, la optimización local intenta mejorar esa solución mediante una serie de cambios locales incrementales. Para definir un algoritmo de optimización local, primero se especifica un método para perturbar las soluciones para obtener diferentes. El conjunto de soluciones que se pueden obtener en uno de esos pasos a partir de una solución dada A se llama vecindario de A. El algoritmo luego realiza el ciclo simple que se muestra en la Figura \ref{OptLocalRS}, con los métodos específicos para elegir $S$ y $S'$ como detalles de implementación.
+		
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/RecocidoSimuladoOptLocal.png}
+		\caption{Optimización local}
+		\label{OptLocalRS}
+		\end{figure}
+		
+		Aunque S no necesita ser una solución óptima cuando finalmente se cierra el ciclo, será localmente óptima ya que ninguno de sus vecinos tiene un costo menor. La esperanza es que localmente óptimo sea lo suficientemente bueno. \\
+		
+		La dificultad de la optimización local es que no tiene forma de retirarse de los óptimos locales poco atractivos. Nunca se pasa a una nueva solución a menos que la dirección sea cuesta abajo, es decir, a un mejor valor de la función de costo. El Recocido Simulado es un enfoque que intenta evitar dicho atrapamiento. Esto se realiza bajo la influencia de un generador de números aleatorios y un parámetro de control llamado temperatura. Como se implementa típicamente, el enfoque de Recocido Simulado involucra un par de ciclos anidados y dos parámetros adicionales, una relación de enfriamiento $r$, $0 < r <1$, y una longitud de temperatura entera $L$ (ver Figura \ref{RecocidoSimulado}). En el Paso 3 del algoritmo, el término congelado se refiere a un estado en el que no parece probable una mejora adicional en el costo ($S$).
+		
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/RecocidoSimulado.png}
+		\caption{RecocidoSimulado}
+		\label{RecocidoSimulado}
+		\end{figure}
+		
+		$e ^{-\Delta / T}$ será un número en el intervalo $(0, 1)$ donde $\Delta$ y $T$ son positivos. La probabilidad de que un movimiento cuesta arriba de tamaño $\Delta$ sea aceptado disminuye proporcionalmente a la temperatura y, para una temperatura fija $T$, los movimientos ascendentes pequeños tienen mayores probabilidades de aceptación que los grandes. Este método particular de operación está motivado por una analogía física.
+	
 		
 %\begin{thebibliography}{0}
 	%\bibitem{id} Fernando Barber y Ricardo Ferrís

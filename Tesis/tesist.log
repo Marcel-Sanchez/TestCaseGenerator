@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.18)  29 FEB 2020 12:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.18)  2 MAR 2020 12:51
 entering extended mode
 **./tesist.tex
 (tesist.tex
@@ -240,56 +240,78 @@ Cap\'{\i }tulo 2.
 <./Graphics/GRASPgeneral.png, id=37, 585.98924pt x 246.9225pt>
 File: ./Graphics/GRASPgeneral.png Graphic file (type png)
 <use ./Graphics/GRASPgeneral.png>
-Package pdftex.def Info: ./Graphics/GRASPgeneral.png  used on input line 136.
+Package pdftex.def Info: ./Graphics/GRASPgeneral.png  used on input line 135.
 (pdftex.def)             Requested size: 284.52756pt x 119.89665pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
-
- []
-
-LaTeX Info: Redefining \. on input line 148.
-LaTeX Info: Redefining \% on input line 148.
-[10 <./Graphics/GRASPgeneral.png>]
-<./Graphics/GRASPconstructionphase.png, id=41, 587.796pt x 245.11575pt>
+<./Graphics/GRASPconstructionphase.png, id=38, 587.796pt x 245.11575pt>
 File: ./Graphics/GRASPconstructionphase.png Graphic file (type png)
 <use ./Graphics/GRASPconstructionphase.png>
 Package pdftex.def Info: ./Graphics/GRASPconstructionphase.png  used on input l
-ine 151.
+ine 146.
 (pdftex.def)             Requested size: 284.52756pt x 118.65283pt.
+LaTeX Info: Redefining \. on input line 149.
+LaTeX Info: Redefining \% on input line 149.
+ [10 <./Graphics/GRASPgeneral.png>]
 <./Graphics/GRASPlocal.png, id=42, 428.19975pt x 218.0145pt>
 File: ./Graphics/GRASPlocal.png Graphic file (type png)
 <use ./Graphics/GRASPlocal.png>
-Package pdftex.def Info: ./Graphics/GRASPlocal.png  used on input line 162.
+Package pdftex.def Info: ./Graphics/GRASPlocal.png  used on input line 157.
 (pdftex.def)             Requested size: 284.52756pt x 144.86803pt.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+ [11 <./Graphics/GRASPconstructionphase.png> <./Graphics/GRASPlocal.png>]
+<./Graphics/RecocidoSimuladoOptLocal.png, id=46, 444.4605pt x 168.02776pt>
+File: ./Graphics/RecocidoSimuladoOptLocal.png Graphic file (type png)
+<use ./Graphics/RecocidoSimuladoOptLocal.png>
+Package pdftex.def Info: ./Graphics/RecocidoSimuladoOptLocal.png  used on input
+ line 169.
+(pdftex.def)             Requested size: 284.52756pt x 107.56816pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
+[12 <./Graphics/RecocidoSimuladoOptLocal.png>]
+<./Graphics/RecocidoSimulado.png, id=51, 444.4605pt x 265.59225pt>
+File: ./Graphics/RecocidoSimulado.png Graphic file (type png)
+<use ./Graphics/RecocidoSimulado.png>
+Package pdftex.def Info: ./Graphics/RecocidoSimulado.png  used on input line 18
+0.
+(pdftex.def)             Requested size: 284.52756pt x 170.02707pt.
  (tesist.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [11 <./Graphics/GRASPconstructionphase.png> <./Graphics/GRASPlocal.png>]
+ [13 <./Graphics/RecocidoSimulado.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [12
+ [14
 
-]) [13] (tesist.aux
+]) [15] (tesist.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 2447 strings out of 492895
- 35528 string characters out of 3123268
- 110668 words of memory out of 3000000
- 6344 multiletter control sequences out of 15000+200000
+ 2469 strings out of 492895
+ 36009 string characters out of 3123268
+ 111698 words of memory out of 3000000
+ 6364 multiletter control sequences out of 15000+200000
  9199 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,5n,31p,866b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,5n,31p,1217b,365s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmmi12.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marcel/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Marcel/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesist.pdf (13 pages, 239342 bytes).
+.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Marcel/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marcel/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/
+Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.
+pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on tesist.pdf (15 pages, 314628 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
