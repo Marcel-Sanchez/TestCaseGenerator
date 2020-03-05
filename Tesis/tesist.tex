@@ -183,7 +183,35 @@
 		\end{figure}
 		
 		$e ^{-\Delta / T}$ será un número en el intervalo $(0, 1)$ donde $\Delta$ y $T$ son positivos. La probabilidad de que un movimiento cuesta arriba de tamaño $\Delta$ sea aceptado disminuye proporcionalmente a la temperatura y, para una temperatura fija $T$, los movimientos ascendentes pequeños tienen mayores probabilidades de aceptación que los grandes. Este método particular de operación está motivado por una analogía física.
+		
+	\subsection{Algoritmos Genéticos}
+		Un Algoritmo Genético \cite{AlgGen} consiste en un conjunto de soluciones codificadas, que hacen una analogía con los cromosomas.  Cada  uno  de  estos, tendrá  asociado  un  ajuste o valor de bondad, que expresa una medida su valor como solución al problema. En función de este valor se le darán más o menos oportunidades de ``reproducción". John Holland, investigador de la Universidad de Michigan, es uno de los principales precursores del desarrollo de los Algoritmos Genéticos, sus trabajos a finales de la década de los 60 mostraron una técnica que imitaba en su funcionamiento a la selección natural.
+		
+		La reproducción en estos algoritmos pueden darse de dos formas:
+		\begin{itemize}
+			\item Cruce: Se genera una descendencia a partir del mismo número de individuos (generalmente 2) de la generación anterior. 
+			\item Copia: Un determinado número de individuos pasa sin sufrir ninguna variación directamente a la siguiente generación.
+		\end{itemize}
 	
+		La Figura \ref{AlgoritmoeGenetico} muestra el funcionamiento de un algoritmo genético
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=10cm]{./Graphics/AlgoritmoGenetico.png}
+			\caption{Algoritmo Genético}
+			\label{AlgoritmoeGenetico}
+		\end{figure}
+	
+		Algunos de los criterios de parada pudieran ser:
+		\begin{itemize}
+			\item Se ha alcanzado una población con individuos lo suficientemente buenos para darle solución al problema.
+			\item Ha convergido la población, lo cual quiere decir que la  media  de  bondad  de  la  misma  se aproxima a la bondad del mejor individuo.
+			\item Se ha alcanzado el número de generaciones (iteraciones) especificado
+		\end{itemize}
+	
+		A es algoritmo se le han definido numerosas variantes. Una de las más extendidas es aplicar los operadores genéticos de cruce y mutación directamente sobre la población genética. Pero en el caso de que se aplique cruce, no se puede insertar directamente la descendencia en la población, debido a que número de individuos de la población se ha de mantener constante. Es decir, para permitir a los descendientes generados incorporarse a la población, se  han  de  eliminar  otros individuos. Trabajando con una sola población no se puede definir que la misma está llena, pues el número de sus miembros es constante. En este caso se pasará a la siguiente población cuando se hayan alcanzado un número determinado de cruzamientos especificados por el usuario, que deberán estar acordes al tamaño de la población.
+		
+		En el esquema general, solo los descendientes originados a partir de un cruce son mutados. Otra opción habitual es la selección aleatoria del individuo a mutar entre todos los que forman parte de la población.
 		
 %\begin{thebibliography}{0}
 	%\bibitem{id} Fernando Barber y Ricardo Ferrís
