@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,9 +58,17 @@
       <Project>{c15ff915-b3cf-4860-868f-cf9b73eed29b}</Project>
       <Name>Implementations</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Metahehuristic\Metaheuristic.csproj">
+      <Project>{eea28ea0-49c6-4e6b-a8f3-0df7b62849af}</Project>
+      <Name>Metaheuristic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{b19c0f5f-30e1-46ee-a820-5aa6afd7fe59}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Setting\Setting.csproj">
+      <Project>{0fd07c70-d80a-4b1c-a34d-351d16901bdb}</Project>
+      <Name>Setting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

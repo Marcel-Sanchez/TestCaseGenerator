@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    public class Model
+    public class ModelCase
     {
         public string Method;
         public List<dynamic> Sols;
@@ -14,7 +14,7 @@ namespace Model
         public Func<dynamic, dynamic, bool> Eq;
         public float Percentaje { get { return (OkSols.Count / ((float)OkSols.Count + BadSols.Count) * 100); } }
 
-        public Model(string methodName, Func<dynamic, dynamic, bool> eq)
+        public ModelCase(string methodName, Func<dynamic, dynamic, bool> eq)
         {
             Method = methodName;
             Sols = new List<dynamic>();

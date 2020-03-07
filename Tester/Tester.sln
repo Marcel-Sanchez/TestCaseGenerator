@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generator", "..\Generator\G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "..\Implementations\Implementations.csproj", "{C15FF915-B3CF-4860-868F-CF9B73EED29B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{B19C0F5F-30E1-46EE-A820-5AA6AFD7FE59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "..\Model\Model.csproj", "{B19C0F5F-30E1-46EE-A820-5AA6AFD7FE59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setting", "..\Setting\Setting.csproj", "{0FD07C70-D80A-4B1C-A34D-351D16901BDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metaheuristic", "..\Metahehuristic\Metaheuristic.csproj", "{EEA28EA0-49C6-4E6B-A8F3-0DF7B62849AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{B19C0F5F-30E1-46EE-A820-5AA6AFD7FE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B19C0F5F-30E1-46EE-A820-5AA6AFD7FE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B19C0F5F-30E1-46EE-A820-5AA6AFD7FE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD07C70-D80A-4B1C-A34D-351D16901BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD07C70-D80A-4B1C-A34D-351D16901BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD07C70-D80A-4B1C-A34D-351D16901BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD07C70-D80A-4B1C-A34D-351D16901BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA28EA0-49C6-4E6B-A8F3-0DF7B62849AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA28EA0-49C6-4E6B-A8F3-0DF7B62849AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA28EA0-49C6-4E6B-A8F3-0DF7B62849AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA28EA0-49C6-4E6B-A8F3-0DF7B62849AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

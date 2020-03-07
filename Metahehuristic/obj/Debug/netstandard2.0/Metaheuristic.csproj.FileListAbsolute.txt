@@ -1,0 +1,13 @@
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Metaheuristic.deps.json
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Metaheuristic.dll
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Metaheuristic.pdb
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Model.dll
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Setting.dll
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Model.pdb
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Setting.pdb
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.csprojAssemblyReference.cache
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.AssemblyInfoInputs.cache
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.AssemblyInfo.cs
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.csproj.CopyComplete
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.dll
+D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.pdb

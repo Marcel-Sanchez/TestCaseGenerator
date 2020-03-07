@@ -1,0 +1,13 @@
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Implementation.deps.json
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Implementation.dll
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Implementation.pdb
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Model.dll
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Setting.dll
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Model.pdb
+D:\Códigos\Implementation\bin\Debug\netstandard2.0\Setting.pdb
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.csprojAssemblyReference.cache
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.AssemblyInfoInputs.cache
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.AssemblyInfo.cs
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.csproj.CopyComplete
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.dll
+D:\Códigos\Implementation\obj\Debug\netstandard2.0\Implementation.pdb

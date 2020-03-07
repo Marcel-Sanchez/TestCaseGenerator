@@ -1,0 +1,8 @@
+D:\Códigos\Setting\bin\Debug\netstandard2.0\Setting.deps.json
+D:\Códigos\Setting\bin\Debug\netstandard2.0\Setting.dll
+D:\Códigos\Setting\bin\Debug\netstandard2.0\Setting.pdb
+D:\Códigos\Setting\obj\Debug\netstandard2.0\Setting.csprojAssemblyReference.cache
+D:\Códigos\Setting\obj\Debug\netstandard2.0\Setting.AssemblyInfoInputs.cache
+D:\Códigos\Setting\obj\Debug\netstandard2.0\Setting.AssemblyInfo.cs
+D:\Códigos\Setting\obj\Debug\netstandard2.0\Setting.dll
+D:\Códigos\Setting\obj\Debug\netstandard2.0\Setting.pdb

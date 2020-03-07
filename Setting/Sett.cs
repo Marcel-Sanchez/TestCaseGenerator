@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Settings
+namespace Setting
 {
-    public static class Setting
+    public static class Sett
     {
         public const string MethodNameImpl3 = "MultPol3";
         public const string MethodNameImpl4 = "MultPol4";
