@@ -8,8 +8,10 @@ namespace Implementations
 {
     public static class SolutionComparer
     {
-        public static Func<dynamic, dynamic, bool> F = (a, b) => 
+        public static Func<object, object, bool> F = (aa, bb) => 
         {
+            var a = aa as int[];
+            var b = bb as int[];
             if(a.Length != b.Length)
                 return false;
             for (int i = 0; i < a.Length; i++)

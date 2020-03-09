@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Generator
 {
-    public class Generator : IGenerator
+    public class CaseGenerator : IGenerator
     {
         public IEnumerable<IEnumerable<object>> GenerateCases(int k)
         {

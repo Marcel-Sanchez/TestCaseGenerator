@@ -18,7 +18,7 @@ namespace Tester
         static void Main(string[] args)
         {
             // Generador de casos de prueba aleatorios.
-            var generator = new Generator.Generator();
+            var generator = new CaseGenerator();
             // Método que me genera n casos de prueba.
             var cases = generator.GenerateCases(500);
 
@@ -44,7 +44,7 @@ namespace Tester
                 foreach (var methodName in Sett.MethodNames)
                 {
                     // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
-                    dynamic result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassName, methodName, cas.ToArray(), new List<object>().ToArray());
+                    object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassName, methodName, cas.ToArray(), new List<object>().ToArray());
 
                     //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
 
@@ -82,10 +82,16 @@ namespace Tester
 
             // Aplico una versión de Greedy Randomized Adaptive Search Procedures
             GRASP.Run(models);
+
+            var finalCases = cases.ToList();
+
+            foreach (var index in models[2].RemovedIndexs)
+            {
+                finalCases.RemoveAt(index);
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Cantidad de casos finales: {finalCases.Count}");
         }
-
-        
-
         static object CallDllMethod(string dllPath, string dllName, string className, string methodName,
                                     object[] methodArgs, object[] contructorArgs)
         {
@@ -102,9 +108,8 @@ namespace Tester
             // 4. Creo la instancia.
             var instance = Activator.CreateInstance(type, contructorArgs);
 
-            // 5. Le paso los parámetros al método y capturo la salida.
-            var ret = methodInfo.Invoke(instance, methodArgs);
-            return ret;
+            // 5. Le paso los parámetros al método y devuelvo la salida.
+            return methodInfo.Invoke(instance, methodArgs);
         }
     }
 }
