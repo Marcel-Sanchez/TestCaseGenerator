@@ -8,16 +8,17 @@ namespace Metaheuristic
 {
     public static class GRASP
     {
-        public static void Run(ModelCase[] models)
+        public static void Run(UniqueModelCase model)
         {
             Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
-            float funcEval = Sett.TargetFunc(models[0].Percentaje, models[1].Percentaje);
+            var percentajes = model.GetPercentajes();
+            float funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
 
             //var cases = models[Setting.PosSolution5].Sols.ToList();
 
-            List<dynamic> candidates = GetCandidates(models, funcEval);
+            List<int> candidates = GetCandidates(model, funcEval);
 
             Console.WriteLine($"Count candidates: {candidates.Count}");
 
@@ -26,47 +27,51 @@ namespace Metaheuristic
             {
                 // Selecciono un candidato random a eliminar.
                 var caseToDelete = candidates[Sett.Rnd.Next(candidates.Count)];
-                candidates.Remove(caseToDelete);
+                model.RemoveCase(caseToDelete);
 
                 Console.WriteLine($"Antes de eliminar: {funcEval}");
 
                 // Elimino el caso y actualizo la evaluación de la función objetivo.
-                models[0].RemoveCase(caseToDelete);
-                models[1].RemoveCase(caseToDelete);
-                models[2].RemoveCase(caseToDelete);
+                //models[0].RemoveCase(caseToDelete);
+                //models[1].RemoveCase(caseToDelete);
+                //models[2].RemoveCase(caseToDelete);
+                percentajes = model.GetPercentajes();
+                funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
 
-                funcEval = Sett.TargetFunc(models[0].Percentaje, models[1].Percentaje);
-
-                Console.WriteLine($"Después de eliminar: {Sett.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
+                Console.WriteLine($"Después de eliminar: {funcEval}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
                 Console.WriteLine();
 
                 // Obtengo la nueva lista de candidatos.
-                candidates = GetCandidates(models, funcEval);
+                candidates = GetCandidates(model, funcEval);
                 Console.WriteLine($"Count candidates: {candidates.Count}");
             }
-            Console.WriteLine($"Final diference: {Sett.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
+            percentajes = model.GetPercentajes();
+            funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
+            Console.WriteLine($"Final diference: {funcEval}");
         }
 
-        public static List<dynamic> GetCandidates(ModelCase[] models, float targetFunEvaluation)
+        public static List<int> GetCandidates(UniqueModelCase model, float targetFunEvaluation)
         {
-            List<dynamic> candidates = new List<dynamic>();
-            var obtained3 = models[0].Percentaje;
-            var obtained4 = models[1].Percentaje;
+            List<int> candidates = new List<int>();
+            var percentajes = model.GetPercentajes();
+            var obtained3 = percentajes.Item1;
+            var obtained4 = percentajes.Item2;
 
             // Recorro la lista total de casos de prueba.
-            foreach (var caseToRemove in models[Sett.PosSolution5].Sols.ToArray())
+            foreach (var caseToRemove in model.Results.Keys)
             {
                 // Verifio si mejora la evaluación de la función objetivo.
-                float ifRemove3 = models[0].DiferenceIfRemoveCase(caseToRemove);
-                float ifRemove4 = models[1].DiferenceIfRemoveCase(caseToRemove);
+                percentajes = model.GetPercentajeIfRemove(caseToRemove);
+                float ifRemove3 = percentajes.Item1;
+                float ifRemove4 = percentajes.Item2;
                 //Console.WriteLine($"Diference if remove case {k} in 3: {ifRemove3}");
                 //Console.WriteLine($"Diference if remove case {k} in 4: {ifRemove4}");
 
-                var newObtained3 = obtained3 + ifRemove3;
-                var newObtained4 = obtained4 + ifRemove4;
+                //var newObtained3 = obtained3 + ifRemove3;
+                //var newObtained4 = obtained4 + ifRemove4;
 
-                float newTargetFunEvaluation = Sett.TargetFunc(newObtained3, newObtained4);
+                float newTargetFunEvaluation = Sett.TargetFunc(ifRemove3, ifRemove4);
                 //Console.WriteLine($"New total diference = {newTargetFunEvaluation}");
                 //Console.WriteLine();
 
