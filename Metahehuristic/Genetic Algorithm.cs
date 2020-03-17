@@ -19,8 +19,8 @@ namespace Metaheuristic
             var percentajes = Solutions.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
-            int n = 50;
-            while (n-- > 0 || !evals.Any(p => p < 1))
+            int n = 500;
+            while (n-- > 0 && evals.All(p => p > 1))
             {
                 percentajes = Solutions.Select(p => p.GetPercentajes());
                 evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
@@ -57,14 +57,14 @@ namespace Metaheuristic
                 var newSolutions = new UniqueModelCase[] { c1, c2, c3, c4, c5, c6, c7, c8 };
                 Solutions.AddRange(newSolutions);
 
-                var newFunEvals = newSolutions.Select(p => Sett.TargetFunc(p.GetPercentajes()));
-                var newEvals = evals.ToList();
-                newEvals.AddRange(newFunEvals);
+                var newPercentajes = Solutions.Select(p => p.GetPercentajes());
+                var newEvals = newPercentajes.Select(p => Sett.TargetFunc(p)).ToList();
 
                 for (int i = 0; i < 4; i++)
                 {
                     int index = Filter(newEvals);
                     Solutions.RemoveAt(index);
+                    newEvals.RemoveAt(index);
                 }
                 Console.WriteLine();
                 Console.WriteLine($"Menor evaluación {evals.Min()}");
@@ -98,7 +98,7 @@ namespace Metaheuristic
 
     public static class MergeAndFind
     {
-        // Mezcla alternado.
+        // Mezcla alternado. En la primera iteración no, pero en las demás puede que a y b tengan elementos iguales entre sí.
         public static Dictionary<int, (int, int)> Merge1(Dictionary<int, (int, int)> a, Dictionary<int, (int, int)> b)
         {
             Dictionary<int, (int, int)> result = new Dictionary<int, (int, int)>();
@@ -112,11 +112,12 @@ namespace Metaheuristic
             for (int i = 1; i < bArray.Length; i += 2)
             {
                 var keyVal = bArray[i];
-                result.Add(keyVal.Key, keyVal.Value);
+                if (!result.ContainsKey(keyVal.Key))
+                    result.Add(keyVal.Key, keyVal.Value);
             }
             return result;
         }
-        // Mezcla n/2 y m/2.
+        // Mezcla n/2 de 'a' y m/2 de 'b'. 
         public static Dictionary<int, (int, int)> Merge2(Dictionary<int, (int, int)> a, Dictionary<int, (int, int)> b)
         {
             Dictionary<int, (int, int)> result = new Dictionary<int, (int, int)>();
@@ -130,7 +131,8 @@ namespace Metaheuristic
             for (int i = b.Count / 2; i < b.Count; i++)
             {
                 var keyVal = bArray[i];
-                result.Add(keyVal.Key, keyVal.Value);
+                if (!result.ContainsKey(keyVal.Key))
+                    result.Add(keyVal.Key, keyVal.Value);
             }
             return result;
         }
@@ -142,7 +144,8 @@ namespace Metaheuristic
             var bArray = b.ToArray();
             bool[] maskA = new bool[aArray.Length];
             bool[] maskB = new bool[bArray.Length];
-            while (result.Count < (aArray.Length + bArray.Length) / 2)
+            int iter = 0;
+            while (result.Count < (aArray.Length + bArray.Length) / 2 && iter++ < a.Count + b.Count)
             {
                 int indexA = Sett.Rnd.Next(aArray.Length);
                 int indexB = Sett.Rnd.Next(bArray.Length);
@@ -150,19 +153,15 @@ namespace Metaheuristic
                 {
                     var keyVal = aArray[indexA];
                     if (!result.ContainsKey(keyVal.Key))
-                    {
                         result.Add(keyVal.Key, keyVal.Value);
-                        maskA[indexA] = true;
-                    }
+                    maskA[indexA] = true;
                 }
                 if (!maskB[indexB])
                 {
                     var keyVal = bArray[indexB];
                     if (!result.ContainsKey(keyVal.Key))
-                    {
                         result.Add(keyVal.Key, keyVal.Value);
-                        maskB[indexB] = true;
-                    }
+                    maskB[indexB] = true;
                 }
             }
             return result;
@@ -184,11 +183,8 @@ namespace Metaheuristic
                 if (!maskA[indexA])
                 {
                     var keyVal = aArray[indexA];
-                    if (temp1.All(p => p.Item1 != keyVal.Key))
-                    {
-                        temp1.Add((keyVal.Key, keyVal.Value));
-                        maskA[indexA] = true;
-                    }
+                    temp1.Add((keyVal.Key, keyVal.Value));
+                    maskA[indexA] = true;
                 }
             }
             List<(int, (int, int))> temp2 = new List<(int, (int, int))>();
@@ -197,19 +193,17 @@ namespace Metaheuristic
                 int indexB = Sett.Rnd.Next(b.Count);
                 if (!maskB[indexB])
                 {
-                    var keyVal = aArray[indexB];
-                    if (temp2.All(p => p.Item1 != keyVal.Key))
-                    {
-                        temp2.Add((keyVal.Key, keyVal.Value));
-                        maskB[indexB] = true;
-                    }
+                    var keyVal = bArray[indexB];
+                    temp2.Add((keyVal.Key, keyVal.Value));
+                    maskB[indexB] = true;
                 }
             }
             temp1.AddRange(temp2);
 
             foreach (var item in temp1)
             {
-                result.Add(item.Item1, item.Item2);
+                if (!result.ContainsKey(item.Item1))
+                    result.Add(item.Item1, item.Item2);
             }
 
             return result;
