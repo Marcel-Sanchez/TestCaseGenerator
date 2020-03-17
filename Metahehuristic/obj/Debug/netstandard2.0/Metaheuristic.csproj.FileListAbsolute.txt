@@ -11,3 +11,8 @@ D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.AssemblyInfo.c
 D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.csproj.CopyComplete
 D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.dll
 D:\Códigos\Metahehuristic\obj\Debug\netstandard2.0\Metaheuristic.pdb
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\IFace.dll
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\IFace.pdb
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Implementations.dll
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Implementations.pdb
+D:\Códigos\Metahehuristic\bin\Debug\netstandard2.0\Implementations.dll.config

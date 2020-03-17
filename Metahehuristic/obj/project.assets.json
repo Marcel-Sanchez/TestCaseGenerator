@@ -35,6 +35,25 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "IFace/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/IFace.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IFace.dll": {}
+        }
+      },
+      "Implementations/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Implementations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Implementations.dll": {}
+        }
+      },
       "Model/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -273,6 +292,16 @@
         "netstandard.library.nuspec"
       ]
     },
+    "IFace/1.0.0": {
+      "type": "project",
+      "path": "../IFace/IFace.csproj",
+      "msbuildProject": "../IFace/IFace.csproj"
+    },
+    "Implementations/1.0.0": {
+      "type": "project",
+      "path": "../Implementations/Implementations.csproj",
+      "msbuildProject": "../Implementations/Implementations.csproj"
+    },
     "Model/1.0.0": {
       "type": "project",
       "path": "../Model/Model.csproj",
@@ -286,6 +315,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "IFace >= 1.0.0",
+      "Implementations >= 1.0.0",
       "Model >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Setting >= 1.0.0"
@@ -321,6 +352,12 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "D:\\Códigos\\IFace\\IFace.csproj": {
+              "projectPath": "D:\\Códigos\\IFace\\IFace.csproj"
+            },
+            "D:\\Códigos\\Implementations\\Implementations.csproj": {
+              "projectPath": "D:\\Códigos\\Implementations\\Implementations.csproj"
+            },
             "D:\\Códigos\\Model\\Model.csproj": {
               "projectPath": "D:\\Códigos\\Model\\Model.csproj"
             },

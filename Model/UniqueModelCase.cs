@@ -8,16 +8,25 @@ namespace Model
     public class UniqueModelCase
     {
         public Dictionary<int, (int, int)> Results;
-        public Func<object, object, bool> Eq;
-        private int correctAns3count;
-        private int correctAns4count;
+        private Func<object, object, bool> _eq;
+        private int _correctAns3count;
+        private int _correctAns4count;
 
         public UniqueModelCase(Func<object, object, bool> eq)
         {
             Results = new Dictionary<int, (int, int)>();
-            Eq = eq;
-            correctAns3count = 0;
-            correctAns4count = 0;
+            _eq = eq;
+            _correctAns3count = 0;
+            _correctAns4count = 0;
+        }
+
+        public UniqueModelCase(Dictionary<int, (int, int)> results, Func<object, object, bool> eq)
+        {
+            Results = new Dictionary<int, (int, int)>(results);
+            _eq = eq;
+            _correctAns3count = 0;
+            _correctAns4count = 0;
+            RecalculatePercentajes();
         }
 
         public void SplitCases(IList<object> answers, IList<object> correctAnswers, int Item)
@@ -26,14 +35,14 @@ namespace Model
             {
                 for (int i = 0; i < correctAnswers.Count; i++)
                 {
-                    if (Eq(correctAnswers[i], answers[i]))
+                    if (_eq(correctAnswers[i], answers[i]))
                     {
-                        Results[i] = (1, 0);
-                        correctAns3count++;
+                        Results[i + 1] = (1, 0);
+                        _correctAns3count++;
                     }
                     else
                     {
-                        Results[i] = (0, 0);
+                        Results[i + 1] = (0, 0);
                     }
                 }
             }
@@ -41,10 +50,10 @@ namespace Model
             {
                 for (int j = 0; j < correctAnswers.Count; j++)
                 {
-                    if (Eq(correctAnswers[j], answers[j]))
+                    if (_eq(correctAnswers[j], answers[j]))
                     {
-                        Results[j] = (Results[j].Item1, 1);
-                        correctAns4count++;
+                        Results[j + 1] = (Results[j + 1].Item1, 1);
+                        _correctAns4count++;
                     }
                 }
             }
@@ -53,24 +62,30 @@ namespace Model
         public void RemoveCase(int caseToRemove)
         {
             var res = Results[caseToRemove];
-            correctAns3count -= res.Item1;
-            correctAns4count -= res.Item2;
+            _correctAns3count -= res.Item1;
+            _correctAns4count -= res.Item2;
 
             Results.Remove(caseToRemove);
         }
 
         public (float, float) GetPercentajes()
         {
-            return ((float)correctAns3count / Results.Count * 100, (float)correctAns4count / Results.Count * 100) ;
+            return ((float)_correctAns3count / Results.Count * 100, (float)_correctAns4count / Results.Count * 100);
         }
 
         public (float, float) GetPercentajeIfRemove(int caseToRemove)
         {
             var res = Results[caseToRemove];
-            float newcorrectAns3count = correctAns3count - res.Item1;
-            float newcorrectAns4count = correctAns4count - res.Item2;
+            float newcorrectAns3count = _correctAns3count - res.Item1;
+            float newcorrectAns4count = _correctAns4count - res.Item2;
 
             return (newcorrectAns3count / (Results.Count - 1) * 100, newcorrectAns4count / (Results.Count - 1) * 100);
+        }
+
+        public void RecalculatePercentajes()
+        {
+            _correctAns3count = Results.Count(p => p.Value.Item1 == 1);
+            _correctAns4count = Results.Count(p => p.Value.Item2 == 1);
         }
     }
 }

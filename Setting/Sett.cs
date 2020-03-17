@@ -25,6 +25,10 @@ namespace Setting
         {
             return Math.Abs(excepted3 - obtained3) + Math.Abs(excepted4 - obtained4);
         }
+        public static float TargetFunc( ValueTuple<float,float> percentajes)
+        {
+            return Math.Abs(excepted3 - percentajes.Item1) + Math.Abs(excepted4 - percentajes.Item2);
+        }
 
         public static Random Rnd = new Random();
     }

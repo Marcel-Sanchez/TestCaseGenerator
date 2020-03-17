@@ -1,0 +1,8 @@
+D:\Códigos\IFace\bin\Debug\netstandard2.0\IFace.deps.json
+D:\Códigos\IFace\bin\Debug\netstandard2.0\IFace.dll
+D:\Códigos\IFace\bin\Debug\netstandard2.0\IFace.pdb
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.csprojAssemblyReference.cache
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.AssemblyInfoInputs.cache
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.AssemblyInfo.cs
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.dll
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.pdb

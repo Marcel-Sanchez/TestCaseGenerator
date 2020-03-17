@@ -10,7 +10,7 @@ namespace Metaheuristic
     {
         public static void Run(UniqueModelCase model)
         {
-            Console.WriteLine();
+            //Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
             var percentajes = model.GetPercentajes();
@@ -20,7 +20,7 @@ namespace Metaheuristic
 
             List<int> candidates = GetCandidates(model, funcEval);
 
-            Console.WriteLine($"Count candidates: {candidates.Count}");
+            //Console.WriteLine($"Count candidates: {candidates.Count}");
 
             // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
             while (candidates.Count > 0 && funcEval != 0)
@@ -29,7 +29,7 @@ namespace Metaheuristic
                 var caseToDelete = candidates[Sett.Rnd.Next(candidates.Count)];
                 model.RemoveCase(caseToDelete);
 
-                Console.WriteLine($"Antes de eliminar: {funcEval}");
+                //Console.WriteLine($"Antes de eliminar: {funcEval}");
 
                 // Elimino el caso y actualizo la evaluación de la función objetivo.
                 //models[0].RemoveCase(caseToDelete);
@@ -38,13 +38,13 @@ namespace Metaheuristic
                 percentajes = model.GetPercentajes();
                 funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
 
-                Console.WriteLine($"Después de eliminar: {funcEval}");
+                //Console.WriteLine($"Después de eliminar: {funcEval}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
-                Console.WriteLine();
+                //Console.WriteLine();
 
                 // Obtengo la nueva lista de candidatos.
                 candidates = GetCandidates(model, funcEval);
-                Console.WriteLine($"Count candidates: {candidates.Count}");
+                //Console.WriteLine($"Count candidates: {candidates.Count}");
             }
             percentajes = model.GetPercentajes();
             funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
