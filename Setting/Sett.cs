@@ -17,17 +17,24 @@ namespace Setting
         public const string DllName = "Implementations";
         public const string ClassName = "Implementation";
 
-        // Porcientos de acirto para las notas
-        public const int excepted3 = 30;
-        public const int excepted4 = 90;
+        // Porcientos de acierto para las notas
+        public const int Excepted3 = 30;
+        public const int Excepted4 = 90;
+
+        // Número de casos de prueba agenerar
+        public const int CasesToGenerate = 500;
+        // Número inicial de la población a generar.
+        public static int MembersToGenerate = 10;
+        // Número de casos Totales
+        public static int CaseNumber = 0;
 
         public static float TargetFunc(float obtained3, float obtained4)
         {
-            return Math.Abs(excepted3 - obtained3) + Math.Abs(excepted4 - obtained4);
+            return Math.Abs(Excepted3 - obtained3) + Math.Abs(Excepted4 - obtained4);
         }
-        public static float TargetFunc( ValueTuple<float,float> percentajes)
+        public static float TargetFunc(ValueTuple<float, float> percentajes)
         {
-            return Math.Abs(excepted3 - percentajes.Item1) + Math.Abs(excepted4 - percentajes.Item2);
+            return Math.Abs(Excepted3 - percentajes.Item1) + Math.Abs(Excepted4 - percentajes.Item2);
         }
 
         public static Random Rnd = new Random();

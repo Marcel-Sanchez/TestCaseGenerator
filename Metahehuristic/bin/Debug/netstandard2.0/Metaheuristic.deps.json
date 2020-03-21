@@ -45,7 +45,8 @@
       },
       "Model/1.0.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.7.0"
+          "Microsoft.CSharp": "4.7.0",
+          "Setting": "1.0.0"
         },
         "runtime": {
           "Model.dll": {}

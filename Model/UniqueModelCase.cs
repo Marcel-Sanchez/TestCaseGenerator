@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Setting;
 
 namespace Model
 {
@@ -37,12 +38,12 @@ namespace Model
                 {
                     if (_eq(correctAnswers[i], answers[i]))
                     {
-                        Results[i + 1] = (1, 0);
+                        Results[i + Sett.CaseNumber + 1] = (1, 0);
                         _correctAns3count++;
                     }
                     else
                     {
-                        Results[i + 1] = (0, 0);
+                        Results[i + Sett.CaseNumber + 1] = (0, 0);
                     }
                 }
             }
@@ -52,10 +53,11 @@ namespace Model
                 {
                     if (_eq(correctAnswers[j], answers[j]))
                     {
-                        Results[j + 1] = (Results[j + 1].Item1, 1);
+                        Results[j + Sett.CaseNumber + 1] = (Results[j + Sett.CaseNumber + 1].Item1, 1);
                         _correctAns4count++;
                     }
                 }
+                Sett.CaseNumber += Results.Count;
             }
         }
 
@@ -86,6 +88,16 @@ namespace Model
         {
             _correctAns3count = Results.Count(p => p.Value.Item1 == 1);
             _correctAns4count = Results.Count(p => p.Value.Item2 == 1);
+        }
+
+        public void Merge(UniqueModelCase other)
+        {
+            foreach (var item in other.Results)
+            {
+                Results.Add(item.Key, item.Value);
+            }
+            _correctAns3count += other._correctAns3count;
+            _correctAns4count += other._correctAns4count;
         }
     }
 }

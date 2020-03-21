@@ -15,7 +15,7 @@ namespace Metaheuristic
         public static void Run(IEnumerable<UniqueModelCase> sols)
         {
             Solutions = new List<UniqueModelCase>(sols);
-            ReamkeKeys(Solutions);
+            //ReamkeKeys(Solutions);
             var percentajes = Solutions.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
@@ -66,10 +66,16 @@ namespace Metaheuristic
                     Solutions.RemoveAt(index);
                     newEvals.RemoveAt(index);
                 }
-                Console.WriteLine();
-                Console.WriteLine($"Menor evaluación {evals.Min()}");
-                Console.WriteLine($"Evaluación media {evals.Average()}");
+                //Console.WriteLine();
+                //Console.WriteLine($"Menor evaluación {evals.Min()}");
+                //Console.WriteLine($"Evaluación media {evals.Average()}");
             }
+            Console.WriteLine($"Menor evaluación {evals.Min()}");
+            //foreach (var item in Solutions)
+            //{
+
+            //    Console.WriteLine($"{item.GetPercentajes()}");
+            //}
         }
 
         private static int Filter(List<float> solutions)

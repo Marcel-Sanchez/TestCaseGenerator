@@ -20,24 +20,14 @@ namespace Tester
             // Generador de casos de prueba aleatorios.
             var list = new List<UniqueModelCase>();
             var generator = new CaseGenerator();
-            int n = 20;
-            // Método que me genera n casos de prueba.
             do
             {
-                var cases = generator.GenerateCases(500);
+                // Método que me genera n casos de prueba.
+                var cases = generator.GenerateCases(Sett.CasesToGenerate);
                 List<object> sols3 = new List<object>();
                 List<object> sols4 = new List<object>();
                 List<object> sols5 = new List<object>();
                 List<object>[] sols = new List<object>[] { sols3, sols4, sols5 };
-
-                // Array de tamaño cantidad de implementaciones pasadas. En este caso, en la dll hay una implementación de 3, 4 y 5.
-                //var models = new ModelCase[Sett.MethodNames.Length];
-
-                // Inicializo cada Modelo (clase auxiliar para guardar datos de las implementaciones).
-                //for (int i = 0; i < Sett.MethodNames.Length; i++)
-                //{
-                //    models[i] = new ModelCase(Sett.MethodNames[i], SolutionComparer.F);
-                //}
 
                 // Por cada caso de prueba generado.
                 foreach (var cas in cases)
@@ -57,15 +47,14 @@ namespace Tester
                         //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
 
                         // Añado la solución obtenida.
-                        //models[posModel++].Sols.Add(result);
                         sols[posModel++].Add(result);
                     }
                     //Console.WriteLine("---");
                 }
                 //Console.WriteLine("---");
 
-                // Separo en casos de acierto y en casos de error para cada implementación.
                 UniqueModelCase model = new UniqueModelCase(SolutionComparer.F);
+                // Separo en casos de acierto y en casos de error para cada implementación.
                 model.SplitCases(sols3, sols5, 1);
                 model.SplitCases(sols4, sols5, 2);
 
@@ -78,13 +67,6 @@ namespace Tester
                 //Console.WriteLine($"Model 4: {obtained4}%");
                 //Console.WriteLine($"Model 5: 100%");
 
-                // Calculo las diferencias con los valores esperados.
-                float dif3 = Sett.excepted3 - obtained3;
-                float dif4 = Sett.excepted4 - obtained4;
-
-                //Console.WriteLine($"Diference 3: {dif3}");
-                //Console.WriteLine($"Diference 4: {dif4}");
-
                 // Evaluación de la función objetivo a minimizar.
                 float targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
                 //Console.WriteLine($"Total diference: {targetFunEvaluation}");
@@ -92,26 +74,16 @@ namespace Tester
                 //Console.WriteLine();
                 list.Add(model);
 
-            } while (n-- > 0);
+            } while (Sett.MembersToGenerate-- > 0);
 
-            // Aplico una versión de Greedy Randomized Adaptive Search Procedures
-            //GRASP.Run(model);
+            //Genetic_Algorithm.Run(list);
 
-            //foreach (var item in list)
-            //{
-            //    GRASP.Run(item);
-            //}
-
-            Genetic_Algorithm.Run(list);
-            
-
-
-
-            //Console.WriteLine($"Cantidad de casos finales: {list[0].Results.Count}");
-            //Console.WriteLine($"Cantidad de casos finales: {list[1].Results.Count}");
-            //Console.WriteLine($"Cantidad de casos finales: {list[2].Results.Count}");
-            //Console.WriteLine($"Cantidad de casos finales: {list[3].Results.Count}");
-            //Console.WriteLine($"Cantidad de casos finales: {list[4].Results.Count}");
+            var m = list[0];
+            foreach (var item in list.Skip(1))
+            {
+                m.Merge(item);
+            }
+            GRASP.Run(m);
         }
         static object CallDllMethod(string dllPath, string dllName, string className, string methodName,
                                     object[] methodArgs, object[] contructorArgs)

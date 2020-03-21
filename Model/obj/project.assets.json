@@ -34,6 +34,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Setting/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Setting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Setting.dll": {}
+        }
       }
     }
   },
@@ -249,12 +259,18 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Setting/1.0.0": {
+      "type": "project",
+      "path": "../Setting/Setting.csproj",
+      "msbuildProject": "../Setting/Setting.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Microsoft.CSharp >= 4.7.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "Setting >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -286,7 +302,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Códigos\\Setting\\Setting.csproj": {
+              "projectPath": "D:\\Códigos\\Setting\\Setting.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
