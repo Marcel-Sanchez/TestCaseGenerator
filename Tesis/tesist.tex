@@ -213,9 +213,64 @@
 		
 		En el esquema general, solo los descendientes originados a partir de un cruce son mutados. Otra opción habitual es la selección aleatoria del individuo a mutar entre todos los que forman parte de la población.
 		
-%\begin{thebibliography}{0}
-	%\bibitem{id} Fernando Barber y Ricardo Ferrís
-%\end{thebibliography}
+		
+\chapter{Diseño de la Propuesta}
+	Para poder aplicar alguna metahehurística al problema que se intenta dar solución, es necesario definir nuestro espacio de búsqueda, así como las entradas, salidas y adaptaciones hechas a las implementaciones.
+	
+	Se provee al sistema de un conjunto inicial de casos de prueba brindados por el generador, los cuales inicialmente constituyen una solución, pues nuestro problema de optimización no tiene restricciones, solo una función objetivo $f(x,y)$ a minimizar: \\
+	
+	$ f(x,y) = |x - x_0| + |y - y_0|$ 
+	
+	\begin{itemize}
+		\item $x$: Porcentaje de acierto de la solución de 3
+		\item $x_0$: Porcentaje de acierto esperado de la solución de 3
+		\item $y$: Porcentaje de acierto de la solución de 4
+		\item $y_0$: Porcentaje de acierto esperado de la solución de 4
+	\end{itemize}
+
+	La solución que brinde el algoritmo debe consistir en un subconjunto del conjunto inicial de casos de prueba, que debería tener una evaluación menor o igual que la inicial. Se ha de aclarar que la salida puede estar sesgada por la misma entrada, es decir, que el conjunto que se reciba como entrada no sea una muestra lo suficientemente representativa de la población de casos de prueba.
+	
+	A continuación se explican las adaptaciones hechas a los dos algoritmos implementados: GRASP y Genético, los cuales reciben la misma entrada y aplican un proceder diferente.
+	
+	\section{Adaptación de GRASP}
+		Como mencionábamos en (hacer referencia a la subsección), GRASP en cada iteración hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En nuestro problema en particular, se tienen inicialmente los $n$ casos de prueba, de los cuales se selecciona un subconjunto de tamaño $k, k \leq n$ que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$.
+		
+		Como casos de parada tenemos los siguientes:
+		\begin{itemize}
+			\item Se ha alcanzado el valor esperado de la función objetivo.
+			\item Se han cumplido un número de iteraciones especificadas.
+			\item La lista de candidatos a extraer es vacía.
+		\end{itemize}
+	
+		Para un mayor rendimiento de este algoritmo, se hacen varias pasadas con el conjunto inicial de los $n$ casos de prueba brindados por el generador, pues en la aleatoriedad de seleccionar el candidato a eliminar, puede que no siempre se esté caminando hacia el óptimo global. Por lo que varias corridas lanzarán un mejor rendimiento del algoritmo, el cual se quedará con la mejor de todas.
+		
+	\section{Adaptación del Genético}
+		En (hacer referencia a la subsección), el Algoritmo Genético define varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se camina hacia una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto).
+		
+		Primero se hace conformación de la población: se dividen los $n$ casos en $k$ grupos de soluciones. Una vez conformada, se procede a la selección de $4$ individuos que pudieran ser representativos.
+		
+		\begin{itemize}
+			\item individuo $o_1$: el que mejor evalúa la función objetivo.
+			\item individuo $o_2$: el segundo que mejor evalúa la función objetivo.
+			\item indivudio $r_1$: uno seleccionado de forma aleatoria.
+			\item indivudio $r_2$: otro tomado al azar.
+		\end{itemize} 
+	
+		Operadores genéticos definidos donde $i1, i2$ son individuos de la población, o sea, soluciones al problema.
+			\begin{itemize}
+			\item operador $op_1(i_1, i_2)$: mezcla la primera mitad de $i_1$ con la segunda mitad de $i_2$ 
+			\item operador $op_2(i_1, i_2)$: mezcla de forma alternada $i_1$ e $i_2$.
+			\item operador $op_3(i_1, i_2)$: unión de miembros aleatorios de $i_1$ e $i_2$.
+			\item operador $op_4(i_1, i_2, p)$: mezcla el $p\%$ de $i_1$ con el $(1-p)\%$ de $i_2$.
+		\end{itemize}
+	
+		Una vez definida la población inicial y los operadores genéticos, se procede a aplicar estos últimos sobre los $4$ individuos de la siguiente forma. Dados $o_1$ y $o_2$ se le pasan como parámetros cada operador genético, similar con $r_1$ y $r_2$. De esta forma se obtienen $8$ nuevos individuos, de los cuales se seleccionan los $4$ mejores y se añaden a la población. Esto se repite un número determinado de iteraciones y se devuelve el mejor individuo de la población, el cual minimiza la evaluación de la función objetivo.
+		
+		Note que en cada iteración del algoritmo, se aumenta el $4$ el número de soluciones, por lo que debe estar regulado el número de las mismas.
+	
+		De esta forma se intenta cubrir varios caminos que nos puedan llevar al óptimo y se dan pasos de más de tamaño $1$. Con un número de iteraciones lo suficientemente grande, este algoritmo debe acercarse a una buena solución al problema dada la mezcla entre exploración y mutación que posee.
+	
+	
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}
