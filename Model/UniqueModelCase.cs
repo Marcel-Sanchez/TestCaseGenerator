@@ -8,6 +8,8 @@ namespace Model
 {
     public class UniqueModelCase
     {
+        // Este diccionario me representa el número del caso contra una tupla de int que funciona como bool (arreglar).
+        // La tupla representa si acertó para el caso del 3 y si acertó para el caso del 4.
         public Dictionary<int, (int, int)> Results;
         private Func<object, object, bool> _eq;
         private int _correctAns3count;

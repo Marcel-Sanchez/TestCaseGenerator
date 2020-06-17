@@ -53,6 +53,7 @@ namespace Metaheuristic
 
         public static List<int> GetCandidates(UniqueModelCase model, float targetFunEvaluation)
         {
+            //Lista de los casos candidatos a remover (un índice del caso).
             List<int> candidates = new List<int>();
             var percentajes = model.GetPercentajes();
             var obtained3 = percentajes.Item1;

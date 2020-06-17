@@ -83,7 +83,9 @@ namespace Tester
             {
                 m.Merge(item);
             }
+            Console.WriteLine(m.Results.Count);
             GRASP.Run(m);
+            Console.WriteLine(m.Results.Count);
         }
         static object CallDllMethod(string dllPath, string dllName, string className, string methodName,
                                     object[] methodArgs, object[] contructorArgs)

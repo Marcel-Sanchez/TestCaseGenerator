@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.18)  2 APR 2020 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.18)  12 MAY 2020 21:56
 entering extended mode
 **./tesist.tex
 (tesist.tex
@@ -196,118 +196,147 @@ Package pdftex.def Info: ./Graphics/uhlogo.pdf  used on input line 24.
 
 ]
 Cap\'{\i }tulo 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-[5]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [6]
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 85.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 85.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+ [5]
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 109.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 109.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 109.
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
-[8]
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
+[7]
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
+ [8]
 Cap\'{\i }tulo 2.
 [9
 
 ]
-<./Graphics/GRASPgeneral.png, id=37, 585.98924pt x 246.9225pt>
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+LaTeX Info: Redefining \. on input line 190.
+LaTeX Info: Redefining \% on input line 190.
+[11]
+<./Graphics/GRASPgeneral.png, id=44, 585.98924pt x 246.9225pt>
 File: ./Graphics/GRASPgeneral.png Graphic file (type png)
 <use ./Graphics/GRASPgeneral.png>
-Package pdftex.def Info: ./Graphics/GRASPgeneral.png  used on input line 135.
+Package pdftex.def Info: ./Graphics/GRASPgeneral.png  used on input line 195.
 (pdftex.def)             Requested size: 284.52756pt x 119.89665pt.
-<./Graphics/GRASPconstructionphase.png, id=38, 587.796pt x 245.11575pt>
+<./Graphics/GRASPconstructionphase.png, id=45, 587.796pt x 245.11575pt>
 File: ./Graphics/GRASPconstructionphase.png Graphic file (type png)
 <use ./Graphics/GRASPconstructionphase.png>
 Package pdftex.def Info: ./Graphics/GRASPconstructionphase.png  used on input l
-ine 146.
+ine 206.
 (pdftex.def)             Requested size: 284.52756pt x 118.65283pt.
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
- [10 <./Graphics/GRASPgeneral.png>]
-<./Graphics/GRASPlocal.png, id=42, 428.19975pt x 218.0145pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./Graphics/GRASPlocal.png, id=46, 428.19975pt x 218.0145pt>
 File: ./Graphics/GRASPlocal.png Graphic file (type png)
 <use ./Graphics/GRASPlocal.png>
-Package pdftex.def Info: ./Graphics/GRASPlocal.png  used on input line 157.
+Package pdftex.def Info: ./Graphics/GRASPlocal.png  used on input line 217.
 (pdftex.def)             Requested size: 284.52756pt x 144.86803pt.
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
- [11 <./Graphics/GRASPconstructionphase.png> <./Graphics/GRASPlocal.png>]
-<./Graphics/RecocidoSimuladoOptLocal.png, id=46, 444.4605pt x 168.02776pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+[12 <./Graphics/GRASPgeneral.png>]
+LaTeX Info: Redefining \. on input line 225.
+LaTeX Info: Redefining \% on input line 225.
+ [13 <./Graphics/GRASPconstructionphase.png> <./Graphics/GRASPlocal.png>]
+<./Graphics/RecocidoSimuladoOptLocal.png, id=54, 444.4605pt x 168.02776pt>
 File: ./Graphics/RecocidoSimuladoOptLocal.png Graphic file (type png)
 <use ./Graphics/RecocidoSimuladoOptLocal.png>
 Package pdftex.def Info: ./Graphics/RecocidoSimuladoOptLocal.png  used on input
- line 169.
+ line 229.
 (pdftex.def)             Requested size: 284.52756pt x 107.56816pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
-[12 <./Graphics/RecocidoSimuladoOptLocal.png>]
-<./Graphics/RecocidoSimulado.png, id=51, 444.4605pt x 265.59225pt>
+<./Graphics/RecocidoSimulado.png, id=55, 444.4605pt x 265.59225pt>
 File: ./Graphics/RecocidoSimulado.png Graphic file (type png)
 <use ./Graphics/RecocidoSimulado.png>
-Package pdftex.def Info: ./Graphics/RecocidoSimulado.png  used on input line 18
+Package pdftex.def Info: ./Graphics/RecocidoSimulado.png  used on input line 24
 0.
 (pdftex.def)             Requested size: 284.52756pt x 170.02707pt.
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
- [13 <./Graphics/RecocidoSimulado.png>]
-<./Graphics/AlgoritmoGenetico.png, id=58, 567.92175pt x 369.7815pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 246.
+LaTeX Info: Redefining \% on input line 246.
+[14 <./Graphics/RecocidoSimuladoOptLocal.png>]
+<./Graphics/AlgoritmoGenetico.png, id=62, 567.92175pt x 369.7815pt>
 File: ./Graphics/AlgoritmoGenetico.png Graphic file (type png)
 <use ./Graphics/AlgoritmoGenetico.png>
 Package pdftex.def Info: ./Graphics/AlgoritmoGenetico.png  used on input line 2
-00.
+60.
 (pdftex.def)             Requested size: 284.52756pt x 185.26268pt.
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
- [14 <./Graphics/AlgoritmoGenetico.png>]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
- [15]
-LaTeX Info: Redefining \. on input line 217.
-LaTeX Info: Redefining \% on input line 217.
- [16
 
-]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+[15 <./Graphics/RecocidoSimulado.png>]
+LaTeX Info: Redefining \. on input line 277.
+LaTeX Info: Redefining \% on input line 277.
+ [16 <./Graphics/AlgoritmoGenetico.png>]
 Cap\'{\i }tulo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-[17]
-LaTeX Info: Redefining \. on input line 257.
-LaTeX Info: Redefining \% on input line 257.
+[17
+
+]
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
  [18] (tesist.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -321,13 +350,13 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 2486 strings out of 492895
- 36329 string characters out of 3123268
- 111713 words of memory out of 3000000
- 6380 multiletter control sequences out of 15000+200000
+ 2487 strings out of 492895
+ 36344 string characters out of 3123268
+ 112713 words of memory out of 3000000
+ 6381 multiletter control sequences out of 15000+200000
  9199 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,31p,1217b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,6n,31p,1217b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmmi12.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2
@@ -339,7 +368,7 @@ pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Marcel/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on tesist.pdf (21 pages, 426182 bytes).
+Output written on tesist.pdf (21 pages, 431123 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
