@@ -334,6 +334,43 @@
 		Falta responder: ¿Cómo estos operadores genéticos resuelven el problema del estancamiento local?
 	
 	
+\chapter{Resultados Obtenidos}
+	Para hablar acerca de resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, se diseñó un conjunto de casos de prueba a ser pasado como entrada en varias corridas de los mismos. Dicho conjunto fue generado de manera aleatoria.
+	
+	Se muestran algunos detalles de la salida, los casos están enumerados de $1$ a $n$. Como se puede apreciar, dada la aleatoriedad inherente a la metaheurística empleada, quedan distintos casos de prueba en el conjunto final. Sin embargo cada salida tiene un aspecto en común que se aprecia en las figuras a continuación: todos los conjuntos tienen igual cantidad de casos finales.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=15cm]{./Graphics/Corrida1GRASP.png}
+		\caption{Casos de prueba finales. Corrida 1}
+		\label{Corrida1GRASP}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=15cm]{./Graphics/Corrida2GRASP.png}
+		\caption{Casos de prueba finales. Corrida 2}
+		\label{Corrida2GRASP}
+	\end{figure}
+
+	\begin{figure}[!]
+		\centering
+		\includegraphics[width=15cm]{./Graphics/Corrida3GRASP.png}
+		\caption{Casos de prueba finales. Corrida 3}
+		\label{Corrida3GRASP}
+	\end{figure}
+
+	Veamos otros aspectos a destacar para comprender el porqué sucede esto. A continuación la evaluación de la función objetivo en cada en cada corrida de GRASP con dicho conjunto de casos de prueba.
+	
+	\begin{figure}[!]
+		\centering
+		\includegraphics[width=15cm]{./Graphics/FuncionObj123GRASP.png}
+		\caption{Evaluación de la Función Objetivo. Corridas 1, 2 y 3}
+		\label{FuncionObj123GRASP}
+	\end{figure}
+	
+	
+	
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}

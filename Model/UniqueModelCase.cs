@@ -66,6 +66,7 @@ namespace Model
         public void RemoveCase(int caseToRemove)
         {
             var res = Results[caseToRemove];
+            //Console.WriteLine(res);
             _correctAns3count -= res.Item1;
             _correctAns4count -= res.Item2;
 

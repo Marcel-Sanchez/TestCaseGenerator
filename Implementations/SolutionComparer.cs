@@ -12,6 +12,8 @@ namespace Implementations
         {
             var a = aa as int[];
             var b = bb as int[];
+            //if(a == null || b == null)
+
             if(a.Length != b.Length)
                 return false;
             for (int i = 0; i < a.Length; i++)

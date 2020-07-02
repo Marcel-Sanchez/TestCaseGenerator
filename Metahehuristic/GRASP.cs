@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using Model;
 using Setting;
@@ -23,6 +24,7 @@ namespace Metaheuristic
             //Console.WriteLine($"Count candidates: {candidates.Count}");
 
             // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
+            int i = 0;
             while (candidates.Count > 0 && funcEval != 0)
             {
                 // Selecciono un candidato random a eliminar.
@@ -37,6 +39,22 @@ namespace Metaheuristic
                 //models[2].RemoveCase(caseToDelete);
                 percentajes = model.GetPercentajes();
                 funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
+
+                var s = "";
+                
+                string p = Directory.GetCurrentDirectory() + @"\" + "f3.txt";
+                using (StreamWriter file = new StreamWriter(p, true))
+                {
+                    //file.WriteLine($"percentajes: {percentajes}");
+                    file.Write($"{funcEval.ToString("00.00")}  ");
+                    i++;
+                    if (i == 20)
+                    {
+                        i = 0;
+                        file.WriteLine();
+                    }
+                    //file.WriteLine($"caseToDelete: {caseToDelete}");
+                }
 
                 //Console.WriteLine($"Después de eliminar: {funcEval}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");

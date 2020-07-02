@@ -1,0 +1,21 @@
+percentajes: (19.67871, 95.18073)
+f.o.: 15.50201
+caseToDelete: 219
+percentajes: (19.75806, 95.16129)
+f.o.: 15.40323
+caseToDelete: 46
+percentajes: (19.83806, 95.1417)
+f.o.: 15.30364
+caseToDelete: 240
+percentajes: (19.9187, 95.12195)
+f.o.: 15.20325
+caseToDelete: 208
+percentajes: (20, 95.10204)
+f.o.: 15.10204
+caseToDelete: 54
+percentajes: (20.08197, 95.08197)
+f.o.: 15
+caseToDelete: 109
+percentajes: (20.16461, 95.06173)
+f.o.: 14.89712
+caseToDelete: 51

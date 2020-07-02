@@ -22,9 +22,9 @@ namespace Setting
         public const int Excepted4 = 90;
 
         // Número de casos de prueba agenerar
-        public const int CasesToGenerate = 500;
+        public const int CasesToGenerate = 250;
         // Número inicial de la población a generar.
-        public static int MembersToGenerate = 10;
+        //public static int MembersToGenerate = 10;
         // Número de casos Totales
         public static int CaseNumber = 0;
 
