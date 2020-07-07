@@ -11,6 +11,7 @@ namespace Metaheuristic
     {
         public static void Run(UniqueModelCase model)
         {
+            CheckCases(model.Results.Values);
             //Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
@@ -24,7 +25,7 @@ namespace Metaheuristic
             //Console.WriteLine($"Count candidates: {candidates.Count}");
 
             // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
-            int i = 0;
+            //int i = 0;
             while (candidates.Count > 0 && funcEval != 0)
             {
                 // Selecciono un candidato random a eliminar.
@@ -39,22 +40,23 @@ namespace Metaheuristic
                 //models[2].RemoveCase(caseToDelete);
                 percentajes = model.GetPercentajes();
                 funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
+                //Console.WriteLine(funcEval);
 
-                var s = "";
-                
-                string p = Directory.GetCurrentDirectory() + @"\" + "f3.txt";
-                using (StreamWriter file = new StreamWriter(p, true))
-                {
-                    //file.WriteLine($"percentajes: {percentajes}");
-                    file.Write($"{funcEval.ToString("00.00")}  ");
-                    i++;
-                    if (i == 20)
-                    {
-                        i = 0;
-                        file.WriteLine();
-                    }
-                    //file.WriteLine($"caseToDelete: {caseToDelete}");
-                }
+                //var s = "";
+
+                //string p = Directory.GetCurrentDirectory() + @"\" + "f3.txt";
+                //using (StreamWriter file = new StreamWriter(p, true))
+                //{
+                //    //file.WriteLine($"percentajes: {percentajes}");
+                //    file.Write($"{funcEval.ToString("00.00")}  ");
+                //    i++;
+                //    if (i == 20)
+                //    {
+                //        i = 0;
+                //        file.WriteLine();
+                //    }
+                //    //file.WriteLine($"caseToDelete: {caseToDelete}");
+                //}
 
                 //Console.WriteLine($"Después de eliminar: {funcEval}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
@@ -67,6 +69,7 @@ namespace Metaheuristic
             percentajes = model.GetPercentajes();
             funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
             Console.WriteLine($"Final diference: {funcEval}");
+            CheckCases(model.Results.Values);
         }
 
         public static List<int> GetCandidates(UniqueModelCase model, float targetFunEvaluation)
@@ -99,6 +102,30 @@ namespace Metaheuristic
                     candidates.Add(caseToRemove);
             }
             return candidates;
+        }
+
+        private static void CheckCases(IEnumerable<(int, int)> values)
+        {
+            int cero = 0, uno = 0, dos = 0;
+            foreach (var item in values)
+            {
+                if (item == (0, 0))
+                    cero++;
+                else if (item == (0, 1))
+                    uno++;
+                else
+                    dos++;
+
+            }
+            string p = Directory.GetCurrentDirectory() + @"\" + "tipos.txt";
+            using (StreamWriter file = new StreamWriter(p, true))
+            {
+                //file.WriteLine($"percentajes: {percentajes}");
+                file.WriteLine($"cero: {cero}");
+                file.WriteLine($"uno: {uno}");
+                file.WriteLine($"dos: {dos}");
+                file.WriteLine();
+            }
         }
     }
 }

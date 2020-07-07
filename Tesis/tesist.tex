@@ -32,7 +32,7 @@
 			\end{large}
 			\vspace*{0.6in}
 			Autor: \textbf{Marcel Ernesto Sánchez Aguilar} \\
-			Tutor: \textbf{Ludwig Leonard Méndez}
+			Tutores: \textbf{Ludwig Leonard Méndez}, \textbf{Carlos Fleitas}
 			
 			
 			\vspace*{0.6in}
@@ -56,11 +56,19 @@
 
 	La Ciencia de la Computación estudia los fundamentos teóricos de los procesos computacionales y su aplicación en la implementación de sistemas computacionales en correspondencia con el desarrollo vertiginoso de la propia ciencia y las tecnologías computacionales, los cuales dan solución a la informatización que demanda la sociedad contemporánea. El origen de esta ciencia es anterior a la invención del primer computador moderno, pues desde la antigüedad han existido procedimientos y algoritmos para realizar cómputos, solo que estos eran llevados a cabo por personas y no por un ente digital. Gracias a los trabajos de Alan Turing \cite{Turing} -considerado el padre de esta ciencia- y otros investigadores, se abrió el camino a nuevas ramas como la computabilidad y se profundizó en otras como la Inteligencia Artificial.
 	
-	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Pero, ¿qué tan buena puede ser una aplicación y cómo expresamos la calidad de las mismas? El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación.
+	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Pero, ¿qué tan buena puede ser una aplicación y cómo expresamos la calidad de las mismas? El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación. \\
 	
-	Las aplicaciones de consola tienen una interfaz visual básica, por lo que la aceptación de las mismas recae únicamente en la lógica detrás del código. Esto es fundamental para el buen funcionamiento de cualquier programa, un correcto diseño de la lógica del código, por lo que tener un criterio de calidad respecto a una aplicación, es significativo.
 	
-	Una vez fijado el objetivo de evaluación, quedaría por designar las métricas a utilizar para dicho fin. ¿Cómo evaluar la aplicación? ¿En base a cuáles aspectos se mide la calidad de estos sistemas de cómputo?
+	En la actualidad existen numerosas herramientas que de alguna manera permiten expresar una métrica en cuanto a evaluación de un código. En lo adelante se hará mención de algunas de las mismas.
+	
+	\textbf{SonarQube} es una plataforma desarrollada en Java que permite realizar análisis de la calidad de código de forma automatizada, para lo cual se usan diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs que permiten obtener métricas que ayudan a mejorar la calidad. Resulta una herramienta de utilidad en durante el testing de código en una aplicación.
+	
+	\textbf{Beyond Compare} es una herramienta que permite comparar ficheros. Si al examinar 2 códigos, resulta que tienen una estructura similar, es probable que que hayan seguido la misma idea pero con diferente ejecución para la solución de un problema.
+	
+	\textbf{HP Quality Center} es una herramienta de gestión de pruebas que tiene como objetivo el control de la calidad software. Entre los mismo incluye la gestión de requisitos, gestión de pruebas y los procesos de negocio. \\
+	
+	
+	La aceptación de cualquier software pasa siempre por la lógica detrás del código. Esto es fundamental para el buen funcionamiento de cualquier programa. Un correcto diseño de la lógica del código puntúa de manera favorable el criterio de calidad. Siendo este nuestro objetivo de evaluación, quedaría por designar las métricas a utilizar para dicho fin. ¿Cómo evaluar la aplicación? ¿En base a cuáles aspectos se mide la calidad de estos sistemas de cómputo?
 	
 	\section{Estado del Arte}
 		%La calidad podría resultar fácil de explicar. Sin embargo, no lo es ni en su propia definición. Algunos definen la calidad como el nivel de satisfacción del cliente. Otros dicen que se trata de cumplir con los requisitos del cliente. O bien el estado del software libre de defectos. Para ello se introduce una nueva definición: deuda técnica \cite{EAsoftwareevaluation}. Esto no es más que una serie de aspectos que pueden puntuar la calidad de un software. Se han identificado ocho dimensiones de la deuda técnica del producto de software:
@@ -281,7 +289,7 @@
 	
 	Se provee al sistema de un conjunto inicial de casos de prueba brindados por el generador, los cuales inicialmente constituyen una solución, pues nuestro problema de optimización no tiene restricciones, solo una función objetivo $f(x,y)$ a minimizar: \\
 	
-	$ f(x,y) = |x - x_0| + |y - y_0|$ 
+	$f(x,y) = |x - x_0| + |y - y_0|$ \label{fo}
 	
 	\begin{itemize}
 		\item $x$: Porcentaje de acierto obtenido por la solución con nota 3
@@ -335,41 +343,116 @@
 	
 	
 \chapter{Resultados Obtenidos}
-	Para hablar acerca de resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, se diseñó un conjunto de casos de prueba a ser pasado como entrada en varias corridas de los mismos. Dicho conjunto fue generado de manera aleatoria.
+	Los resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, fueron analizados en base a un mismo conjunto de casos de prueba en varias ejecuciones del algoritmo, el cual fue pasado como entrada en varias corridas de los mismos. Dicho conjunto fue generado de manera aleatoria. \\
 	
-	Se muestran algunos detalles de la salida, los casos están enumerados de $1$ a $n$. Como se puede apreciar, dada la aleatoriedad inherente a la metaheurística empleada, quedan distintos casos de prueba en el conjunto final. Sin embargo cada salida tiene un aspecto en común que se aprecia en las figuras a continuación: todos los conjuntos tienen igual cantidad de casos finales.
+	A continuación se muestran algunos detalles de 3 corridas, los casos están enumerados del $1$ a $n$. Dada la aleatoriedad inherente a la metaheurística empleada, quedan distintos casos de prueba en el conjunto final. Sin embargo cada ejecución tiene los mismos valores finales en los indicadores que se expresan en la siguiente tabla:
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=15cm]{./Graphics/Corrida1GRASP.png}
-		\caption{Casos de prueba finales. Corrida 1}
-		\label{Corrida1GRASP}
-	\end{figure}
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=15cm]{./Graphics/Corrida1GRASP.png}
+%		\caption{Casos de prueba finales. Corrida 1}
+%		\label{Corrida1GRASP}
+%	\end{figure}
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| l | c |} \hline
+				Cantidad de casos iniciales & 250 \\
+				Porcentaje inicial/esperado del 3 & 19.60/30 \\
+				Porcentaje inicial/esperado del 4 & 95.20/90 \\
+				Evaluación inicial de la f.o. & 15.60 \\ \hline
+				Iteraciones del algoritmo & 87 \\ \hline
+				Cantidad de casos finales & 163 \\
+				Porcentaje final/esperado del 3 & 30.06/30 \\
+				Porcentaje final/esperado del 4 & 92.63/90 \\
+				Evaluación final de la f.o. & 2.699 \\ \hline
+			\end{tabular}
+			\caption{Indicadores iniciales y finales de las corridas 1, 2 y 3}
+			\label{tab:IndicadoresGRASP123}
+		\end{center}
+	\end{table}
 
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=15cm]{./Graphics/Corrida2GRASP.png}
-		\caption{Casos de prueba finales. Corrida 2}
-		\label{Corrida2GRASP}
-	\end{figure}
+%	\begin{figure}[h]
+%		\centering
+%		\includegraphics[width=15cm]{./Graphics/Corrida2GRASP.png}
+%		\caption{Casos de prueba finales. Corrida 2}
+%		\label{Corrida2GRASP}
+%	\end{figure}
 
-	\begin{figure}[!]
-		\centering
-		\includegraphics[width=15cm]{./Graphics/Corrida3GRASP.png}
-		\caption{Casos de prueba finales. Corrida 3}
-		\label{Corrida3GRASP}
-	\end{figure}
+%	\begin{figure}[!]
+%		\centering
+%		\includegraphics[width=15cm]{./Graphics/Corrida3GRASP.png}
+%		\caption{Casos de prueba finales. Corrida 3}
+%		\label{Corrida3GRASP}
+%	\end{figure}
 
-	Veamos otros aspectos a destacar para comprender el porqué sucede esto. A continuación la evaluación de la función objetivo en cada en cada corrida de GRASP con dicho conjunto de casos de prueba.
+	Veamos otros aspectos a destacar para comprender por qué sucede esto. En la tabla \ref{tab:foGRASP123} se muestra la evaluación de la función objetivo en cada una de las 3 corridas de GRASP con dicho conjunto de casos de prueba.
 	
-	\begin{figure}[!]
-		\centering
-		\includegraphics[width=15cm]{./Graphics/FuncionObj123GRASP.png}
-		\caption{Evaluación de la Función Objetivo. Corridas 1, 2 y 3}
-		\label{FuncionObj123GRASP}
-	\end{figure}
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| c | c |} \hline
+				Iteración & f.o. \\ \hline
+				0 & 15.600 \\
+				1 & 15.502 \\
+				2 & 15.403 \\
+				... & ... \\
+				43 & 10.53 \\
+				44 & 10.39 \\
+				45 & 10.24 \\
+				... & ... \\
+				85 & 3.030 \\
+				86 & 2.800 \\
+				87 & 2.699 \\ \hline
+			\end{tabular}
+			\caption{Valor de la función objetivo según las iteraciones}
+			\label{tab:foGRASP123}
+		\end{center}
+	\end{table}
 	
+%	\begin{figure}[t]
+%		\centering
+%		\includegraphics[width=15cm]{./Graphics/FuncionObj123GRASP.png}
+%		\caption{Evaluación de la Función Objetivo. Corridas 1, 2 y 3}
+%		\label{FuncionObj123GRASP}
+%	\end{figure}
+		
+	En cada una de las 3 ejecuciones de GRASP se hicieron exactamente 87 iteraciones. Como resultado se eliminaron conjuntos de casos disjuntos, pero la evaluación de la función objetivo en cada paso se redujo de manera idéntica. ¿Por qué? \\
 	
+	Haciendo un análisis más profundo, dadas las peculiaridades del problema a resolver, podemos calificar en 3 grupos los casos de prueba:
+	\begin{itemize}
+		\item tipo $uno$: son de la forma $(0, 0)$, donde ninguna implementación acierta el caso
+		\item tipo $dos$: son de la forma $(0, 1)$, donde solo acierta la implementación del 4.
+		\item tipo $tres$: son de la forma $(1, 1)$, donde ambas implementaciones aciertan el caso
+		\item tipo $cuatro$: son de la forma $(1, 0)$ donde solo acierta la implementación del 3.
+	\end{itemize}
+
+	\textbf{Nota}: Por lo general no existen los casos de la forma $(1, 0)$. En la práctica puede que surjan de manera muy aislada. Se supone que una implementación de 4 debería acertar en los mismos casos que una de 3 y más, que no tenga un aspecto en el que quede por detrás de otra que obtenga una nota inferior. Sin embargo es posible que no se provea al sistema de una implementación de 4 puntos, por lo que los casos de tipo $cuatro$ serían los únicos presentes.\\
+ 
+ 	Una vez fijado el conjunto inicial de casos de prueba, ya la función objetivo toma un valor (ver definición de la misma en el Capítulo \ref{fo}). Supongamos que el porciento de acierto de la implementación de 3 es 75\% de un 80\% esperado y la de 4 es 90\% de un 95\% esperado. El algoritmo debe reducir en alguna medida los casos en que fallan ambas implementaciones, por lo cual la lista de candidatos a eliminar definida por GRASP en cada iteración serán solamente los casos de la forma $cero$. Por tanto de esa lista, que no va a variar en cuanto a grupos de casos, pues el tipo de un caso es invariable, se seleccionarán tantos casos a eliminar como la evaluación de la función objetivo lo permita (mientras mejore) y según la cantidad de casos del tipo objetivo presentes en el conjunto inicial.
+ 	
+ 	Por lo cual no importa cuál sea el conjunto inicial de casos de prueba, una vez fijado, siempre se se obtendrá un subconjunto final distinto en cuanto a casos de prueba pero con iguales evaluación de la función objetivo y cantidad de casos por tipo. En el cuadro \ref{tab:Tiposdecasos123} se aprecia lo anteriormente expuesto. \\
+ 	
+ 	
+ 	\begin{table}[t]
+ 		\begin{center}
+ 			\begin{tabular}{| c | c | c |} \hline
+ 				Tipo de caso & Cantidad Inicial & Cantidad Final \\ \hline
+ 				uno & 12 & 12 \\
+ 				dos & 189 & 102 \\
+ 				tres & 49 & 49 \\ \hline
+ 			\end{tabular}
+ 			\caption{Tipos de casos presentes en las corridas 1, 2 y 3}
+ 			\label{tab:Tiposdecasos123}
+ 		\end{center}
+ 	\end{table}
+ 
+ 	
+	Como se ha mencionado, los casos de prueba se generan de forma aleatoria, por lo que desde ese inicio se puede estar comprometiendo el buen funcionamiento del algoritmo. Recibir como entrada una muestra donde esté representado el universo de casos de prueba permite una mejor evaluación de la función objetivo, pues el algoritmo es capaz de desestimar aquellos casos que no son iguales desde el punto de vista físico pero sí a nivel de evaluación (combinación lineal uno de otro). Tener toda la gama de casos de prueba le brinda la posibilidad de hacer ajustes para poder minimizar la función objetivo de manera óptima. De lo contrario podría estar condenada (que no se minimice todo lo posible) desde el principio. Al no poder garantizar esto, es posible que el algoritmo no pueda encontrar la solución óptima al problema si no pertenece al subconjunto que se recibe como entrada. \\
+	
+	Sin embargo hay otros aspectos negativos inherentes al problema que afectan el desempeño del algoritmo. Por ejemplo, la información que se tiene de un caso de prueba es muy poca, solo tenemos información de en cuáles implementaciones acertó, no existe un criterio que permita comparar 2 casos de prueba en cuanto a ser significativo para una implementación u otra.
+	
+	Una idea pudiera ser tener varias implementaciones de nota, en vez de recibir solo una de 3 y una de 4. Con ello se podría tener más información, pues no necesariamente un caso de prueba tiene que acertarle a la totalidad del conjunto de implementaciones de 3 o de 4. Así se podría hacer algún tipo de ajuste, tener otra métrica para que el conjunto final de casos de prueba sea más heterogéneo. El inconveniente de esta propuesta es que se vería forzado el evaluador de proveer al sistema de dichas implementaciones extras.
+	
+	Respecto a la idea del párrafo anterior, para que el evaluador no tenga que idear varias implementaciones, se podría tener una métrica en cuanto a dos implementaciones. Por ejemplo, asumiendo el porciento de acierto de las implementaciones como métrica, si la solución de un estudiante obtiene un resultado cercano al esperado por el evaluador, la misma se podría incorporar a lista de implementaciones de referencia. Pero esto no resulta siempre posible, depende de las características del problema que se pueda generar diferentes implementaciones de iguales en resultados.
 	
 
 \bibliography{bibliography}
