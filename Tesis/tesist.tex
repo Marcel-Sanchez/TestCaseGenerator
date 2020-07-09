@@ -343,9 +343,11 @@
 	
 	
 \chapter{Resultados Obtenidos}
-	Los resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, fueron analizados en base a un mismo conjunto de casos de prueba en varias ejecuciones del algoritmo, el cual fue pasado como entrada en varias corridas de los mismos. Dicho conjunto fue generado de manera aleatoria. \\
+	Los resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, fueron analizados en base a un mismo conjunto de casos de prueba en varias ejecuciones del algoritmo, el cual fue pasado como entrada en varias corridas de los mismos.
 	
-	A continuación se muestran algunos detalles de 3 corridas, los casos están enumerados del $1$ a $n$. Dada la aleatoriedad inherente a la metaheurística empleada, quedan distintos casos de prueba en el conjunto final. Sin embargo cada ejecución tiene los mismos valores finales en los indicadores que se expresan en la siguiente tabla:
+	El problema analizado en particular fue el de multiplicación de polinomios: se reciben 2 arrays que representan coeficientes, según el índice que ocupan es el grado de la $x$ que acompañan. Se debe devolver un array resultante de la multiplicación de ambos. Dicho conjunto de pares de polinomios fue generado de manera aleatoria. \\
+	
+	En la tabla \ref{tab:IndicadoresGRASP123} se muestran algunos detalles de 3 ejecuciones distintas donde se aplica GRASP, los casos están enumerados del $1$ al $n$. Dada la aleatoriedad inherente en la metaheurística empleada, quedan distintos casos de prueba en el conjunto final como salida del algoritmo, pues este último no es determinista. Sin embargo cada ejecución tiene los mismos valores finales en los indicadores que se expresan en la siguiente tabla:
 	
 %	\begin{figure}[h]
 %		\centering
@@ -417,7 +419,7 @@
 		
 	En cada una de las 3 ejecuciones de GRASP se hicieron exactamente 87 iteraciones. Como resultado se eliminaron conjuntos de casos disjuntos, pero la evaluación de la función objetivo en cada paso se redujo de manera idéntica. ¿Por qué? \\
 	
-	Haciendo un análisis más profundo, dadas las peculiaridades del problema a resolver, podemos calificar en 3 grupos los casos de prueba:
+	Haciendo un análisis más profundo, dadas las peculiaridades del problema general a resolver, podemos calificar en 4 grupos los casos de prueba:
 	\begin{itemize}
 		\item tipo $uno$: son de la forma $(0, 0)$, donde ninguna implementación acierta el caso
 		\item tipo $dos$: son de la forma $(0, 1)$, donde solo acierta la implementación del 4.
@@ -425,14 +427,16 @@
 		\item tipo $cuatro$: son de la forma $(1, 0)$ donde solo acierta la implementación del 3.
 	\end{itemize}
 
+	Debido a la información que se tiene ahora mismo sobre cada caso de prueba, el vector de que se construye de estos es binario y de dimensión 2. Por tanto, el máximo número de tipos de casos posibles presentes en el problema general es 4.\\
+
 	\textbf{Nota}: Por lo general no existen los casos de la forma $(1, 0)$. En la práctica puede que surjan de manera muy aislada. Se supone que una implementación de 4 debería acertar en los mismos casos que una de 3 y más, que no tenga un aspecto en el que quede por detrás de otra que obtenga una nota inferior. Sin embargo es posible que no se provea al sistema de una implementación de 4 puntos, por lo que los casos de tipo $cuatro$ serían los únicos presentes.\\
  
  	Una vez fijado el conjunto inicial de casos de prueba, ya la función objetivo toma un valor (ver definición de la misma en el Capítulo \ref{fo}). Supongamos que el porciento de acierto de la implementación de 3 es 75\% de un 80\% esperado y la de 4 es 90\% de un 95\% esperado. El algoritmo debe reducir en alguna medida los casos en que fallan ambas implementaciones, por lo cual la lista de candidatos a eliminar definida por GRASP en cada iteración serán solamente los casos de la forma $cero$. Por tanto de esa lista, que no va a variar en cuanto a grupos de casos, pues el tipo de un caso es invariable, se seleccionarán tantos casos a eliminar como la evaluación de la función objetivo lo permita (mientras mejore) y según la cantidad de casos del tipo objetivo presentes en el conjunto inicial.
  	
- 	Por lo cual no importa cuál sea el conjunto inicial de casos de prueba, una vez fijado, siempre se se obtendrá un subconjunto final distinto en cuanto a casos de prueba pero con iguales evaluación de la función objetivo y cantidad de casos por tipo. En el cuadro \ref{tab:Tiposdecasos123} se aprecia lo anteriormente expuesto. \\
+ 	Por lo cual no importa cuál sea el conjunto inicial de casos de prueba, si se realizan varias ejecuciones de GRASP sobre el mismo, siempre se se obtendrá un subconjunto final distinto en cuanto a casos de prueba pero con iguales evaluación de la función objetivo y cantidad de casos por tipo. En el cuadro \ref{tab:Tiposdecasos123} se aprecia lo anteriormente expuesto, solo se reducirá un tipo de caso particular en cada corrida. \\
  	
  	
- 	\begin{table}[t]
+ 	\begin{table}[h]
  		\begin{center}
  			\begin{tabular}{| c | c | c |} \hline
  				Tipo de caso & Cantidad Inicial & Cantidad Final \\ \hline
@@ -448,11 +452,20 @@
  	
 	Como se ha mencionado, los casos de prueba se generan de forma aleatoria, por lo que desde ese inicio se puede estar comprometiendo el buen funcionamiento del algoritmo. Recibir como entrada una muestra donde esté representado el universo de casos de prueba permite una mejor evaluación de la función objetivo, pues el algoritmo es capaz de desestimar aquellos casos que no son iguales desde el punto de vista físico pero sí a nivel de evaluación (combinación lineal uno de otro). Tener toda la gama de casos de prueba le brinda la posibilidad de hacer ajustes para poder minimizar la función objetivo de manera óptima. De lo contrario podría estar condenada (que no se minimice todo lo posible) desde el principio. Al no poder garantizar esto, es posible que el algoritmo no pueda encontrar la solución óptima al problema si no pertenece al subconjunto que se recibe como entrada. \\
 	
-	Sin embargo hay otros aspectos negativos inherentes al problema que afectan el desempeño del algoritmo. Por ejemplo, la información que se tiene de un caso de prueba es muy poca, solo tenemos información de en cuáles implementaciones acertó, no existe un criterio que permita comparar 2 casos de prueba en cuanto a ser significativo para una implementación u otra.
+	Sin embargo hay otros aspectos negativos inherentes al problema general que afectan el desempeño del algoritmo. Por ejemplo, la tipología de los casos de prueba. La información que se tiene es muy poca, solo se adquiere noción de en cuáles implementaciones acertó, no existe un criterio que permita comparar 2 casos de prueba en cuanto a ser significativo para una implementación u otra. En la práctica, existen casos de prueba que resultan muy triviales y deben ser resueltos fácilmente por todas las implementaciones de 3 puntos y otros que, aunque sencillos, no todos resuelven. Es decir, se pierde la relevancia entre los casos de prueba dentro de un mismo tipo. \\
 	
-	Una idea pudiera ser tener varias implementaciones de nota, en vez de recibir solo una de 3 y una de 4. Con ello se podría tener más información, pues no necesariamente un caso de prueba tiene que acertarle a la totalidad del conjunto de implementaciones de 3 o de 4. Así se podría hacer algún tipo de ajuste, tener otra métrica para que el conjunto final de casos de prueba sea más heterogéneo. El inconveniente de esta propuesta es que se vería forzado el evaluador de proveer al sistema de dichas implementaciones extras.
+	La idea de la evaluación de un caso de prueba basada en una implementación única es insuficiente e irreal. En un contexto ideal se tendría una cantidad de implementaciones efectivas por cada caso de prueba y un valor asociado a la bondad del caso. Eso hace que el vector pase de ser binario a continuo en el intervalo [0, 1] y entonces se podría diferenciar mejor los casos. Esta necesidad hace que surja del problema general, un nuevo problema que sería el enriquecer la manera de evaluar cada caso.
 	
-	Respecto a la idea del párrafo anterior, para que el evaluador no tenga que idear varias implementaciones, se podría tener una métrica en cuanto a dos implementaciones. Por ejemplo, asumiendo el porciento de acierto de las implementaciones como métrica, si la solución de un estudiante obtiene un resultado cercano al esperado por el evaluador, la misma se podría incorporar a lista de implementaciones de referencia. Pero esto no resulta siempre posible, depende de las características del problema que se pueda generar diferentes implementaciones de iguales en resultados.
+	Es necesario crear una especie de "tribunal" donde hayan varios jueces (implementaciones) que juzguen qué tan significativo puede resultar un caso de prueba para ellos. Ante esta nueva inquietud surgen también 2 posibles soluciones a este nuevo problema: \\
+	
+ 	Variante 1: Que el usuario proporcione varias implementaciones de cada nota. De esta forma ya estaría conformado el tribunal encargado desde el inicio. Sin embargo, resulta poco práctica. El objetivo de esta tesis es reducir a un conjunto representativo de casos de prueba dado un conjunto inicial e implementaciones de 3 y 4. Con ello se pondría fin al problema de generar estos casos a mano como se hace hasta ahora. Si esta variante se convierte en solución final, el usuario se vería sometido a un problema que resultaría igual, mayor o incluso imposible de resolver en algunas situaciones. Por lo que no es del todo factible. \\
+	
+	Variante 2: Añadir soluciones automáticamente según el grado de similitud con las soluciones "canónicas" proveídas por el profesor. Así se resuelve el problema de no tener que garantizar el jurado desde un inicio, pero por otro lado puede que este no se llegue a conformar nunca. Se necesita cierta variedad entre las soluciones, esto tal vez no sea posible encontrarlo debido a que entre las implementaciones candidatas, ninguna cumple los requisitos o por las características del problema particular que no lo permita. \\
+	
+	Vale destacar que la variante 2 también está condicionada por el espacio de búsqueda, muchas veces infinito. Por lo que resulta infactible su total exploración. Una vez más se insiste en la importancia de contar con una muestra representativa de la población en el conjunto inicial de casos de prueba, para un óptimo funcionamiento de las metaheurísticas empleadas y de las propuestas de solución a este nuevo problema generado.
+	
+	
+
 	
 
 \bibliography{bibliography}
