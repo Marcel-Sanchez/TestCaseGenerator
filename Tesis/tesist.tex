@@ -1,17 +1,10 @@
 
-
 \documentclass[a4paper,12pt]{book}
-
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 
 
-
-
 \begin{document}
-
-
-	
 	\begin{titlepage}
 		\begin{center}
 			\vspace*{-1in}
@@ -40,8 +33,8 @@
 			Licenciado en Ciencia de la Computación
 		\end{center}
 	\end{titlepage}
-	
-	
+
+\tableofcontents
 
 \chapter*{Glosario}
 	\begin{itemize}
@@ -58,35 +51,7 @@
 	
 	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Pero, ¿qué tan buena puede ser una aplicación y cómo expresamos la calidad de las mismas? El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación. \\
 	
-	
-	En la actualidad existen numerosas herramientas que de alguna manera permiten expresar una métrica en cuanto a evaluación de un código. En lo adelante se hará mención de algunas de las mismas.
-	
-	\textbf{SonarQube} es una plataforma desarrollada en Java que permite realizar análisis de la calidad de código de forma automatizada, para lo cual se usan diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs que permiten obtener métricas que ayudan a mejorar la calidad. Resulta una herramienta de utilidad en durante el testing de código en una aplicación.
-	
-	\textbf{Beyond Compare} es una herramienta que permite comparar ficheros. Si al examinar 2 códigos, resulta que tienen una estructura similar, es probable que que hayan seguido la misma idea pero con diferente ejecución para la solución de un problema.
-	
-	\textbf{HP Quality Center} es una herramienta de gestión de pruebas que tiene como objetivo el control de la calidad software. Entre los mismo incluye la gestión de requisitos, gestión de pruebas y los procesos de negocio. \\
-	
-	
-	La aceptación de cualquier software pasa siempre por la lógica detrás del código. Esto es fundamental para el buen funcionamiento de cualquier programa. Un correcto diseño de la lógica del código puntúa de manera favorable el criterio de calidad. Siendo este nuestro objetivo de evaluación, quedaría por designar las métricas a utilizar para dicho fin. ¿Cómo evaluar la aplicación? ¿En base a cuáles aspectos se mide la calidad de estos sistemas de cómputo?
-	
-	\section{Estado del Arte}
-		%La calidad podría resultar fácil de explicar. Sin embargo, no lo es ni en su propia definición. Algunos definen la calidad como el nivel de satisfacción del cliente. Otros dicen que se trata de cumplir con los requisitos del cliente. O bien el estado del software libre de defectos. Para ello se introduce una nueva definición: deuda técnica \cite{EAsoftwareevaluation}. Esto no es más que una serie de aspectos que pueden puntuar la calidad de un software. Se han identificado ocho dimensiones de la deuda técnica del producto de software:
-		
-		%\begin{itemize}
-			%\item Calidad del código fuente
-			%\item Usabilidad, interfaz de usuario y documentación
-			%\item Seguridad
-			%\item Actuación
-			%\item Lógica de negocios
-			%\item Calidad de la arquitectura
-			%\item Calidad de los datos
-			%\item Uso de código fuente abierto
-		%\end{itemize}
-	
-		%Cada dimensión se mide según las métricas críticas y los niveles que deben alcanzar. Permite recibir una evaluación integral del producto con recomendaciones concretas. Con este enfoque, los programadores entienden cómo se siente realmente el producto. Ofrece una evaluación cuantitativa completa de la calidad del producto.
-		
-		% deuda técnica no es solo acerca del código, este enfoque permite ejecutar un análisis profundo, el cual ha demostrado que las deudas técnicas se refieren a la calidad general del producto. Comprobar el código del software o de una de sus componentes no es suficiente para comprender la eficiencia del producto, se debe avanzar más.
+	La aceptación de cualquier software pasa siempre por la lógica detrás del código. Esto es fundamental para el buen funcionamiento de cualquier programa. Un correcto diseño de la lógica del código puntúa de manera favorable el criterio de calidad. Siendo este nuestro objetivo de evaluación, quedaría por designar las métricas a utilizar para dicho fin. Cómo evaluar una la aplicación y en base a cuáles aspectos se mide la calidad de estos sistemas de cómputo serán interrogantes a responder.
 		
 	\section{Contexto del problema}
 		
@@ -94,25 +59,16 @@
 		
 		Otro aspecto a señalar en estas pruebas particulares, es que la evaluación no se realiza directamente sobre los códigos de los estudiantes. Profesores de la asignatura se empeñan en confeccionar casos de prueba representativos que puedan dar una medida de la correctitud del algoritmo propuesto. La anterior tarea puede resultar engorrosa, diseñar esos casos de prueba puede llegar a ser incluso más difícil que la solución al problema, pues es necesario cubrir la mayor cantidad de aspectos a evaluar sin incidir de más en algún rasgo para no afectar la calificación.
 		
-		%El proceso de evaluación de las implementaciones de los algoritmos de los estudiantes de primer año de la carrera Ciencia de la Computación se realiza de forma semiautomática en la Facultad de Matemática y Computación de la Universidad de La Habana. La generación de los casos de prueba a utilizar es manual y puede resultar engorrosa, pues es necesario cubrir la mayor cantidad de aspectos a evaluar sin incidir de más en algún rasgo para determinar la calificación correcta de cada estudiante.
-		
 		Entre los principales aspectos a evaluar están la correctitud del código, el uso adecuado de los recursos del lenguaje de programación y el manejo eficiente del tiempo y la memoria (en términos computacionales).
-		
-%		Luego de realizada una generación abarcadora de casos de prueba, se debe escoger ese subconjunto que mejor represente la medida de calidad de la componente de software evaluada.
 		
 %		La idea es proveer al sistema de algunas implementaciones para las cuales se conoce de antemano las evaluaciones y luego se debe encontrar el mejor subconjunto de casos de prueba respecto a las soluciones de referencia.. Luego, si dos soluciones obtienen los mismos resultados al usar idénticos casos de prueba, es muy probable que ambas implementaciones tengan la misma calificación. Este es un problema de optimización combinatoria que será abordado con métodos de optimización meta-heurísticos.
 
-		
-		
-		
 	\section{Resultados esperados, importancia y herramientas a utilizar}
 	
 		El objetivo general de esta tesis es la generación automática de casos de prueba y la selección o ponderación de los mismos que permita utilizarlos como medida de calidad para la evaluación de algoritmos. El objeto de investigación es la optimización combinatoria abordado por meta-heurísticas \cite{OptimizacionCombinatoria} para ser aplicado en la definición de los casos de pruebas de las evaluaciones de los estudiantes de Programación en la Facultad de Matemática y Computación. Ahora bien, ¿qué algoritmo implementar? ¿Por qué una meta-heurística? ¿Será necesario aplicar un modelo de optimización? ¿Es un problema de Inteligencia Artificial o de Combinatoria? A estas y otras interrogantes se dará respuesta a lo largo de este documento.
 		
 		Esta solución sería extensible a cualquier algoritmo de programación. Existe abstracción sobre los algoritmos a evaluar, pero se diseñó particularmente para los tipos de exámenes que se aplican en primer año. Con solo tener en cuenta otros factores como el tiempo de ejecución y la memoria consumida, se podría ampliar el marco de algoritmos evaluables por esta propuesta.  
 		
-		
-	
 	% Objetivos, qué es lo que pienso hacer (app web, herramienta), evaluar la propuesta y compararla con otras 
 	% La implementación de la propuesta sería una aplicación de escritorio. \\
 	
@@ -149,10 +105,8 @@
 		\end{itemize}
 	
 		Nuestra propuesta deberá generar $n$ casos aleatorios con ayuda del generador y reducirlos a un $k <= n$ representativo que se ajuste a los porcentajes esperados por cada solución. Para ello se aplicarán algoritmos metaheurísticos que se describen posteriormente.
-		
-	
 
-\chapter{Marco Teórico}
+\chapter{Optimización Combinatoria}
 	Los problemas de optimización combinatoria que involucran una extensa, pero finita, lista de posibles soluciones son muy comunes en la vida diaria. Por mencionar algunos, entre los más destacados se encuentran el diseño de redes de comunicación y la planificación de rutas de vuelo. Debido a la gran envergadura de estos problemas en cuanto a la cantidad de datos, resulta imposible enumerar las posibles soluciones y quedarnos con la mejor, pues no es factible en tiempo tal enumeración; incluso con los poderes de cómputo actuales, pues dicha lista crece de manera exponencial respecto al tamaño del problema.
 	
 	En los últimos 50 años se han desarrollado varios métodos de búsqueda, los cuales arrojan una solución factible cercana al óptimo del problema sin necesidad de explorar cada alternativa. Esto es lo que se conoce como Optimización Combinatoria. Los resultados han sido notorios, avances significativos en problemas de importancia para la ciencia como lo son el viajante y el enrutamiento de vehículos ya son palpables.
@@ -192,8 +146,7 @@
 	
 		Los métodos constructivos y los de búsqueda local resaltan entre los procedimientos metaheurísticos más empleados y con mejores resultados en la práctica, por lo que para la confección de nuestra propuesta fueron seleccionados algunos de los que resultan aplicables a nuestro problema. 
 	
-	
-		\subsection{Greedy Randomized Adaptive Search Procedures} 
+		\subsection{Greedy Randomized Adaptive Search Procedures} \label{sub:GRASP}
 		GRASP \cite{GRASP} es una técnica de muestreo aleatorio iterativo. Tiene la invariante de que en cada iteración proporciona una solución factible al problema en cuestión. Hay dos fases dentro de cada iteración del algoritmo: la primera construye inteligentemente una solución a través de una función codiciosa aleatoria; la segunda aplica un procedimiento de búsqueda local a la solución construida con la esperanza de encontrar una mejora. Esto se repite mientras no se alcance una condición de parada, que pudiera ser el cumplimiento de un número de iteraciones o el alcance de un valor en la función objetivo.
 		
 		En la Figura \ref{GRASPgeneral} se muestra el procedimiento general del GRASP
@@ -252,10 +205,11 @@
 		
 		$e ^{-\Delta / T}$ será un número en el intervalo $(0, 1)$ donde $\Delta$ y $T$ son positivos. La probabilidad de que un movimiento cuesta arriba de tamaño $\Delta$ sea aceptado disminuye proporcionalmente a la temperatura y, para una temperatura fija $T$, los movimientos ascendentes pequeños tienen mayores probabilidades de aceptación que los grandes. Este método particular de operación está motivado por una analogía física.
 		
-	\subsection{Algoritmos Genéticos}
+	\subsection{Algoritmos Genéticos} \label{sub:Genetico}
 		Un Algoritmo Genético \cite{AlgGen} consiste en un conjunto de soluciones codificadas, que hacen una analogía con los cromosomas.  Cada uno  de  estos tendrá  asociado  un  ajuste o valor de bondad, que expresa una medida de su valor como solución al problema. En función de este valor se le darán más o menos oportunidades de ``reproducción". John Holland, investigador de la Universidad de Michigan, es uno de los principales precursores del desarrollo de los Algoritmos Genéticos. Sus trabajos a finales de la década de los 60 mostraron una técnica que imitaba en su funcionamiento a la selección natural.
 		
 		La reproducción en estos algoritmos puede darse de dos formas:
+		
 		\begin{itemize}
 			\item Cruce: Se genera una descendencia a partir del mismo número de individuos (generalmente 2) de la generación anterior. 
 			\item Copia: Un determinado número de individuos pasa sin sufrir ninguna variación directamente a la siguiente generación.
@@ -271,6 +225,7 @@
 		\end{figure}
 	
 		Algunos de los criterios de parada pudieran ser:
+		
 		\begin{itemize}
 			\item Se ha alcanzado una población con individuos lo suficientemente buenos para darle solución al problema.
 			\item Ha convergido la población, lo cual quiere decir que la  media  de  bondad  de  la  misma  se aproxima a la bondad del mejor individuo.
@@ -281,10 +236,33 @@
 		
 		%En el esquema general, solo los descendientes originados a partir de un cruce son mutados. Otra opción habitual es la selección aleatoria del individuo a mutar entre todos los que forman parte de la población.
 		
+\chapter{Evaluación de Código}
+
+	La calidad de una herramienta digital se establece en base a la escritura del código fuente y la arquitectura diseñada. Que una aplicación esté libre de fallos y que además facilite la comprensión en la lectura y reusabilidad del código resulta de importancia para su aprobación.
+
+	En la actualidad existen numerosas herramientas que de alguna manera permiten expresar una métrica en cuanto a evaluación de un código. En lo adelante se hará mención de algunas de las mismas.
+	
+	\begin{itemize}
+		\item SonarQube es una plataforma desarrollada en Java que permite realizar análisis de la calidad de código de forma automatizada, para lo cual se usan diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs que permiten obtener métricas que ayudan a mejorar la calidad. Resulta una herramienta de utilidad en durante el testing de código en una aplicación.
+		
+		\item Beyond Compare es una herramienta que permite comparar ficheros. Si al examinar 2 códigos, resulta que tienen una estructura similar, es probable que que hayan seguido la misma idea pero con diferente ejecución para la solución de un problema.
+		
+		\item HP Quality Center es una herramienta de gestión de pruebas que tiene como objetivo el control de la calidad software. Entre los mismo incluye la gestión de requisitos, gestión de pruebas y los procesos de negocio.
+	\end{itemize}
+	
+	Existen algunas métricas presentes en el código que nos permiten evaluar la calidad del mismo. Estas son ajenas al lenguaje de programación que se use. Algunas de las principales categorías son las siguientes.
+	
+	\begin{itemize}
+		\item Reusabilidad. Se refiere a la utilización en varios lugares del programa de un mismo código, evitando así volverlo a escribir y posibles errores. Un ejemplo sencillo de esto es la separación del programa en proyectos y las funcionalidades en métodos.
+		
+		\item Extensibilidad. Es la facilidad con que cuenta un producto para corregir defectos, cumplir nuevos requisitos y facilitar el mantenimiento futuro.
+
+		\item Eficiencia. Se refiere al buen manejo de los recursos físicos del programa (la memoria) y el tiempo de ejecución, lo cual permite un mejor rendimiento.
+	\end{itemize}
+		
 		
 \chapter{Diseño de la Propuesta}
 
-	Para el diseño lógico de esta herramienta se utilizará la aplicación Visual Studio y el lenguaje de programación C\#. Esta elección se debe a las facilidades que ambos brindan para la confección de una solución a este problema. Pero pudiera haberse utilizado cualquier lenguaje de propósito general. 
 	Para poder aplicar alguna metahehurística al problema que se intenta dar solución, es necesario definir nuestro espacio de búsqueda, así como las entradas, salidas y adaptaciones hechas a las implementaciones.
 	
 	Se provee al sistema de un conjunto inicial de casos de prueba brindados por el generador, los cuales inicialmente constituyen una solución, pues nuestro problema de optimización no tiene restricciones, solo una función objetivo $f(x,y)$ a minimizar: \\
@@ -298,24 +276,25 @@
 		\item $y_0$: Porcentaje de acierto esperado de la solución con nota 4
 	\end{itemize}
 
-	La solución que brinde el algoritmo debe consistir en un subconjunto del conjunto inicial de casos de prueba, que debería tener una evaluación menor o igual que la inicial. Se ha de aclarar que la salida puede estar sesgada por la entrada, es decir, que el conjunto que se reciba como entrada no sea una muestra representativa de la población de casos de prueba.
+	La solución que brinde el algoritmo debe consistir en un subconjunto del conjunto inicial de casos de prueba, que debería tener una evaluación menor o igual que la inicial. Se ha de aclarar que la salida puede estar comprometida por el sesgo en los datos de entrada, es decir, que el conjunto que se reciba como entrada no sea una muestra representativa de la población de casos de prueba. \\
 	
 	A continuación se explican las adaptaciones hechas a los dos algoritmos implementados: GRASP y Genético, los cuales reciben la misma entrada y aplican un proceder diferente.
 	
 	\section{Adaptación de GRASP}
-		Como mencionábamos en (hacer referencia a la subsección), GRASP en cada iteración hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En nuestro problema en particular, se tienen inicialmente los $n$ casos de prueba, de los cuales se selecciona un subconjunto de tamaño $k, k \leq n$ que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$.
+		Como mencionábamos en el apartado \ref{sub:GRASP}, en cada iteración de GRASP Se hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En este problema en particular, se tienen inicialmente los $n$ casos de prueba, de los cuales se selecciona un subconjunto de tamaño $k, k \leq n$ que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$.
 		
-		Como casos de parada tenemos los siguientes:
+		Como casos de parada se destacan los siguientes:
+		
 		\begin{itemize}
 			\item Se ha alcanzado el valor esperado de la función objetivo.
 			\item Se han cumplido un número de iteraciones especificadas.
 			\item La lista de candidatos a extraer es vacía.
 		\end{itemize}
 	
-		Para un mayor rendimiento de este algoritmo, se hacen $k$ pasadas con el conjunto inicial de los $n$ casos de prueba brindados por el generador, pues en la aleatoriedad de seleccionar el candidato a eliminar, puede que no siempre se esté caminando hacia el óptimo global. Por lo que varias corridas lanzarán un mejor rendimiento del algoritmo, el cual se quedará con la mejor de todas. La estimación del parámetro $k$ se hace de forma experimental y es posible que dos pasadas brinden la misma solución, pero esto último es muy poco probable.
+		Para un mayor rendimiento de este algoritmo, se hacen $k$ pasadas con el conjunto inicial de los $n$ casos de prueba brindados por el generador, pues en la aleatoriedad de seleccionar el candidato a eliminar, puede que no siempre se esté caminando hacia el óptimo global. Por lo que varias corridas deberían lanzar un mejor rendimiento del algoritmo, el cual se quedará con la mejor de todas. La estimación del parámetro $k$ se hace de forma experimental y es posible que dos pasadas brinden la misma solución, pero esto último es muy poco probable.
 		
 	\section{Adaptación del Genético}
-		En (hacer referencia a la subsección), el Algoritmo Genético define varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto).
+		En el Algoritmo Genético mencionado en el apartado \ref{sub:Genetico}, se definen varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto).
 		
 		La población inicial del algoritmo será de los $n$ casos iniciales, $k, k > 4$ configuraciones diferentes de bits sobre esos $n$. Una vez conformada, se procede a la selección de $4$ individuos que pudieran ser representativos.
 		
@@ -326,6 +305,7 @@
 		\end{itemize} 
 	
 		Operadores genéticos definidos donde $i1, i2$ son individuos de la población, o sea, soluciones al problema.
+		
 			\begin{itemize}
 			\item operador $op_1(i_1, i_2)$: mezcla la primera mitad de $i_1$ con la segunda mitad de $i_2$.
 			\item operador $op_2(i_1, i_2)$: mezcla de forma alternada $i_1$ e $i_2$.
@@ -339,22 +319,16 @@
 	
 		De esta forma se intenta cubrir varios caminos que nos puedan llevar al óptimo y se dan pasos de más de tamaño $1$ (que difieran en más de un bit dos soluciones). Con un número de iteraciones lo suficientemente grande, este algoritmo debe acercarse a una buena solución del problema dado el balance entre exploración y explotación que posee.
 		
-		Falta responder: ¿Cómo estos operadores genéticos resuelven el problema del estancamiento local?
-	
+		***Falta responder: ¿Cómo estos operadores genéticos resuelven el problema del estancamiento local?
 	
 \chapter{Resultados Obtenidos}
-	Los resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, fueron analizados en base a un mismo conjunto de casos de prueba en varias ejecuciones del algoritmo, el cual fue pasado como entrada en varias corridas de los mismos.
+
+	Los resultados en cuanto a la eficacia de los algoritmos en reducir la evaluación de la función objetivo, fueron analizados en base a un mismo conjunto de casos de prueba en varias ejecuciones del algoritmo. Se utilizó la aplicación Visual Studio y el lenguaje de programación C\#. Esta elección se debe a las facilidades que ambos brindan para la confección de una solución a este problema. Pero pudiera haberse utilizado cualquier lenguaje de propósito general. 
 	
 	El problema analizado en particular fue el de multiplicación de polinomios: se reciben 2 arrays que representan coeficientes, según el índice que ocupan es el grado de la $x$ que acompañan. Se debe devolver un array resultante de la multiplicación de ambos. Dicho conjunto de pares de polinomios fue generado de manera aleatoria. \\
 	
-	En la tabla \ref{tab:IndicadoresGRASP123} se muestran algunos detalles de 3 ejecuciones distintas donde se aplica GRASP, los casos están enumerados del $1$ al $n$. Dada la aleatoriedad inherente en la metaheurística empleada, quedan distintos casos de prueba en el conjunto final como salida del algoritmo, pues este último no es determinista. Sin embargo cada ejecución tiene los mismos valores finales en los indicadores que se expresan en la siguiente tabla:
+	En la tabla \ref{tab:IndicadoresGRASP123} se muestran algunos detalles de 3 ejecuciones distintas donde se aplica GRASP sobre el mismo conjunto, los casos están enumerados del $1$ al $n$. Dado el no determinismo inherente a la metaheurística empleada, los 3 subconjuntos obtenidos son disjuntos entre sí en cuanto a casos de prueba. Sin embargo cada ejecución tiene los mismos valores finales en los indicadores que se expresan en la tabla \ref{tab:IndicadoresGRASP123}.
 	
-%	\begin{figure}[h]
-%		\centering
-%		\includegraphics[width=15cm]{./Graphics/Corrida1GRASP.png}
-%		\caption{Casos de prueba finales. Corrida 1}
-%		\label{Corrida1GRASP}
-%	\end{figure}
 	\begin{table}[h]
 		\begin{center}
 			\begin{tabular}{| l | c |} \hline
@@ -373,21 +347,7 @@
 		\end{center}
 	\end{table}
 
-%	\begin{figure}[h]
-%		\centering
-%		\includegraphics[width=15cm]{./Graphics/Corrida2GRASP.png}
-%		\caption{Casos de prueba finales. Corrida 2}
-%		\label{Corrida2GRASP}
-%	\end{figure}
-
-%	\begin{figure}[!]
-%		\centering
-%		\includegraphics[width=15cm]{./Graphics/Corrida3GRASP.png}
-%		\caption{Casos de prueba finales. Corrida 3}
-%		\label{Corrida3GRASP}
-%	\end{figure}
-
-	Veamos otros aspectos a destacar para comprender por qué sucede esto. En la tabla \ref{tab:foGRASP123} se muestra la evaluación de la función objetivo en cada una de las 3 corridas de GRASP con dicho conjunto de casos de prueba.
+	Otros aspectos a destacar para comprender por qué sucede esto se muestran en la tabla \ref{tab:foGRASP123}, donde queda evidencia de la evaluación de la función objetivo a lo largo de las 3 corridas de GRASP sobre el conjunto de casos de prueba.
 	
 	\begin{table}[h]
 		\begin{center}
@@ -409,17 +369,11 @@
 			\label{tab:foGRASP123}
 		\end{center}
 	\end{table}
-	
-%	\begin{figure}[t]
-%		\centering
-%		\includegraphics[width=15cm]{./Graphics/FuncionObj123GRASP.png}
-%		\caption{Evaluación de la Función Objetivo. Corridas 1, 2 y 3}
-%		\label{FuncionObj123GRASP}
-%	\end{figure}
 		
-	En cada una de las 3 ejecuciones de GRASP se hicieron exactamente 87 iteraciones. Como resultado se eliminaron conjuntos de casos disjuntos, pero la evaluación de la función objetivo en cada paso se redujo de manera idéntica. ¿Por qué? \\
+	En cada una de las 3 ejecuciones de GRASP se hicieron exactamente 87 iteraciones. Como resultado se eliminaron conjuntos de casos disjuntos, pero la evaluación de la función objetivo en cada paso se redujo de manera idéntica. \\
 	
-	Haciendo un análisis más profundo, dadas las peculiaridades del problema general a resolver, podemos calificar en 4 grupos los casos de prueba:
+	Haciendo un análisis más profundo, dadas las peculiaridades del problema general a resolver, se puede calificar en 4 grupos los casos de prueba:
+	
 	\begin{itemize}
 		\item tipo $uno$: son de la forma $(0, 0)$, donde ninguna implementación acierta el caso
 		\item tipo $dos$: son de la forma $(0, 1)$, donde solo acierta la implementación del 4.
@@ -435,7 +389,6 @@
  	
  	Por lo cual no importa cuál sea el conjunto inicial de casos de prueba, si se realizan varias ejecuciones de GRASP sobre el mismo, siempre se se obtendrá un subconjunto final distinto en cuanto a casos de prueba pero con iguales evaluación de la función objetivo y cantidad de casos por tipo. En el cuadro \ref{tab:Tiposdecasos123} se aprecia lo anteriormente expuesto, solo se reducirá un tipo de caso particular en cada corrida. \\
  	
- 	
  	\begin{table}[h]
  		\begin{center}
  			\begin{tabular}{| c | c | c |} \hline
@@ -449,7 +402,6 @@
  		\end{center}
  	\end{table}
  
- 	
 	Como se ha mencionado, los casos de prueba se generan de forma aleatoria, por lo que desde ese inicio se puede estar comprometiendo el buen funcionamiento del algoritmo. Recibir como entrada una muestra donde esté representado el universo de casos de prueba permite una mejor evaluación de la función objetivo, pues el algoritmo es capaz de desestimar aquellos casos que no son iguales desde el punto de vista físico pero sí a nivel de evaluación (combinación lineal uno de otro). Tener toda la gama de casos de prueba le brinda la posibilidad de hacer ajustes para poder minimizar la función objetivo de manera óptima. De lo contrario podría estar condenada (que no se minimice todo lo posible) desde el principio. Al no poder garantizar esto, es posible que el algoritmo no pueda encontrar la solución óptima al problema si no pertenece al subconjunto que se recibe como entrada. \\
 	
 	Sin embargo hay otros aspectos negativos inherentes al problema general que afectan el desempeño del algoritmo. Por ejemplo, la tipología de los casos de prueba. La información que se tiene es muy poca, solo se adquiere noción de en cuáles implementaciones acertó, no existe un criterio que permita comparar 2 casos de prueba en cuanto a ser significativo para una implementación u otra. En la práctica, existen casos de prueba que resultan muy triviales y deben ser resueltos fácilmente por todas las implementaciones de 3 puntos y otros que, aunque sencillos, no todos resuelven. Es decir, se pierde la relevancia entre los casos de prueba dentro de un mismo tipo. \\
@@ -463,9 +415,6 @@
 	Variante 2: Añadir soluciones automáticamente según el grado de similitud con las soluciones "canónicas" proveídas por el profesor. Así se resuelve el problema de no tener que garantizar el jurado desde un inicio, pero por otro lado puede que este no se llegue a conformar nunca. Se necesita cierta variedad entre las soluciones, esto tal vez no sea posible encontrarlo debido a que entre las implementaciones candidatas, ninguna cumple los requisitos o por las características del problema particular que no lo permita. \\
 	
 	Vale destacar que la variante 2 también está condicionada por el espacio de búsqueda, muchas veces infinito. Por lo que resulta infactible su total exploración. Una vez más se insiste en la importancia de contar con una muestra representativa de la población en el conjunto inicial de casos de prueba, para un óptimo funcionamiento de las metaheurísticas empleadas y de las propuestas de solución a este nuevo problema generado.
-	
-	
-
 	
 
 \bibliography{bibliography}
