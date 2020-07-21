@@ -5,34 +5,47 @@ using System.Linq;
 using Setting;
 using Model;
 using Implementations;
+using System.IO;
 
 namespace Metaheuristic
 {
     public static class Genetic_Algorithm
     {
-        public static List<UniqueModelCase> Solutions;
+        //public static List<UniqueModelCase> Solutions;
 
-        public static void Run(IEnumerable<UniqueModelCase> sols)
+        public static UniqueModelCase Run(UniqueModelCase model)
         {
-            Solutions = new List<UniqueModelCase>(sols);
+            var modelSplited = SplitModel(model);
+            // Solo para poderle aplicar lambda.
+            var solutionsList = new List<UniqueModelCase>(modelSplited);
             //ReamkeKeys(Solutions);
-            var percentajes = Solutions.Select(p => p.GetPercentajes());
+            var percentajes = solutionsList.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
-            int n = 500;
-            while (n-- > 0 && evals.All(p => p > 1))
+            int n = 0;
+            while (n++ < 200 && evals.All(p => p > 1))
             {
-                percentajes = Solutions.Select(p => p.GetPercentajes());
-                evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
+                string p = Directory.GetCurrentDirectory() + @"\" + "GenFO1.txt";
+                using (StreamWriter file = new StreamWriter(p, true))
+                {
+                    file.WriteLine($"Menor evaluación {evals.Min()}");
+                    file.WriteLine($"Evaluación media {evals.Average()}");
+                    file.WriteLine($"Iteración {n}");
+
+                    file.WriteLine();
+                }
+
+                percentajes = solutionsList.Select(k => k.GetPercentajes());
+                evals = percentajes.Select(k => Sett.TargetFunc(k)).ToArray();
 
                 var couple1Indexs = MergeAndFind.Find2Bests(evals);
                 var couple2Indexs = MergeAndFind.Find2Random(evals);
 
-                var c1x = Solutions[couple1Indexs.Item1];
-                var c1y = Solutions[couple1Indexs.Item2];
+                var c1x = solutionsList[couple1Indexs.Item1];
+                var c1y = solutionsList[couple1Indexs.Item2];
 
-                var c2x = Solutions[couple2Indexs.Item1];
-                var c2y = Solutions[couple2Indexs.Item2];
+                var c2x = solutionsList[couple2Indexs.Item1];
+                var c2y = solutionsList[couple2Indexs.Item2];
 
                 var resultc1A = MergeAndFind.Merge1(c1x.Results, c1y.Results);
                 var resultc1B = MergeAndFind.Merge2(c1x.Results, c1y.Results);
@@ -55,27 +68,45 @@ namespace Metaheuristic
                 var c8 = new UniqueModelCase(resultc2D, SolutionComparer.F);
 
                 var newSolutions = new UniqueModelCase[] { c1, c2, c3, c4, c5, c6, c7, c8 };
-                Solutions.AddRange(newSolutions);
+                solutionsList.AddRange(newSolutions);
 
-                var newPercentajes = Solutions.Select(p => p.GetPercentajes());
-                var newEvals = newPercentajes.Select(p => Sett.TargetFunc(p)).ToList();
+                var newPercentajes = solutionsList.Select(k => k.GetPercentajes());
+                var newEvals = newPercentajes.Select(k => Sett.TargetFunc(k)).ToList();
 
                 for (int i = 0; i < 4; i++)
                 {
                     int index = Filter(newEvals);
-                    Solutions.RemoveAt(index);
+                    solutionsList.RemoveAt(index);
                     newEvals.RemoveAt(index);
                 }
-                //Console.WriteLine();
+                
                 //Console.WriteLine($"Menor evaluación {evals.Min()}");
                 //Console.WriteLine($"Evaluación media {evals.Average()}");
+                //Console.WriteLine();
             }
-            Console.WriteLine($"Menor evaluación {evals.Min()}");
+            var min = evals.Min();
+            Console.WriteLine($"Menor evaluación {min}");
+            return model = solutionsList.First(p => Sett.TargetFunc(p.GetPercentajes()) == min);
             //foreach (var item in Solutions)
             //{
 
             //    Console.WriteLine($"{item.GetPercentajes()}");
             //}
+        }
+
+        private static IEnumerable<UniqueModelCase> SplitModel(UniqueModelCase model)
+        {
+            int n = 5;
+            UniqueModelCase[] modelArray = new UniqueModelCase[n];
+            for (int i = 0; i < n; i++)
+            {
+                modelArray[i] = new UniqueModelCase(SolutionComparer.F);
+            }
+            foreach (var k in model.Results.Keys)
+            {
+                modelArray[k % n].AddCase(k, model.Results[k]);
+            }
+            return modelArray;
         }
 
         private static int Filter(List<float> solutions)

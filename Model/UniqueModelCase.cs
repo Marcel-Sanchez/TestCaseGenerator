@@ -11,9 +11,9 @@ namespace Model
         // Este diccionario me representa el número del caso contra una tupla de int que funciona como bool (arreglar).
         // La tupla representa si acertó para el caso del 3 y si acertó para el caso del 4.
         public Dictionary<int, (int, int)> Results;
-        private Func<object, object, bool> _eq;
-        private int _correctAns3count;
-        private int _correctAns4count;
+        public Func<object, object, bool> _eq;
+        public int _correctAns3count;
+        public int _correctAns4count;
 
         public UniqueModelCase(Func<object, object, bool> eq)
         {
@@ -71,6 +71,13 @@ namespace Model
             _correctAns4count -= res.Item2;
 
             Results.Remove(caseToRemove);
+        }
+
+        public void AddCase(int caseToAdd, (int, int) note)
+        {
+            Results[caseToAdd] = note;
+            _correctAns3count += note.Item1;
+            _correctAns4count += note.Item2;
         }
 
         public (float, float) GetPercentajes()

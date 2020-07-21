@@ -414,7 +414,68 @@
 	
 	Variante 2: Añadir soluciones automáticamente según el grado de similitud con las soluciones "canónicas" proveídas por el profesor. Así se resuelve el problema de no tener que garantizar el jurado desde un inicio, pero por otro lado puede que este no se llegue a conformar nunca. Se necesita cierta variedad entre las soluciones, esto tal vez no sea posible encontrarlo debido a que entre las implementaciones candidatas, ninguna cumple los requisitos o por las características del problema particular que no lo permita. \\
 	
-	Vale destacar que la variante 2 también está condicionada por el espacio de búsqueda, muchas veces infinito. Por lo que resulta infactible su total exploración. Una vez más se insiste en la importancia de contar con una muestra representativa de la población en el conjunto inicial de casos de prueba, para un óptimo funcionamiento de las metaheurísticas empleadas y de las propuestas de solución a este nuevo problema generado.
+	Vale destacar que la variante 2 también está condicionada por el espacio de búsqueda, muchas veces infinito. Por lo que resulta infactible su total exploración. Una vez más se insiste en la importancia de contar con una muestra representativa de la población en el conjunto inicial de casos de prueba, para un óptimo funcionamiento de las metaheurísticas empleadas y de las propuestas de solución a este nuevo problema generado. \\
+	
+	Hasta aquí se ha podido apreciar los resultados del algoritmo GRASP aplicado a un conjunto de casos de prueba, veamos a continuación sobre ese mismo conjunto, el comportamiento del algoritmo genético. La tabla \ref{tab:IndicadoresGen1} muestra algunos indicadores de una de las corridas.
+	
+	Se especificaron como criterios de parada el cumplir 200 iteraciones o el alcanzar una evaluación de la función objetivo menor a 1. La población inicial fueron 5 subconjuntos disjuntos de soluciones cuya unión genera los 250 casos iniciales, a los cuales se les aplicaron los operadores genéticos. 
+	
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| l | c |} \hline
+				Cantidad de casos iniciales & 250 \\
+				Porcentaje inicial/esperado del 3 & 19.60/30 \\
+				Porcentaje inicial/esperado del 4 & 95.20/90 \\
+				Evaluación inicial de la f.o. & 15.60 \\ \hline
+				Iteraciones del algoritmo & 60 \\ \hline
+				Cantidad de casos finales & 41 \\
+				Porcentaje final/esperado del 3 & 29.268/30 \\
+				Porcentaje final/esperado del 4 & 90.24/90 \\
+				Evaluación final de la f.o. & 0.9756 \\ \hline
+			\end{tabular}
+			\caption{Indicadores iniciales y finales}
+			\label{tab:IndicadoresGen1}
+		\end{center}
+	\end{table}
+
+	Entre las corridas que se hicieron, fue notorio el apreciar algunas que lograron reducir la evaluación de la función objetivo a 0. Esto podría inducir la conjetura de que sea posible llevarla a 0 si se alcanza un adecuado número de iteraciones y se elimina el criterio de parada de la evaluación de la función objetivo anteriormente expuesto. La tabla \ref{tab:foGen1} muestra la evaluación media y la menor de la función objetivo en algunas de las iteraciones entre los subconjuntos que conforman la población actual de soluciones. Se aprecia como dicho criterio de parada se cumplió e influyó en la obtención de un óptimo.
+
+
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| c | c | c |} \hline
+				Iteración & Evaluación media & Menor evaluación. \\ \hline
+				0 & 15.6 & 12 \\
+				1 & 14 & 8 \\
+				2 & 12.6 & 6 \\
+				... & ... & ... \\
+				30 & 10.32632 & 1.30435\\
+				31 & 10.2714 & 1.30435\\
+				32 & 10.23214 & 1.30435\\
+				... & ... & ...\\
+				85 & 9.47092 & 1.30435\\
+				86 & 9.49476 & 1.30435\\
+				87 & 9.425285 & 0.9756107 \\ \hline
+			\end{tabular}
+			\caption{Valor de la función objetivo según las iteraciones}
+			\label{tab:foGen1}
+		\end{center}
+	\end{table}
+
+	El conjunto resultante de casos que fue de tamaño 41 en esta corrida. Los casos según la clasificación en tipos definida anteriormente se muestran en la tabla \ref{tab:IndicadoresGen1}. Esta vez no todas las corridas arrojaron igual cantidad de tipos de casos ni idéntica cardinalidad del conjunto final.
+
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| c | c | c |} \hline
+				Tipo de caso & Cantidad Inicial & Cantidad Final \\ \hline
+				uno & 12 & 4 \\
+				dos & 189 & 25 \\
+				tres & 49 & 12 \\ \hline
+			\end{tabular}
+			\caption{Tipos de casos presentes en las corridas 1, 2 y 3}
+			\label{tab:TiposdecasosGen1}
+		\end{center}
+	\end{table}
 	
 
 \bibliography{bibliography}

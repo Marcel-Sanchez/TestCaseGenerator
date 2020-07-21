@@ -104,7 +104,7 @@ namespace Metaheuristic
             return candidates;
         }
 
-        private static void CheckCases(IEnumerable<(int, int)> values)
+        public static void CheckCases(IEnumerable<(int, int)> values)
         {
             int cero = 0, uno = 0, dos = 0;
             foreach (var item in values)

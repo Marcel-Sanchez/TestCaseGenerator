@@ -1,28 +1,4 @@
-cero: 12
-uno: 189
-dos: 49
-
-cero: 12
-uno: 102
-dos: 49
-
-cero: 12
-uno: 189
-dos: 49
-
-cero: 12
-uno: 102
-dos: 49
-
-cero: 12
-uno: 189
-dos: 49
-
-cero: 12
-uno: 102
-dos: 49
-
-cero: 12
-uno: 189
-dos: 49
+cero: 4
+uno: 25
+dos: 12
 

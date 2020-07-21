@@ -20,7 +20,7 @@ namespace Tester
             //IEnumerable<object> cases = null;
 
             // Generador de casos de prueba aleatorios.
-            var list = new List<UniqueModelCase>();
+            //var list = new List<UniqueModelCase>();
             var generator = new CaseGenerator();
             //do
             //{
@@ -95,7 +95,9 @@ namespace Tester
             //    m.Merge(item);
             //}
             Console.WriteLine(model.Results.Count);
-            GRASP.Run(model);
+            //GRASP.Run(model);
+            
+            model = Genetic_Algorithm.Run(model);
 
 
             obtained = model.GetPercentajes();
@@ -106,6 +108,8 @@ namespace Tester
             Console.WriteLine($"Model 4: {obtained4}%");
             //Genetic_Algorithm.Run(m);
             Console.WriteLine(model.Results.Count);
+
+            GRASP.CheckCases(model.Results.Values);
 
             //int i = 0;
             //string p = Directory.GetCurrentDirectory() + @"\" + "3.txt";
@@ -127,9 +131,9 @@ namespace Tester
             //        }
             //    }
             //}
-
-
         }
+
+        
 
         private static void SaveData(IEnumerable<IEnumerable<object>> cases, string fileName)
         {

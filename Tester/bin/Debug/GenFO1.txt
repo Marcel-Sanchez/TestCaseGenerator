@@ -1,0 +1,240 @@
+﻿Menor evaluación 12
+Evaluación media 15.6
+Iteración 1
+
+Menor evaluación 8
+Evaluación media 14
+Iteración 2
+
+Menor evaluación 6
+Evaluación media 12.60082
+Iteración 3
+
+Menor evaluación 6
+Evaluación media 13.04768
+Iteración 4
+
+Menor evaluación 6
+Evaluación media 13.12657
+Iteración 5
+
+Menor evaluación 6
+Evaluación media 13.02709
+Iteración 6
+
+Menor evaluación 6
+Evaluación media 13.31775
+Iteración 7
+
+Menor evaluación 5.416664
+Evaluación media 12.46988
+Iteración 8
+
+Menor evaluación 3.255812
+Evaluación media 11.84708
+Iteración 9
+
+Menor evaluación 3.255812
+Evaluación media 11.52707
+Iteración 10
+
+Menor evaluación 3.255812
+Evaluación media 11.84889
+Iteración 11
+
+Menor evaluación 3.255812
+Evaluación media 11.68605
+Iteración 12
+
+Menor evaluación 3.255812
+Evaluación media 11.60392
+Iteración 13
+
+Menor evaluación 3.255812
+Evaluación media 11.60376
+Iteración 14
+
+Menor evaluación 3.255812
+Evaluación media 11.50478
+Iteración 15
+
+Menor evaluación 3.255812
+Evaluación media 11.35064
+Iteración 16
+
+Menor evaluación 3.255812
+Evaluación media 11.42095
+Iteración 17
+
+Menor evaluación 3.255812
+Evaluación media 11.38482
+Iteración 18
+
+Menor evaluación 3.255812
+Evaluación media 11.31482
+Iteración 19
+
+Menor evaluación 3.255812
+Evaluación media 11.15898
+Iteración 20
+
+Menor evaluación 3.255812
+Evaluación media 11.11028
+Iteración 21
+
+Menor evaluación 3.255812
+Evaluación media 11.07376
+Iteración 22
+
+Menor evaluación 3.255812
+Evaluación media 11.04892
+Iteración 23
+
+Menor evaluación 3.255812
+Evaluación media 10.92153
+Iteración 24
+
+Menor evaluación 1.30435
+Evaluación media 10.8697
+Iteración 25
+
+Menor evaluación 1.30435
+Evaluación media 10.87162
+Iteración 26
+
+Menor evaluación 1.30435
+Evaluación media 10.73786
+Iteración 27
+
+Menor evaluación 1.30435
+Evaluación media 10.53242
+Iteración 28
+
+Menor evaluación 1.30435
+Evaluación media 10.4829
+Iteración 29
+
+Menor evaluación 1.30435
+Evaluación media 10.32632
+Iteración 30
+
+Menor evaluación 1.30435
+Evaluación media 10.2714
+Iteración 31
+
+Menor evaluación 1.30435
+Evaluación media 10.23214
+Iteración 32
+
+Menor evaluación 1.30435
+Evaluación media 10.17754
+Iteración 33
+
+Menor evaluación 1.30435
+Evaluación media 10.14123
+Iteración 34
+
+Menor evaluación 1.30435
+Evaluación media 10.00998
+Iteración 35
+
+Menor evaluación 1.30435
+Evaluación media 10.01607
+Iteración 36
+
+Menor evaluación 1.30435
+Evaluación media 9.888211
+Iteración 37
+
+Menor evaluación 1.30435
+Evaluación media 9.934921
+Iteración 38
+
+Menor evaluación 1.30435
+Evaluación media 9.898598
+Iteración 39
+
+Menor evaluación 1.30435
+Evaluación media 9.898372
+Iteración 40
+
+Menor evaluación 1.30435
+Evaluación media 9.886673
+Iteración 41
+
+Menor evaluación 1.30435
+Evaluación media 9.90426
+Iteración 42
+
+Menor evaluación 1.30435
+Evaluación media 9.897122
+Iteración 43
+
+Menor evaluación 1.30435
+Evaluación media 9.958077
+Iteración 44
+
+Menor evaluación 1.30435
+Evaluación media 9.921496
+Iteración 45
+
+Menor evaluación 1.30435
+Evaluación media 9.78695
+Iteración 46
+
+Menor evaluación 1.30435
+Evaluación media 9.702923
+Iteración 47
+
+Menor evaluación 1.30435
+Evaluación media 9.708888
+Iteración 48
+
+Menor evaluación 1.30435
+Evaluación media 9.645019
+Iteración 49
+
+Menor evaluación 1.30435
+Evaluación media 9.546969
+Iteración 50
+
+Menor evaluación 1.30435
+Evaluación media 9.543698
+Iteración 51
+
+Menor evaluación 1.30435
+Evaluación media 9.502404
+Iteración 52
+
+Menor evaluación 1.30435
+Evaluación media 9.505553
+Iteración 53
+
+Menor evaluación 1.30435
+Evaluación media 9.561749
+Iteración 54
+
+Menor evaluación 1.30435
+Evaluación media 9.570105
+Iteración 55
+
+Menor evaluación 1.30435
+Evaluación media 9.556414
+Iteración 56
+
+Menor evaluación 1.30435
+Evaluación media 9.534946
+Iteración 57
+
+Menor evaluación 1.30435
+Evaluación media 9.47092
+Iteración 58
+
+Menor evaluación 1.30435
+Evaluación media 9.49476
+Iteración 59
+
+Menor evaluación 0.9756107
+Evaluación media 9.425285
+Iteración 60
+
