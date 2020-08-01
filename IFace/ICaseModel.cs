@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace IFace
 {
-    public interface ICaseModel
+    public abstract class CaseSolver
     {
-        
+        public abstract UniqueModelCase Run(UniqueModelCase model);
     }
+    
 }

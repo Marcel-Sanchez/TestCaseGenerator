@@ -1,0 +1,3 @@
+C:\Users\lleonart\Documents\Visual Studio 2015\Projects\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\YARIEN\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\YARIEN\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.csprojResolveAssemblyReference.cache

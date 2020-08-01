@@ -1,0 +1,10 @@
+C:\Users\rocio.ortiz\Desktop\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\rocio.ortiz\Desktop\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\rocio.ortiz\Desktop\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\rocio.ortiz\Desktop\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\rocio.ortiz\Desktop\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb
+C:\Users\rocio.ortiz\Desktop\C121 - Rocio Ortiz Gancedo\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\rocio.ortiz\Desktop\C121 - Rocio Ortiz Gancedo\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\rocio.ortiz\Desktop\C121 - Rocio Ortiz Gancedo\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\rocio.ortiz\Desktop\C121 - Rocio Ortiz Gancedo\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\rocio.ortiz\Desktop\C121 - Rocio Ortiz Gancedo\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

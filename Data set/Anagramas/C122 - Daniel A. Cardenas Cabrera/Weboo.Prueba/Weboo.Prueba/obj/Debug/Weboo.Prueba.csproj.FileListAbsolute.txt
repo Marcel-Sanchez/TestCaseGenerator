@@ -1,0 +1,5 @@
+C:\Users\Daniel\Desktop\1er TCP de Programacion\C122 - Daniel A. Cardenas Cabrera\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\Daniel\Desktop\1er TCP de Programacion\C122 - Daniel A. Cardenas Cabrera\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\Daniel\Desktop\1er TCP de Programacion\C122 - Daniel A. Cardenas Cabrera\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Desktop\1er TCP de Programacion\C122 - Daniel A. Cardenas Cabrera\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\Daniel\Desktop\1er TCP de Programacion\C122 - Daniel A. Cardenas Cabrera\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

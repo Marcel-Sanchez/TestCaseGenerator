@@ -1,0 +1,10 @@
+C:\Users\lleonart\Documents\Visual Studio 2015\Projects\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\bin\Debug\Probador.exe
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\bin\Debug\Probador.pdb
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.dll
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.pdb
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\obj\Debug\Probador.csprojResolveAssemblyReference.cache
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\obj\Debug\Probador.csproj.CoreCompileInputs.cache
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\obj\Debug\Probador.exe
+C:\Users\Karma\Desktop\C121 - Camilo Ruiz Valdés\Weboo.Prueba\Probador\obj\Debug\Probador.pdb

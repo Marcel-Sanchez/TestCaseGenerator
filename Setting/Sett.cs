@@ -6,16 +6,22 @@ namespace Setting
 {
     public static class Sett
     {
-        public const string MethodNameImpl3 = "MultPol3";
-        public const string MethodNameImpl4 = "MultPol4";
-        public const string MethodNameImpl5 = "MultPol5";
+        public const string MethodPolImpl3 = "MultPol3";
+        public const string MethodPolImpl4 = "MultPol4";
+        public const string MethodPolImpl5 = "MultPol5";
+        public static string[] MethodPolNames = { MethodPolImpl3, MethodPolImpl4, MethodPolImpl5 };
+
+        public const string MethodAnaImpl3 = "Anagramas3";
+        public const string MethodAnaImpl4 = "Anagramas4";
+        public const string MethodAnaImpl5 = "Anagramas5";
+        public static string[] MethodAnaNames = { MethodAnaImpl3, MethodAnaImpl4, MethodAnaImpl5 };
 
 
-        public static string[] MethodNames = { MethodNameImpl3, MethodNameImpl4, MethodNameImpl5 };
         public const int PosSolution5 = 2;
 
         public const string DllName = "Implementations";
-        public const string ClassName = "Implementation";
+        public const string ClassPolName = "Implementation";
+        public const string ClassAnaName = "Anagramas";
 
         // Porcientos de acierto para las notas
         public const int Excepted3 = 30;

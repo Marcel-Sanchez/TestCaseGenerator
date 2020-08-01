@@ -1,0 +1,6 @@
+D:\Códigos\Data set\Script\CaseMaker\bin\Debug\CaseMaker.exe.config
+D:\Códigos\Data set\Script\CaseMaker\bin\Debug\CaseMaker.exe
+D:\Códigos\Data set\Script\CaseMaker\bin\Debug\CaseMaker.pdb
+D:\Códigos\Data set\Script\CaseMaker\obj\Debug\CaseMaker.csprojAssemblyReference.cache
+D:\Códigos\Data set\Script\CaseMaker\obj\Debug\CaseMaker.exe
+D:\Códigos\Data set\Script\CaseMaker\obj\Debug\CaseMaker.pdb

@@ -6,34 +6,34 @@ using Setting;
 using Model;
 using Implementations;
 using System.IO;
+using IFace;
 
 namespace Metaheuristic
 {
-    public static class Genetic_Algorithm
+    public class GeneticAlgorithm : CaseSolver
     {
         //public static List<UniqueModelCase> Solutions;
 
-        public static UniqueModelCase Run(UniqueModelCase model)
+        public override UniqueModelCase Run(UniqueModelCase model)
         {
             var modelSplited = SplitModel(model);
             // Solo para poderle aplicar lambda.
             var solutionsList = new List<UniqueModelCase>(modelSplited);
-            //ReamkeKeys(Solutions);
             var percentajes = solutionsList.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
-            int n = 0;
-            while (n++ < 200 && evals.All(p => p > 1))
+            int n = 200;
+            while (n-- > 0)
             {
-                string p = Directory.GetCurrentDirectory() + @"\" + "GenFO1.txt";
-                using (StreamWriter file = new StreamWriter(p, true))
-                {
-                    file.WriteLine($"Menor evaluación {evals.Min()}");
-                    file.WriteLine($"Evaluación media {evals.Average()}");
-                    file.WriteLine($"Iteración {n}");
+                //string p = Directory.GetCurrentDirectory() + @"\" + "GenFO1.txt";
+                //using (StreamWriter file = new StreamWriter(p, true))
+                //{
+                //    file.WriteLine($"Menor evaluación {evals.Min()}");
+                //    file.WriteLine($"Evaluación media {evals.Average()}");
+                //    file.WriteLine($"Iteración {n}");
 
-                    file.WriteLine();
-                }
+                //    file.WriteLine();
+                //}
 
                 percentajes = solutionsList.Select(k => k.GetPercentajes());
                 evals = percentajes.Select(k => Sett.TargetFunc(k)).ToArray();
@@ -57,15 +57,18 @@ namespace Metaheuristic
                 var resultc2C = MergeAndFind.Merge3(c2x.Results, c2y.Results);
                 var resultc2D = MergeAndFind.Merge4(c2x.Results, c2y.Results, (int)((float)c2x.Results.Count * 80 / 100), (int)((float)c2y.Results.Count * 20 / 100));
 
-                var c1 = new UniqueModelCase(resultc1A, SolutionComparer.F);
-                var c2 = new UniqueModelCase(resultc1B, SolutionComparer.F);
-                var c3 = new UniqueModelCase(resultc1C, SolutionComparer.F);
-                var c4 = new UniqueModelCase(resultc1D, SolutionComparer.F);
+                var currentComparer = SolutionComparer.EqPol;
+                //var currentComparer = SolutionComparer.EqAna;
 
-                var c5 = new UniqueModelCase(resultc2A, SolutionComparer.F);
-                var c6 = new UniqueModelCase(resultc2B, SolutionComparer.F);
-                var c7 = new UniqueModelCase(resultc2C, SolutionComparer.F);
-                var c8 = new UniqueModelCase(resultc2D, SolutionComparer.F);
+                var c1 = new UniqueModelCase(resultc1A, currentComparer);
+                var c2 = new UniqueModelCase(resultc1B, currentComparer);
+                var c3 = new UniqueModelCase(resultc1C, currentComparer);
+                var c4 = new UniqueModelCase(resultc1D, currentComparer);
+                                                        
+                var c5 = new UniqueModelCase(resultc2A, currentComparer);
+                var c6 = new UniqueModelCase(resultc2B, currentComparer);
+                var c7 = new UniqueModelCase(resultc2C, currentComparer);
+                var c8 = new UniqueModelCase(resultc2D, currentComparer);
 
                 var newSolutions = new UniqueModelCase[] { c1, c2, c3, c4, c5, c6, c7, c8 };
                 solutionsList.AddRange(newSolutions);
@@ -100,7 +103,7 @@ namespace Metaheuristic
             UniqueModelCase[] modelArray = new UniqueModelCase[n];
             for (int i = 0; i < n; i++)
             {
-                modelArray[i] = new UniqueModelCase(SolutionComparer.F);
+                modelArray[i] = new UniqueModelCase(SolutionComparer.EqPol);
             }
             foreach (var k in model.Results.Keys)
             {

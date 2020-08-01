@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using IFace;
 using Model;
 using Setting;
 
 namespace Metaheuristic
 {
-    public static class GRASP
+    public class GRASP : CaseSolver
     {
-        public static void Run(UniqueModelCase model)
+        public override UniqueModelCase Run(UniqueModelCase model)
         {
-            CheckCases(model.Results.Values);
+            var result = new UniqueModelCase(model.Results, model._eq);
+            CheckCases(result.Results.Values);
             //Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
-            var percentajes = model.GetPercentajes();
+            var percentajes = result.GetPercentajes();
             float funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
 
             //var cases = models[Setting.PosSolution5].Sols.ToList();
 
-            List<int> candidates = GetCandidates(model, funcEval);
+            List<int> candidates = GetCandidates(result, funcEval);
 
             //Console.WriteLine($"Count candidates: {candidates.Count}");
 
@@ -30,15 +32,12 @@ namespace Metaheuristic
             {
                 // Selecciono un candidato random a eliminar.
                 var caseToDelete = candidates[Sett.Rnd.Next(candidates.Count)];
-                model.RemoveCase(caseToDelete);
+                result.RemoveCase(caseToDelete);
 
                 //Console.WriteLine($"Antes de eliminar: {funcEval}");
 
                 // Elimino el caso y actualizo la evaluación de la función objetivo.
-                //models[0].RemoveCase(caseToDelete);
-                //models[1].RemoveCase(caseToDelete);
-                //models[2].RemoveCase(caseToDelete);
-                percentajes = model.GetPercentajes();
+                percentajes = result.GetPercentajes();
                 funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
                 //Console.WriteLine(funcEval);
 
@@ -63,13 +62,14 @@ namespace Metaheuristic
                 //Console.WriteLine();
 
                 // Obtengo la nueva lista de candidatos.
-                candidates = GetCandidates(model, funcEval);
+                candidates = GetCandidates(result, funcEval);
                 //Console.WriteLine($"Count candidates: {candidates.Count}");
             }
-            percentajes = model.GetPercentajes();
+            percentajes = result.GetPercentajes();
             funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
             Console.WriteLine($"Final diference: {funcEval}");
-            CheckCases(model.Results.Values);
+            CheckCases(result.Results.Values);
+            return result;
         }
 
         public static List<int> GetCandidates(UniqueModelCase model, float targetFunEvaluation)

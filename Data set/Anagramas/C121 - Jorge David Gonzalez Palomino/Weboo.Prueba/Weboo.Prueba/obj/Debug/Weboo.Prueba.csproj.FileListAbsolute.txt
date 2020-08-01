@@ -1,0 +1,6 @@
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csproj.CoreCompileInputs.cache
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\yenyg\Desktop\C121 - Jorge David Gonzalez Palomino\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

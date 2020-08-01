@@ -8,7 +8,7 @@ namespace Implementations
 {
     public static class SolutionComparer
     {
-        public static Func<object, object, bool> F = (aa, bb) => 
+        public static Func<object, object, bool> EqPol = (aa, bb) => 
         {
             var a = aa as int[];
             var b = bb as int[];
@@ -20,6 +20,11 @@ namespace Implementations
                 if (a[i] != b[i])
                     return false;
             return true;
+        };
+
+        public static Func<object, object, bool> EqAna = (aa, bb) =>
+        {
+            return (int)aa == (int)bb;
         };
     }
 }

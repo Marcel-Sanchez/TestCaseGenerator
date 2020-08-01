@@ -1,0 +1,2 @@
+C:\Users\lleonart\Documents\Visual Studio 2015\Projects\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\temporal\Desktop\C122-Glenda Liz Izquierdo Ramos\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config

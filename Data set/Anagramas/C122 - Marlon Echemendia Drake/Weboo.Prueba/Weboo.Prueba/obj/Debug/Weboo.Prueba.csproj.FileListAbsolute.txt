@@ -1,0 +1,4 @@
+C:\Users\Marlon.Echemendia\Desktop\C122 - Marlon Echemendia Drake\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\Marlon.Echemendia\Desktop\C122 - Marlon Echemendia Drake\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\Marlon.Echemendia\Desktop\C122 - Marlon Echemendia Drake\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\Marlon.Echemendia\Desktop\C122 - Marlon Echemendia Drake\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

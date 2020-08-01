@@ -1,0 +1,10 @@
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\C-121 - Pablo Alonso Landa\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\C-121 - Pablo Alonso Landa\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\C-121 - Pablo Alonso Landa\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\C-121 - Pablo Alonso Landa\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\Pablo\Desktop\C1XX - Nombre y Apellidos\C-121 - Pablo Alonso Landa\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

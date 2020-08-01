@@ -6,3 +6,8 @@ D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.AssemblyInfoInputs.cache
 D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.AssemblyInfo.cs
 D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.dll
 D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.pdb
+D:\Códigos\IFace\bin\Debug\netstandard2.0\Model.dll
+D:\Códigos\IFace\bin\Debug\netstandard2.0\Setting.dll
+D:\Códigos\IFace\bin\Debug\netstandard2.0\Model.pdb
+D:\Códigos\IFace\bin\Debug\netstandard2.0\Setting.pdb
+D:\Códigos\IFace\obj\Debug\netstandard2.0\IFace.csproj.CopyComplete

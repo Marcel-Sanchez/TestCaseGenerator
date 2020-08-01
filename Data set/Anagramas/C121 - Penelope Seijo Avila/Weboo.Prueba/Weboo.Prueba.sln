@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weboo.Prueba", "Weboo.Prueba\Weboo.Prueba.csproj", "{38E54995-87BA-434F-B561-C1E13BF98003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probador", "Probador\Probador.csproj", "{D0B525D2-8536-49B9-8D9A-761278D1FAC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38E54995-87BA-434F-B561-C1E13BF98003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38E54995-87BA-434F-B561-C1E13BF98003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38E54995-87BA-434F-B561-C1E13BF98003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38E54995-87BA-434F-B561-C1E13BF98003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B525D2-8536-49B9-8D9A-761278D1FAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B525D2-8536-49B9-8D9A-761278D1FAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B525D2-8536-49B9-8D9A-761278D1FAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B525D2-8536-49B9-8D9A-761278D1FAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

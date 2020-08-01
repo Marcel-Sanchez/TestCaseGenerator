@@ -1,0 +1,5 @@
+D:\MATCOM\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+D:\MATCOM\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+D:\MATCOM\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+D:\MATCOM\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+D:\MATCOM\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

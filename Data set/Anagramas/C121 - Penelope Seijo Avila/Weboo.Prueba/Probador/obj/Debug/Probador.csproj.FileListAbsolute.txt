@@ -1,0 +1,8 @@
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\bin\Debug\Probador.exe
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\bin\Debug\Probador.pdb
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.dll
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.pdb
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\obj\Debug\Probador.csprojResolveAssemblyReference.cache
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\obj\Debug\Probador.exe
+C:\Users\6jo\Desktop\C121 - Penelope Seijo Avila\C121 - Penelope Seijo Avila\Weboo.Prueba\Probador\obj\Debug\Probador.pdb

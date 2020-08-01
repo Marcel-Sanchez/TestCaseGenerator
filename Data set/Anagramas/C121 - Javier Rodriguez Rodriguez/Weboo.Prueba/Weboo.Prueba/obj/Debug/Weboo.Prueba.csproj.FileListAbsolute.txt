@@ -1,0 +1,5 @@
+C:\Users\javie\Desktop\C121 - Javier Rodriguez Rodriguez\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\javie\Desktop\C121 - Javier Rodriguez Rodriguez\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\javie\Desktop\C121 - Javier Rodriguez Rodriguez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\javie\Desktop\C121 - Javier Rodriguez Rodriguez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\javie\Desktop\C121 - Javier Rodriguez Rodriguez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

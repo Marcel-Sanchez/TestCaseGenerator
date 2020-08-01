@@ -1,0 +1,9 @@
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\New folder\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\New folder\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\New folder\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\New folder\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\temporal\Desktop\C122 - Rainel Fernandez Abreu\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

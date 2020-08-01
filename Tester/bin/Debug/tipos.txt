@@ -2,3 +2,551 @@ cero: 4
 uno: 25
 dos: 12
 
+cero: 4
+uno: 25
+dos: 12
+
+cero: 5
+uno: 28
+dos: 14
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 25
+dos: 12
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 4
+uno: 25
+dos: 12
+
+cero: 5
+uno: 29
+dos: 15
+
+cero: 4
+uno: 26
+dos: 13
+
+cero: 3
+uno: 19
+dos: 9
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 4
+uno: 22
+dos: 11
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 23
+dos: 12
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 19
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 19
+dos: 10
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 5
+uno: 30
+dos: 15
+
+cero: 2
+uno: 14
+dos: 7
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 22
+dos: 11
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 19
+dos: 10
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 23
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 22
+dos: 11
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 2
+uno: 12
+dos: 6
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 27
+dos: 13
+
+cero: 4
+uno: 22
+dos: 11
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 4
+uno: 25
+dos: 12
+
+cero: 4
+uno: 22
+dos: 11
+
+cero: 3
+uno: 25
+dos: 12
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 4
+uno: 26
+dos: 13
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 21
+dos: 11
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 19
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 2
+uno: 15
+dos: 7
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 20
+dos: 10
+
+cero: 0
+uno: 0
+dos: 196
+
+cero: 53
+uno: 0
+dos: 35
+
+cero: 349
+uno: 1
+dos: 177
+
+cero: 442
+uno: 1
+dos: 324
+
+cero: 232
+uno: 0
+dos: 206
+
+cero: 189
+uno: 0
+dos: 170
+
+cero: 172
+uno: 0
+dos: 135
+
+cero: 223
+uno: 0
+dos: 188
+
+cero: 207
+uno: 0
+dos: 186
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 3
+uno: 19
+dos: 9
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 3
+uno: 18
+dos: 9
+
+cero: 4
+uno: 23
+dos: 12
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+

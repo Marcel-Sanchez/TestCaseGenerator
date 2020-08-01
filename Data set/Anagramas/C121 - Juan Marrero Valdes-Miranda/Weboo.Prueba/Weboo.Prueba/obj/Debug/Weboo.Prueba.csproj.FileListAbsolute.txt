@@ -1,0 +1,10 @@
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\C121 - Juan Marrero Valdes-Miranda\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\C121 - Juan Marrero Valdes-Miranda\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\C121 - Juan Marrero Valdes-Miranda\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\C121 - Juan Marrero Valdes-Miranda\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\juan.marrero\Desktop\Juan Marrero-C121\C121 - Juan Marrero Valdes-Miranda\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

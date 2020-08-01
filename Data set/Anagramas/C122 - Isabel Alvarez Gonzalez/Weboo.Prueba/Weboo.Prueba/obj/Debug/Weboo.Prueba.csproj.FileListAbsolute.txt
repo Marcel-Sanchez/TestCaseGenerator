@@ -1,0 +1,5 @@
+E:\C122 -Isabel Alvarez Gonzalez\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+E:\C122 -Isabel Alvarez Gonzalez\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+E:\C122 -Isabel Alvarez Gonzalez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojResolveAssemblyReference.cache
+E:\C122 -Isabel Alvarez Gonzalez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+E:\C122 -Isabel Alvarez Gonzalez\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb

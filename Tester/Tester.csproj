@@ -54,6 +54,10 @@
       <Project>{ff4f1266-659d-4c96-8eb8-bc6109ebbd91}</Project>
       <Name>Generator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IFace\IFace.csproj">
+      <Project>{85C8A742-EC3A-4FE7-8B57-6A6A7F979FBD}</Project>
+      <Name>IFace</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Implementations\Implementations.csproj">
       <Project>{c15ff915-b3cf-4860-868f-cf9b73eed29b}</Project>
       <Name>Implementations</Name>

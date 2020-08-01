@@ -42,3 +42,5 @@ D:\Códigos\Tester\bin\Debug\Setting.dll
 D:\Códigos\Tester\bin\Debug\Setting.pdb
 D:\Códigos\Tester\bin\Debug\Metaheuristic.dll
 D:\Códigos\Tester\bin\Debug\Metaheuristic.pdb
+D:\Códigos\Tester\bin\Debug\IFace.dll
+D:\Códigos\Tester\bin\Debug\IFace.pdb

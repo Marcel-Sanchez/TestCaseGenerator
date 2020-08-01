@@ -17,19 +17,15 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            //IEnumerable<object> cases = null;
-
             // Generador de casos de prueba aleatorios.
-            //var list = new List<UniqueModelCase>();
             var generator = new CaseGenerator();
-            //do
-            //{
             //Método que me genera n casos de prueba.
             //if (generate)
             //{
             //var cases = generator.GenerateCases(Sett.CasesToGenerate);
             //SaveData(cases, "Cases.txt");
-            var cases = ReadData();
+            var cases = ReadPolData();
+            //var cases = ReadAnaData();
             //}
 
 
@@ -50,10 +46,14 @@ namespace Tester
                 //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
                 //}
                 int posModel = 0;
-                foreach (var methodName in Sett.MethodNames)
+                foreach (var methodName in Sett.MethodPolNames)
+                    //foreach (var methodName in Sett.MethodAnaNames)
                 {
                     // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
-                    object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassName, methodName, cas.ToArray(), new List<object>().ToArray());
+
+                    object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassPolName, methodName, cas.ToArray(), new List<object>().ToArray());
+
+                    //object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassAnaName, methodName, new object[] { cas }, new List<object>().ToArray());
 
                     //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
 
@@ -64,7 +64,8 @@ namespace Tester
             }
             //Console.WriteLine("---");
 
-            UniqueModelCase model = new UniqueModelCase(SolutionComparer.F);
+            //UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqAna);
+            UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqPol);
             // Separo en casos de acierto y en casos de error para cada implementación.
             model.SplitCases(sols3, sols5, 1);
             model.SplitCases(sols4, sols5, 2);
@@ -82,23 +83,14 @@ namespace Tester
             float targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
             Console.WriteLine($"Total diference: {targetFunEvaluation}");
 
-            //Console.WriteLine();
-            //list.Add(model);
-
-            //} while (Sett.MembersToGenerate-- > 0);
-
-            //Genetic_Algorithm.Run(list);
-
-            //var m = list[0];
-            //foreach (var item in list.Skip(1))
-            //{
-            //    m.Merge(item);
-            //}
             Console.WriteLine(model.Results.Count);
-            //GRASP.Run(model);
-            
-            model = Genetic_Algorithm.Run(model);
 
+            var grasp = new GRASP();
+            model = grasp.Run(model);
+
+
+            //var ga = new GeneticAlgorithm();
+            //model = ga.Run(model);
 
             obtained = model.GetPercentajes();
             obtained3 = obtained.Item1;
@@ -106,7 +98,9 @@ namespace Tester
 
             Console.WriteLine($"Model 3: {obtained3}%");
             Console.WriteLine($"Model 4: {obtained4}%");
-            //Genetic_Algorithm.Run(m);
+            targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
+
+
             Console.WriteLine(model.Results.Count);
 
             GRASP.CheckCases(model.Results.Values);
@@ -133,7 +127,32 @@ namespace Tester
             //}
         }
 
-        
+        private static IEnumerable<object> ReadAnaData()
+        {
+            HashSet<string> words = new HashSet<string>();
+            string path = Directory.GetCurrentDirectory() + @"\" + "Ana.txt";
+            using (StreamReader file = new StreamReader(path))
+            {
+                while (true)
+                {
+                    var readed = file.ReadLine();
+                    if (readed == "")
+                        continue;
+                    if (readed == null)
+                        yield break;
+
+                    //foreach (var item in readed.Split())
+                    //{
+                    if (!words.Contains(readed))
+                    {
+                        words.Add(readed);
+                        //Console.WriteLine(readed);
+                        yield return readed;
+                    }
+                    //}
+                }
+            }
+        }
 
         private static void SaveData(IEnumerable<IEnumerable<object>> cases, string fileName)
         {
@@ -156,10 +175,9 @@ namespace Tester
             }
         }
 
-        private static IEnumerable<IEnumerable<object>> ReadData()
+        private static IEnumerable<IEnumerable<object>> ReadPolData()
         {
             string path = Directory.GetCurrentDirectory() + @"\" + "Cases.txt";
-            int i = 1;
             using (StreamReader file = new StreamReader(path))
             {
                 while (true)

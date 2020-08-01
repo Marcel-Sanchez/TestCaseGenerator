@@ -1,0 +1,11 @@
+C:\Users\lleonart\Documents\Visual Studio 2015\Projects\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.csprojAssemblyReference.cache
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.csproj.CoreCompileInputs.cache
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Probador.exe.config
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Probador.exe
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Probador.pdb
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.dll
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\bin\Debug\Weboo.Prueba.pdb
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.csproj.CopyComplete
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.exe
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Probador\obj\Debug\Probador.pdb

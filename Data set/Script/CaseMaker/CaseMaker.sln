@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseMaker", "CaseMaker.csproj", "{AEB0EAB1-1515-4266-A0D6-BCD6E2CD404D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEB0EAB1-1515-4266-A0D6-BCD6E2CD404D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB0EAB1-1515-4266-A0D6-BCD6E2CD404D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB0EAB1-1515-4266-A0D6-BCD6E2CD404D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB0EAB1-1515-4266-A0D6-BCD6E2CD404D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02268DFD-07D5-4BC5-99FC-6697088158C2}
+	EndGlobalSection
+EndGlobal

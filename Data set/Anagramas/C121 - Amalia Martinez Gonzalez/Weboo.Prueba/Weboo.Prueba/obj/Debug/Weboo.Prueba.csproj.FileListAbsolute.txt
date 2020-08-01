@@ -1,0 +1,6 @@
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csprojAssemblyReference.cache
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.csproj.CoreCompileInputs.cache
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.dll
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\bin\Debug\Weboo.Prueba.pdb
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.dll
+C:\Users\amali\Desktop\C1XX - Nombre y Apellidos\CXXX - Nombre y Apellidos\Weboo.Prueba\Weboo.Prueba\obj\Debug\Weboo.Prueba.pdb
