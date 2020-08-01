@@ -550,3 +550,307 @@ cero: 12
 uno: 102
 dos: 49
 
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 4
+uno: 24
+dos: 12
+
+cero: 4
+uno: 7
+dos: 3055
+
+cero: 4
+uno: 7
+dos: 409
+
+cero: 4
+uno: 7
+dos: 409
+
+cero: 4
+uno: 7
+dos: 3055
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 4
+uno: 7
+dos: 3055
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 4
+uno: 7
+dos: 3055
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 4
+uno: 7
+dos: 829
+
+cero: 5
+uno: 9
+dos: 3052
+
+cero: 5
+uno: 9
+dos: 826
+
+cero: 5
+uno: 9
+dos: 826
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 4
+uno: 91
+dos: 391
+
+cero: 3
+uno: 98
+dos: 412
+
+cero: 3
+uno: 92
+dos: 383
+

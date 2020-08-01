@@ -57,7 +57,7 @@ namespace Metaheuristic
                 var resultc2C = MergeAndFind.Merge3(c2x.Results, c2y.Results);
                 var resultc2D = MergeAndFind.Merge4(c2x.Results, c2y.Results, (int)((float)c2x.Results.Count * 80 / 100), (int)((float)c2y.Results.Count * 20 / 100));
 
-                var currentComparer = SolutionComparer.EqPol;
+                var currentComparer = model._eq;
                 //var currentComparer = SolutionComparer.EqAna;
 
                 var c1 = new UniqueModelCase(resultc1A, currentComparer);

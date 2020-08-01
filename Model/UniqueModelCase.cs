@@ -45,6 +45,7 @@ namespace Model
                     }
                     else
                     {
+                        //Console.WriteLine("Falló el 3");
                         Results[i + Sett.CaseNumber + 1] = (0, 0);
                     }
                 }
@@ -58,6 +59,13 @@ namespace Model
                         Results[j + Sett.CaseNumber + 1] = (Results[j + Sett.CaseNumber + 1].Item1, 1);
                         _correctAns4count++;
                     }
+                    //else
+                    //{
+                    //    Console.WriteLine("Falló el 4");
+                    //    Console.WriteLine(correctAnswers[j]);
+                    //    Console.WriteLine(answers[j]);
+                    //    Console.WriteLine();
+                    //}
                 }
                 Sett.CaseNumber += Results.Count;
             }

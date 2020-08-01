@@ -24,8 +24,8 @@ namespace Setting
         public const string ClassAnaName = "Anagramas";
 
         // Porcientos de acierto para las notas
-        public const int Excepted3 = 30;
-        public const int Excepted4 = 90;
+        public const int Excepted3 = 80;
+        public const int Excepted4 = 95;
 
         // Número de casos de prueba agenerar
         public const int CasesToGenerate = 250;

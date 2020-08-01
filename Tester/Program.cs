@@ -24,48 +24,23 @@ namespace Tester
             //{
             //var cases = generator.GenerateCases(Sett.CasesToGenerate);
             //SaveData(cases, "Cases.txt");
-            var cases = ReadPolData();
-            //var cases = ReadAnaData();
+
+            //var cases = ReadPolData();
+            var cases = ReadAnaData();
             //}
-
-
-
 
             List<object> sols3 = new List<object>();
             List<object> sols4 = new List<object>();
             List<object> sols5 = new List<object>();
             List<object>[] sols = new List<object>[] { sols3, sols4, sols5 };
 
-            // Por cada caso de prueba generado.
-            foreach (var cas in cases)
-            {
-
-                ////Escribo el caso de prueba actual.
-                //foreach (var pol in cas)
-                //{
-                //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
-                //}
-                int posModel = 0;
-                foreach (var methodName in Sett.MethodPolNames)
-                    //foreach (var methodName in Sett.MethodAnaNames)
-                {
-                    // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
-
-                    object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassPolName, methodName, cas.ToArray(), new List<object>().ToArray());
-
-                    //object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassAnaName, methodName, new object[] { cas }, new List<object>().ToArray());
-
-                    //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
-
-                    // Añado la solución obtenida.
-                    sols[posModel++].Add(result);
-                }
-                //Console.WriteLine("---");
-            }
+            //RunPolCases(cases, sols, Sett.MethodPolNames);
+            RunAnaCases(cases, sols, Sett.MethodAnaNames);
             //Console.WriteLine("---");
 
-            //UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqAna);
-            UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqPol);
+            UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqAna);
+            //UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqPol);
+
             // Separo en casos de acierto y en casos de error para cada implementación.
             model.SplitCases(sols3, sols5, 1);
             model.SplitCases(sols4, sols5, 2);
@@ -82,15 +57,15 @@ namespace Tester
             // Evaluación de la función objetivo a minimizar.
             float targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
             Console.WriteLine($"Total diference: {targetFunEvaluation}");
-
+            
             Console.WriteLine(model.Results.Count);
 
-            var grasp = new GRASP();
-            model = grasp.Run(model);
+            //var grasp = new GRASP();
+            //model = grasp.Run(model);
 
 
-            //var ga = new GeneticAlgorithm();
-            //model = ga.Run(model);
+            var ga = new GeneticAlgorithm();
+            model = ga.Run(model);
 
             obtained = model.GetPercentajes();
             obtained3 = obtained.Item1;
@@ -125,6 +100,63 @@ namespace Tester
             //        }
             //    }
             //}
+        }
+
+        private static void RunPolCases(IEnumerable<IEnumerable<object>> cases, List<object>[] sols, string[] MethodNames)
+        {
+            foreach (var cas in cases)
+            {
+                // Por cada caso de prueba generado.
+                ////Escribo el caso de prueba actual.
+                //foreach (var pol in cas)
+                //{
+                //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
+                //}
+                int posModel = 0;
+                foreach (var methodName in MethodNames)
+                //foreach (var methodName in Sett.MethodAnaNames)
+                {
+                    // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
+                    object result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassPolName, methodName, cas.ToArray(), new List<object>().ToArray());
+
+                    //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
+                    // Añado la solución obtenida.
+                    sols[posModel++].Add(result);
+                }
+                //Console.WriteLine("---");
+            }
+        }
+        private static void RunAnaCases(IEnumerable<object> cases, List<object>[] sols, string[] MethodNames)
+        {
+            foreach (var cas in cases)
+            {
+                // Por cada caso de prueba generado.
+                ////Escribo el caso de prueba actual.
+                //foreach (var pol in cas)
+                //{
+                //    Console.WriteLine("Polinomio: " + string.Join(" ", pol as int[]));
+                //}
+                int posModel = 0;
+                foreach (var methodName in MethodNames)
+                //foreach (var methodName in Sett.MethodAnaNames)
+                {
+                    // Llamo a la dll donde se encuantran las implementaciones y corro el caso de prueba actual en cada método suministrado. En este caso, la dll debe estar en el directorio actual.
+                    object result = null;
+                    try
+                    {
+                        result = CallDllMethod(Directory.GetCurrentDirectory(), Sett.DllName, Sett.ClassAnaName, methodName, new object[] { cas }, new List<object>().ToArray());
+                    }
+                    catch
+                    {
+                        result = -1;
+                    }
+
+                    //Console.WriteLine($"Resultado vía {methodName}: " + string.Join(" ", result));
+                    // Añado la solución obtenida.
+                    sols[posModel++].Add(result);
+                }
+                //Console.WriteLine("---");
+            }
         }
 
         private static IEnumerable<object> ReadAnaData()
