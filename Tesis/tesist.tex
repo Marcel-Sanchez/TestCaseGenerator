@@ -476,6 +476,55 @@
 			\label{tab:TiposdecasosGen1}
 		\end{center}
 	\end{table}
+
+
+	\subsection{Aplicación en la práctica}
+		Para probar estas heurísticas con casos reales se seleccionó el problema Anagramas, el cual fue aplicado en el curso 2018-2019 como primer examen de programación en la facultad de Matemática y Computación de la Universidad de La Habana. El mismo consiste en dado un $string$ $s$, obtener la cantidad de pares de $substrings$ de $s$ que son anagramas entre sí. Un anagrama es una palabra que resulta de la transposición de letras de otra palabra. Dicho de otra forma, una palabra es anagrama de otra si las dos tienen las mismas letras, con el mismo número de ocurrencias. Un $substring$ es una secuencia contigua de caracteres de al menos longitud uno.
+		
+		\begin{table}[h]
+			\begin{center}
+				\begin{tabular}{| l | c |} \hline
+					Cantidad de casos iniciales & 3066 \\
+					Porcentaje inicial/esperado del 3 & 82.84409/80 \\
+					Porcentaje inicial/esperado del 4 & 98.63013/95 \\
+					Evaluación inicial de la f.o. & 6.474228 \\ \hline
+					Iteraciones del algoritmo & 436 \\ \hline
+					Cantidad de casos finales & 2630 \\
+					Porcentaje final/esperado del 3 & 80/80 \\
+					Porcentaje final/esperado del 4 & 98.40304/95 \\
+					Evaluación final de la f.o. & 3.403038 \\ \hline
+				\end{tabular}
+				\caption{Indicadores iniciales y finales. GRASP aplicado a Anagramas}
+				\label{tab:IndicadoresAnaGRASP1}
+			\end{center}
+		\end{table}
+	
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| l | c |} \hline
+				Cantidad de casos iniciales & 3066 \\
+				Porcentaje inicial/esperado del 3 & 82.84409/80 \\
+				Porcentaje inicial/esperado del 4 & 98.63013/95 \\
+				Evaluación inicial de la f.o. & 6.474228 \\ \hline
+				Iteraciones del algoritmo & 10000 \\ \hline
+				Cantidad de casos finales & 468 \\
+				Porcentaje final/esperado del 3 & 79.91453/80 \\
+				Porcentaje final/esperado del 4 & 96.5812/95 \\
+				Evaluación final de la f.o. & 1.666672 \\ \hline
+			\end{tabular}
+			\caption{Indicadores iniciales y finales. Genético aplicado a Anagramas}
+			\label{tab:IndicadoresAnaGen1}
+		\end{center}
+	\end{table}
+
+	Entre las principales anotaciones sobre estas ejecuciones se destacan las siguientes:
+	\begin{itemize}
+		\item Alto número de casos finales resultantes de aplicar GRASP. Esto se debe a que en el algoritmo no existe el concepto de exploración de nuevos casos, el mismo solo recibe un conjunto y reduce según los tipos de casos existentes hasta que la próxima reducción no mejore la evaluación de la función objetivo. Por otro lado, la evaluación final de la función objetivo pudiera considerarse en el rango de aceptable siendo de 3.4.
+		
+		\item Alto número de iteraciones aplicadas en Genético. Aplicando la conjetura del caso de parada planteado anteriormente, se escogió de forma experimental un número de iteraciones que aporte un buen rendimiento del algoritmo.
+		
+		\item Buena reducción de la función objetivo resultante de ejecutar Genético. Este algoritmo sí maneja los conceptos de exploración y explotación al crear nuevos conjuntos de casos de prueba y conservar los conjuntos de mejor evaluación respectivamente. Por lo cual logra mejores resultados que GRASP.
+	\end{itemize}
 	
 
 \bibliography{bibliography}

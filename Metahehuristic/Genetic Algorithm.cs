@@ -22,7 +22,7 @@ namespace Metaheuristic
             var percentajes = solutionsList.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
-            int n = 200;
+            int n = 1000;
             while (n-- > 0)
             {
                 //string p = Directory.GetCurrentDirectory() + @"\" + "GenFO1.txt";

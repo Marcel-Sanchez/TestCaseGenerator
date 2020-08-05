@@ -13,7 +13,7 @@ namespace Metaheuristic
         public override UniqueModelCase Run(UniqueModelCase model)
         {
             var result = new UniqueModelCase(model.Results, model._eq);
-            CheckCases(result.Results.Values);
+            Helper.CheckCases(result.Results.Values);
             //Console.WriteLine();
             // Obtengo la lista de canditados a eliminar de los casos de prueba.
             // Un caso de prueba es candidato si mejora la evaluacíón de la función objetivo.
@@ -68,7 +68,7 @@ namespace Metaheuristic
             percentajes = result.GetPercentajes();
             funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
             Console.WriteLine($"Final diference: {funcEval}");
-            CheckCases(result.Results.Values);
+            Helper.CheckCases(result.Results.Values);
             return result;
         }
 
@@ -102,30 +102,6 @@ namespace Metaheuristic
                     candidates.Add(caseToRemove);
             }
             return candidates;
-        }
-
-        public static void CheckCases(IEnumerable<(int, int)> values)
-        {
-            int cero = 0, uno = 0, dos = 0;
-            foreach (var item in values)
-            {
-                if (item == (0, 0))
-                    cero++;
-                else if (item == (0, 1))
-                    uno++;
-                else
-                    dos++;
-
-            }
-            string p = Directory.GetCurrentDirectory() + @"\" + "tipos.txt";
-            using (StreamWriter file = new StreamWriter(p, true))
-            {
-                //file.WriteLine($"percentajes: {percentajes}");
-                file.WriteLine($"cero: {cero}");
-                file.WriteLine($"uno: {uno}");
-                file.WriteLine($"dos: {dos}");
-                file.WriteLine();
-            }
         }
     }
 }

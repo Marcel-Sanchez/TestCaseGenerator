@@ -11,6 +11,7 @@ using Metaheuristic;
 using Implementations;
 using Model;
 
+
 namespace Tester
 {
     class Program
@@ -78,7 +79,12 @@ namespace Tester
 
             Console.WriteLine(model.Results.Count);
 
-            GRASP.CheckCases(model.Results.Values);
+            Helper.CheckCases(model.Results.Values);
+
+            var finalCases = Helper.GetFinalCases(cases, model.Results.Keys);
+            Helper.WriteFinalCases(finalCases);
+
+            //Console.WriteLine(string.Join("\n",finalCases));
 
             //int i = 0;
             //string p = Directory.GetCurrentDirectory() + @"\" + "3.txt";

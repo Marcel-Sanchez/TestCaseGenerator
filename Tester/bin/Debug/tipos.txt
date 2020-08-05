@@ -854,3 +854,147 @@ cero: 3
 uno: 92
 dos: 383
 
+cero: 2
+uno: 76
+dos: 308
+
+cero: 4
+uno: 88
+dos: 373
+
+cero: 4
+uno: 74
+dos: 322
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 2
+uno: 81
+dos: 334
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 2
+uno: 94
+dos: 384
+
+cero: 2
+uno: 74
+dos: 307
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 7
+uno: 519
+dos: 2104
+
+cero: 2
+uno: 95
+dos: 390
+
+cero: 2
+uno: 71
+dos: 290
+
+cero: 3
+uno: 74
+dos: 307
+
+cero: 2
+uno: 67
+dos: 279
+
+cero: 3
+uno: 75
+dos: 324
+
+cero: 3
+uno: 82
+dos: 338
+
+cero: 2
+uno: 79
+dos: 328
+
+cero: 2
+uno: 76
+dos: 308
+
+cero: 1
+uno: 72
+dos: 291
+
+cero: 4
+uno: 90
+dos: 374
+
+cero: 2
+uno: 64
+dos: 266
+
+cero: 3
+uno: 72
+dos: 299
+
+cero: 4
+uno: 78
+dos: 331
+
+cero: 3
+uno: 72
+dos: 308
+
+cero: 1
+uno: 70
+dos: 284
+
+cero: 1
+uno: 71
+dos: 294
+
+cero: 1
+uno: 76
+dos: 312
+
+cero: 4
+uno: 74
+dos: 308
+
