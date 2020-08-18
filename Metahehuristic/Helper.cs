@@ -49,5 +49,34 @@ namespace Metaheuristic
                 }
             }
         }
+
+        public static void WriteFormatedCases()
+        {
+            string writePath = Directory.GetCurrentDirectory() + @"\" + "Formated Cases.txt";
+            string readPath = Directory.GetCurrentDirectory() + @"\" + "final.txt";
+            int i = 0;
+
+            using (StreamWriter writeFile = new StreamWriter(writePath, false))
+            {
+                using (StreamReader readFile = new StreamReader(readPath))
+                {
+                    var readed = readFile.ReadLine();
+                    while (readed != null)
+                    {
+                        string method = $"public class TestCase{i} : AnagramasTest \n" +
+                                        $"{{ \n" +
+                                            $"\t public void Ejemplo{i}() \n" +
+                                            $"\t {{ \n" +
+                                                $"\t \t string str = \"{readed}\"; \n" +
+                                                $"\t \t Assert.That(Student(str), Is.EqualTo(CantidadEnCadena(str))); \n" +
+                                            $"\t }} \n" +
+                                        $"}}";
+                        writeFile.WriteLine(method);
+                        i++;
+                        readed = readFile.ReadLine();
+                    }
+                }
+            }
+        }
     }
 }

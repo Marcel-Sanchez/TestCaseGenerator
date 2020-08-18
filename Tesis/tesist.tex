@@ -49,7 +49,7 @@
 
 	La Ciencia de la Computación estudia los fundamentos teóricos de los procesos computacionales y su aplicación en la implementación de sistemas computacionales en correspondencia con el desarrollo vertiginoso de la propia ciencia y las tecnologías computacionales, los cuales dan solución a la informatización que demanda la sociedad contemporánea. El origen de esta ciencia es anterior a la invención del primer computador moderno, pues desde la antigüedad han existido procedimientos y algoritmos para realizar cómputos, solo que estos eran llevados a cabo por personas y no por un ente digital. Gracias a los trabajos de Alan Turing \cite{Turing} -considerado el padre de esta ciencia- y otros investigadores, se abrió el camino a nuevas ramas como la computabilidad y se profundizó en otras como la Inteligencia Artificial.
 	
-	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Pero, ¿qué tan buena puede ser una aplicación y cómo expresamos la calidad de las mismas? El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación. \\
+	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Pero, ¿qué tan buena puede ser una aplicación y cómo expresamos la calidad de las mismas? El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación.
 	
 	La aceptación de cualquier software pasa siempre por la lógica detrás del código. Esto es fundamental para el buen funcionamiento de cualquier programa. Un correcto diseño de la lógica del código puntúa de manera favorable el criterio de calidad. Siendo este nuestro objetivo de evaluación, quedaría por designar las métricas a utilizar para dicho fin. Cómo evaluar una la aplicación y en base a cuáles aspectos se mide la calidad de estos sistemas de cómputo serán interrogantes a responder.
 		
@@ -65,7 +65,9 @@
 
 	\section{Resultados esperados, importancia y herramientas a utilizar}
 	
-		El objetivo general de esta tesis es la generación automática de casos de prueba y la selección o ponderación de los mismos que permita utilizarlos como medida de calidad para la evaluación de algoritmos. El objeto de investigación es la optimización combinatoria abordado por meta-heurísticas \cite{OptimizacionCombinatoria} para ser aplicado en la definición de los casos de pruebas de las evaluaciones de los estudiantes de Programación en la Facultad de Matemática y Computación. Ahora bien, ¿qué algoritmo implementar? ¿Por qué una meta-heurística? ¿Será necesario aplicar un modelo de optimización? ¿Es un problema de Inteligencia Artificial o de Combinatoria? A estas y otras interrogantes se dará respuesta a lo largo de este documento.
+		El objetivo general de esta tesis es la generación automática de casos de prueba y la selección o ponderación de los mismos que permita utilizarlos como medida de calidad para la evaluación de algoritmos. El objeto de investigación es la optimización combinatoria abordado por meta-heurísticas \cite{OptimizacionCombinatoria} para ser aplicado en la definición de los casos de pruebas de las evaluaciones de los estudiantes de Programación en la Facultad de Matemática y Computación.
+		
+		El algoritmo a implementar y el uso de metaheurísticas y la aplicación o no de un modelo de optimización serán aspectos abordados a lo largo de este documento.
 		
 		Esta solución sería extensible a cualquier algoritmo de programación. Existe abstracción sobre los algoritmos a evaluar, pero se diseñó particularmente para los tipos de exámenes que se aplican en primer año. Con solo tener en cuenta otros factores como el tiempo de ejecución y la memoria consumida, se podría ampliar el marco de algoritmos evaluables por esta propuesta.  
 		
@@ -79,6 +81,20 @@
 	% Artículos relacionados, estado del arte, ... \\
 	
 	% Dar una propuesta
+	\section{Estado del Arte}
+	Las tendencias actuales respecto al uso de las metaheurísticas para la resolución de problemas de optimización, arrojaron los siguientes resultados.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/EoAmetaheuristicas.png}
+		\caption{Relación de artículos y tipos de metaheurística empleada} \cite{EOAgomez2014metaheuristicas}.
+		\label{EoAmetaheuristicas}
+	\end{figure}
+
+	Se puede apreciar en la Figura \ref{EoAmetaheuristicas} que los algoritmos genéticos son los más utilizados por los investigadores, ya sea en solitario o en combinación con otros algoritmos. \\
+	
+	No obstante, mientras se siguen desarrollando las metaheurísticas en la resolución de problemas, ya sea en la  creación  de nuevos algoritmos o mediante el perfeccionamiento de los ya existentes, ha surgido un nuevo concepto, se trata de las denominadas hiperheurísticas. Las mismas son definidas como métodos que inteligentemente controlan la selección de la heurística subordinada que debiera ser aplicada en cada punto de decisión del problema, dependiendo de las características del mismo y de las asociadas al espacio de búsqueda de la solución, mediante un mecanismo de aprendizaje. De esta forma, las hiperheurísticas buscan  tener una mayor vinculación entre la calidad de la solución y la rapidez de la implementación y la ejecución. Algunas de las metaheurísticas que utilizadas por las hiperheurísticas son  la búsqueda  tabú  incremental,  algoritmos  genéticos evolucionados, sistema de hormigas, recocido simulado incremental, entre otras.
+	
 	\section{Ejemplos}
 	
 	\subsection{Funcionamiento General}
@@ -526,6 +542,18 @@
 		\item Buena reducción de la función objetivo resultante de ejecutar Genético. Este algoritmo sí maneja los conceptos de exploración y explotación al crear nuevos conjuntos de casos de prueba y conservar los conjuntos de mejor evaluación respectivamente. Por lo cual logra mejores resultados que GRASP.
 	\end{itemize}
 	
+	Una vez obtenido el conjunto final de casos, utilizando el probador se le ejecutó cada caso a la solución de los estudiantes. Los resultados obtenidos por el algoritmo genético fueron invariantes al obtener igual cantidad de alumnos con notas de 2, 3, 4 y 5. La figura \ref{GraficaDeBarrasNotas} muestra la distribución de notas.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/GraficaDeBarrasNotas.png}
+		\caption{Notas Obtenidas}
+		\label{GraficaDeBarrasNotas}
+	\end{figure}
+
+	Como observación respecto, a la cantidad de casos originales aplicados en el problema (70) y a la aplicada en esta experimentación (468), hubo uno notado aumento en el porciento de acierto de los estudiantes. Esto se debe a que resuelven más casos satisfactoriamente pero que pueden resultar triviales o ser una combinación lineal entre sí, pero no la suficiente cantidad como para mejorar la nota. Por lo cual el tamaño del conjunto casos finales, a pesar de lograr una buena evaluación de la función objetivo, debe tenerse en cuenta para futuras experimentaciones.
+	
+	 
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}
