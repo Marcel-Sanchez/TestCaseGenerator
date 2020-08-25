@@ -1,8 +1,18 @@
 \begin{thebibliography}{1}
 
+\bibitem{montero2017computacion}
+C.~L. Montero, ``La computaci{\'o}n y soluci{\'o}n de problemas
+  computacionales,'' {\em Perspectiv@ s}, vol.~13, no.~12, pp.~23--27, 2017.
+
 \bibitem{Turing}
 B.~J. Copeland, {\em The Essential Turing}.
 \newblock Oxford University Press, 2004.
+
+\bibitem{lopez2016definicion}
+A.~V. L{\'o}pez, A.~S{\'a}nchez, and G.~A. Montejano, ``Definici{\'o}n de
+  m{\'e}tricas de calidad para productos de software,'' in {\em XVIII Workshop
+  de Investigadores en Ciencias de la Computaci{\'o}n (WICC 2016, Entre
+  R{\'\i}os, Argentina)}, 2016.
 
 \bibitem{OptimizacionCombinatoria}
 J.~P. García, ``Optimizacioncombinatoria,'' {\em Universidad Politécnica de
