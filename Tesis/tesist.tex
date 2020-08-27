@@ -47,6 +47,7 @@
 		\item Software: Conjunto de programas y rutinas que permiten a la computadora realizar determinadas funciones.
 		\item Casos de prueba: Conjunto de elementos de entrada que se utilizan para evaluar un programa.
 		\item Algoritmo: Secuencia ordenada y finita de operaciones que permiten resolver un problema.
+		\item Correctitud de un algoritmo: Se dice que un algoritmo es correcto si resuelve el problema para el cual fue diseñado, si produce la salida deseada acorde a la entrada suministrada y si termina en un tiempo admisible.
 	\end{itemize}
 	
 \chapter{Introducción}
@@ -283,6 +284,21 @@
 
 		\item Eficiencia. Se refiere al buen manejo de los recursos físicos del programa (la memoria) y el tiempo de ejecución, lo cual permite un mejor rendimiento.
 	\end{itemize}
+
+	Una herramienta que posibilita la evaluación de código, son los jueces online \cite{hernandez2017feedback}. La idea inicial de estos sistemas, fue la de servir como repositorio de problemas de programación que habían formado parte de concursos en competencias internacionales. Con el paso del tiempo, se han ido popularizando y en la actualidad se utilizan como herramientas didácticas que resultan de gran utilidad, las cuales permiten practicar y aprender algoritmia y métodos de programación de forma amena, llegando incluso a utilizarse en las aulas. Así, una situación común es que el profesor explique un tema e indique a sus alumnos qué ejercicios del juez pueden usar para practicar lo que ha contado. Los estudiantes envían una solución al problema reciben un veredicto positivo (solución correcta) o negativo (solución incorrecta).
+	
+	Entre los principales jueces online podemos encontrar: 
+	\begin{itemize}
+		
+		\item Caribbean Online Judge (COJ). Es un juez en línea para entrenar la programación de algoritmos con diferentes lenguajes.
+		
+		\item CodeChef. Es un sitio web de programación competitiva destinado a proporcionar una plataforma para la práctica y el perfeccionamiento de las habilidades de programación a través de concursos en línea.
+		
+		\item HackerRank es una empresa de tecnología que se enfoca en desafíos de programación competitivos, donde los desarrolladores compiten tratando de programar de acuerdo con las especificaciones proporcionadas.
+		
+		\item CodeSignal es una plataforma de evaluación basada en habilidades, cuya misión es descubrir, desarrollar y promover el talento técnico. Ofrecen desafíos a todos los niveles de habilidad con fines educativos y de reclutamiento.
+		
+	\end{itemize}
 		
 		
 \chapter{Diseño de la Propuesta}
@@ -314,7 +330,14 @@
 	A continuación se explican las adaptaciones hechas a los dos algoritmos implementados: GRASP y Genético, los cuales reciben la misma entrada y aplican un proceder diferente.
 	
 	\section{Adaptación de GRASP}
-		Como mencionábamos en el apartado \ref{sub:GRASP}, en cada iteración de GRASP Se hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En este problema en particular, se tienen inicialmente los $n$ casos de prueba, de los cuales se selecciona un subconjunto de tamaño $k, k \leq n$ que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$.
+		Como mencionábamos en el apartado \ref{sub:GRASP}, en cada iteración de GRASP Se hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En este problema en particular, se tienen inicialmente los $n$ casos de prueba, de los cuales se selecciona un subconjunto de tamaño $k, k \leq n$ que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$. La figura \ref{GrafGRASP} muestra el funcionamiento general.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=10cm]{./Graphics/GrafGRASP.png}
+			\caption{GRASP. Esquema general}
+			\label{GrafGRASP}
+		\end{figure}
 		
 		Como casos de parada se destacan los siguientes:
 		
@@ -327,9 +350,16 @@
 		Para un mayor rendimiento de este algoritmo, se hacen $k$ pasadas con el conjunto inicial de los $n$ casos de prueba brindados por el generador, pues en la aleatoriedad de seleccionar el candidato a eliminar, puede que no siempre se esté caminando hacia el óptimo global. Por lo que varias corridas deberían lanzar un mejor rendimiento del algoritmo, el cual se quedará con la mejor de todas. La estimación del parámetro $k$ se hace de forma experimental y es posible que dos pasadas brinden la misma solución, pero esto último es muy poco probable.
 		
 	\section{Adaptación del Genético}
-		En el Algoritmo Genético mencionado en el apartado \ref{sub:Genetico}, se definen varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto).
+		En el Algoritmo Genético mencionado en el apartado \ref{sub:Genetico}, se definen varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto). La figura \ref{GrafGen} muestra el funcionamiento general.
 		
-		La población inicial del algoritmo será de los $n$ casos iniciales, $k, k > 4$ configuraciones diferentes de bits sobre esos $n$. Una vez conformada, se procede a la selección de $4$ individuos que pudieran ser representativos.
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=10cm]{./Graphics/GrafGen.png}
+			\caption{Algoritmo Genético. Esquema general}
+			\label{GrafGen}
+		\end{figure}
+		
+		La población inicial del algoritmo será de los $n$ casos iniciales, $k; k > 4$ configuraciones diferentes de bits sobre esos $n$. Una vez conformada, se procede a la selección de $4$ individuos que pudieran ser representativos.
 		
 		\begin{itemize}
 			\item individuo $o_1$: el que mejor evalúa la función objetivo.
