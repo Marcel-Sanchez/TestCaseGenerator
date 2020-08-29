@@ -91,7 +91,7 @@
 	
 	% Dar una propuesta
 	\section{Estado del Arte}
-	Las tendencias actuales respecto al uso de las metaheurísticas para la resolución de problemas de optimización, arrojaron los siguientes resultados.
+	Es común ver problemas de optimización combinatoria resueltos con la aplicación de metaheurísticas \cite{marti2003procedimientos}. Las tendencias actuales respecto a su uso para la resolución de dicha familia de problemas, arrojaron los resultados expuestos en la Figura \ref{EoAmetaheuristicas}. Los algoritmos genéticos son los más utilizados por los investigadores, ya sea en solitario o en combinación con otros algoritmos. \\
 	
 	\begin{figure}[h]
 		\centering
@@ -99,10 +99,17 @@
 		\caption{Relación de artículos y tipos de metaheurística empleada} \cite{EOAgomez2014metaheuristicas}.
 		\label{EoAmetaheuristicas}
 	\end{figure}
-
-	Se puede apreciar en la Figura \ref{EoAmetaheuristicas} que los algoritmos genéticos son los más utilizados por los investigadores, ya sea en solitario o en combinación con otros algoritmos. \\
 	
-	No obstante, mientras se siguen desarrollando las metaheurísticas en la resolución de problemas, ya sea en la  creación  de nuevos algoritmos o mediante el perfeccionamiento de los ya existentes, ha surgido un nuevo concepto, se trata de las denominadas hiperheurísticas. Las mismas son definidas como métodos que inteligentemente controlan la selección de la heurística subordinada que debiera ser aplicada en cada punto de decisión del problema, dependiendo de las características del mismo y de las asociadas al espacio de búsqueda de la solución, mediante un mecanismo de aprendizaje. De esta forma, las hiperheurísticas buscan  tener una mayor vinculación entre la calidad de la solución y la rapidez de la implementación y la ejecución. Algunas de las metaheurísticas que utilizadas por las hiperheurísticas son  la búsqueda  tabú  incremental,  algoritmos  genéticos evolucionados, sistema de hormigas, recocido simulado incremental, entre otras.
+	No obstante, mientras se siguen desarrollando las metaheurísticas en la resolución de problemas, ya sea en la  creación  de nuevos algoritmos o mediante el perfeccionamiento de los ya existentes, ha surgido un nuevo concepto, se trata de las denominadas hiperheurísticas. Las mismas son definidas como métodos que inteligentemente controlan la selección de la heurística subordinada que debiera ser aplicada en cada punto de decisión del problema, dependiendo de las características del mismo y de las asociadas al espacio de búsqueda de la solución, mediante un mecanismo de aprendizaje. De esta forma, las hiperheurísticas buscan  tener una mayor vinculación entre la calidad de la solución y la rapidez de la implementación y la ejecución. Algunas de las metaheurísticas que utilizadas por las hiperheurísticas son  la búsqueda  tabú  incremental,  algoritmos  genéticos evolucionados, sistema de hormigas, recocido simulado incremental, entre otras. \\
+	
+	Otras de las técnicas usadas en la resolución de problemas de optimización combinatoria, son los algoritmos aproximados \cite{vasiliev2018algoritmos}. Se dice que un algoritmo es $\alpha$-aproximado, si para un problema de minimización, computa una solución factible de costo a lo sumo $\alpha$-veces el costo óptimo en tiempo polinomial. Entre las técnicas más usadas se encuentran los algoritmos golosos, la técnica de Baker para grafos planares y \emph{ractional local ratio}.
+	
+	Los algoritmos golosos son aquellos en cada iteración buscan maximizar el beneficio. Las demostraciones de los factores de aproximación se basan muchas veces en relacionar directamente una solución óptima con la computada.
+	
+	La técnica de Baker para grafos planares permite obtener algoritmos con factor $(1+ \epsilon)^2$ para todo $\epsilon > 0$ fijo. A pesar de ser costosos estos algoritmos en cuanto a complejidad temporal, permiten definir un problema como “fácil” en grafos planares a pesar de ser difícil de resolver.
+	
+	\emph{Ractional local ratio} es una técnica que se basa en encontrar una solución factible y una descomposición de los costos de forma que se puedan acotar los errores incurridos por la solución computada respecto a cada componente.
+	
 	
 %	\section{Ejemplos}
 %	

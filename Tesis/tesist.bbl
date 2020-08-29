@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{montero2017computacion}
 C.~L. Montero, ``La computaci{\'o}n y soluci{\'o}n de problemas
@@ -18,10 +18,20 @@ A.~V. L{\'o}pez, A.~S{\'a}nchez, and G.~A. Montejano, ``Definici{\'o}n de
 J.~P. García, ``Optimizacioncombinatoria,'' {\em Universidad Politécnica de
   Valencia}, 2006.
 
+\bibitem{marti2003procedimientos}
+R.~Mart{\i}, ``Procedimientos metaheur{\i}sticos en optimizaci{\'o}n
+  combinatoria,''
+
 \bibitem{EOAgomez2014metaheuristicas}
 M.~M. G{\'o}mez, ``Las metaheur{\'\i}sticas: tendencias actuales y su
   aplicabilidad en la ergonom{\'\i}a,'' {\em Ingenier{\'\i}a Industrial.
   Actualidad y Nuevas Tendencias}, vol.~4, no.~12, pp.~108--120, 2014.
+
+\bibitem{vasiliev2018algoritmos}
+S.~Vasiliev, {\em Algoritmos aproximados para problemas de optimizaci{\'o}n
+  combinatoria}.
+\newblock PhD thesis, Facultad de Ciencias Exactas y Naturales. Universidad de
+  Buenos Aires, 2018.
 
 \bibitem{GRASP}
 T.~Feo and M.~Resende, ``Greedy randomized adaptive search procedures,'' {\em
