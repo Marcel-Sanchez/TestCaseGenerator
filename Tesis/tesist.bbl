@@ -2,11 +2,16 @@
 
 \bibitem{montero2017computacion}
 C.~L. Montero, ``La computaci{\'o}n y soluci{\'o}n de problemas
-  computacionales,'' {\em Perspectiv@ s}, vol.~13, no.~12, pp.~23--27, 2017.
+  computacionales,'' {\em Perspectivas}, vol.~13, no.~12, pp.~23--27, 2017.
 
 \bibitem{Turing}
 B.~J. Copeland, {\em The Essential Turing}.
 \newblock Oxford University Press, 2004.
+
+\bibitem{callejas2017modelos}
+M.~Callejas-Cuervo, A.~C. Alarc{\'o}n-Aldana, and A.~M.
+  {\'A}lvarez-Carre{\~n}o, ``Modelos de calidad del software, un estado del
+  arte,'' {\em Entramado}, vol.~13, no.~1, pp.~236--250, 2017.
 
 \bibitem{lopez2016definicion}
 A.~V. L{\'o}pez, A.~S{\'a}nchez, and G.~A. Montejano, ``Definici{\'o}n de
@@ -14,12 +19,18 @@ A.~V. L{\'o}pez, A.~S{\'a}nchez, and G.~A. Montejano, ``Definici{\'o}n de
   de Investigadores en Ciencias de la Computaci{\'o}n (WICC 2016, Entre
   R{\'\i}os, Argentina)}, 2016.
 
+\bibitem{baykasouglu2014testing}
+A.~Baykaso{\u{g}}lu, A.~Hamzadayi, and S.~Y. K{\"o}se, ``Testing the
+  performance of teaching--learning based optimization (tlbo) algorithm on
+  combinatorial problems: Flow shop and job shop scheduling cases,'' {\em
+  Information Sciences}, vol.~276, pp.~204--218, 2014.
+
 \bibitem{OptimizacionCombinatoria}
-J.~P. García, ``Optimizacioncombinatoria,'' {\em Universidad Politécnica de
+J.~P. García, ``Optimizacion combinatoria,'' {\em Universidad Politécnica de
   Valencia}, 2006.
 
 \bibitem{marti2003procedimientos}
-R.~Mart{\i}, ``Procedimientos metaheur{\i}sticos en optimizaci{\'o}n
+R.~Mart{\'i}, ``Procedimientos metaheur{\'i}sticos en optimizaci{\'o}n
   combinatoria,''
 
 \bibitem{EOAgomez2014metaheuristicas}
@@ -32,6 +43,40 @@ S.~Vasiliev, {\em Algoritmos aproximados para problemas de optimizaci{\'o}n
   combinatoria}.
 \newblock PhD thesis, Facultad de Ciencias Exactas y Naturales. Universidad de
   Buenos Aires, 2018.
+
+\bibitem{johnson1974approximation}
+D.~S. Johnson, ``Approximation algorithms for combinatorial problems,'' {\em
+  Journal of computer and system sciences}, vol.~9, no.~3, pp.~256--278, 1974.
+
+\bibitem{dowsland2003diseno}
+K.~A. Dowsland and B.~A. D{\'\i}az, ``Dise{\~n}o de heur{\'\i}stica y
+  fundamentos del recocido simulado,'' {\em Inteligencia Artificial. Revista
+  Iberoamericana de Inteligencia Artificial}, vol.~7, no.~19, p.~0, 2003.
+
+\bibitem{cunquero2003algoritmos}
+R.~M. Cunquero, ``Algoritmos heur{\'\i}sticos en optimizaci{\'o}n
+  combinatoria,'' {\em Valencia: Universodad de Valencia. Retrieved}, vol.~11,
+  no.~01, p.~2012, 2003.
+
+\bibitem{jimenez2009busquedas}
+J.~J.~D. Jim{\'e}nez, {\em B{\'u}squedas gen{\'e}ticas: m{\'e}todos de
+  optimizaci{\'o}n global y optimizaci{\'o}n combinatoria}.
+\newblock PhD thesis, Universidad de C{\'a}diz, 2009.
+
+\bibitem{resende2003grasp}
+M.~G. Resende and J.~L. Gonz{\'a}lez~Velarde, ``Grasp: Greedy randomized
+  adaptive search procedures,'' {\em Inteligencia Artificial, Revista
+  Iberoamericana de Inteligencia Artificial}, vol.~19, no.~1, pp.~61--76, 2003.
+
+\bibitem{gandomi2013metaheuristic}
+A.~H. Gandomi, X.-S. Yang, S.~Talatahari, and A.~H. Alavi, ``Metaheuristic
+  algorithms in modeling and optimization,'' {\em Metaheuristic applications in
+  structures and infrastructures}, pp.~1--24, 2013.
+
+\bibitem{yagiura2001metaheuristic}
+M.~Yagiura and T.~Ibaraki, ``On metaheuristic algorithms for combinatorial
+  optimization problems,'' {\em Systems and Computers in Japan}, vol.~32,
+  no.~3, pp.~33--55, 2001.
 
 \bibitem{GRASP}
 T.~Feo and M.~Resende, ``Greedy randomized adaptive search procedures,'' {\em
