@@ -998,3 +998,107 @@ cero: 4
 uno: 74
 dos: 308
 
+cero: 12
+uno: 189
+dos: 49
+
+cero: 3
+uno: 9
+dos: 48
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 3
+uno: 9
+dos: 48
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 3
+uno: 9
+dos: 48
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 12
+uno: 189
+dos: 49
+
+cero: 12
+uno: 102
+dos: 49
+
+cero: 7
+uno: 519
+dos: 2540
+
+cero: 7
+uno: 519
+dos: 2104
+

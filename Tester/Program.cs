@@ -18,7 +18,6 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Anagramas.Anagramas5("god"));
             //Helper.WriteFormatedCases();
             //// Generador de casos de prueba aleatorios.
             //var generator = new CaseGenerator();
@@ -28,65 +27,67 @@ namespace Tester
             ////var cases = generator.GenerateCases(Sett.CasesToGenerate);
             ////SaveData(cases, "Cases.txt");
 
-            ////var cases = ReadPolData();
-            //var cases = ReadAnaData();
+            //var cases = ReadPolData();
+            var cases = ReadAnaData();
             ////}
 
-            //List<object> sols3 = new List<object>();
-            //List<object> sols4 = new List<object>();
-            //List<object> sols5 = new List<object>();
-            //List<object>[] sols = new List<object>[] { sols3, sols4, sols5 };
+            List<object> sols3 = new List<object>();
+            List<object> sols4 = new List<object>();
+            List<object> sols5 = new List<object>();
+            List<object>[] sols = new List<object>[] { sols3, sols4, sols5 };
 
-            ////RunPolCases(cases, sols, Sett.MethodPolNames);
-            //RunAnaCases(cases, sols, Sett.MethodAnaNames);
-            ////Console.WriteLine("---");
+            //RunPolCases(cases, sols, Sett.MethodPolNames);
+            RunAnaCases(cases, sols, Sett.MethodAnaNames);
+            //Console.WriteLine("---");
 
-            //UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqAna);
-            ////UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqPol);
+            UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqAna);
+            //UniqueModelCase model = new UniqueModelCase(SolutionComparer.EqPol);
 
-            //// Separo en casos de acierto y en casos de error para cada implementación.
-            //model.SplitCases(sols3, sols5, 1);
-            //model.SplitCases(sols4, sols5, 2);
+            // Separo en casos de acierto y en casos de error para cada implementación.
+            model.SplitCases(sols3, sols5, 1);
+            model.SplitCases(sols4, sols5, 2);
 
-            //// Calculo el % de acierto.
-            //var obtained = model.GetPercentajes();
-            //var obtained3 = obtained.Item1;
-            //var obtained4 = obtained.Item2;
+            // Calculo el % de acierto.
+            var obtained = model.GetPercentajes();
+            var obtained3 = obtained.Item1;
+            var obtained4 = obtained.Item2;
 
-            //Console.WriteLine($"Model 3: {obtained3}%");
-            //Console.WriteLine($"Model 4: {obtained4}%");
-            ////Console.WriteLine($"Model 5: 100%");
+            Console.WriteLine($"Model 3: {obtained3}%");
+            Console.WriteLine($"Model 4: {obtained4}%");
+            //Console.WriteLine($"Model 5: 100%");
 
-            //// Evaluación de la función objetivo a minimizar.
-            //float targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
-            //Console.WriteLine($"Total diference: {targetFunEvaluation}");
-            
-            //Console.WriteLine(model.Results.Count);
+            // Evaluación de la función objetivo a minimizar.
+            float targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
+            Console.WriteLine($"Total diference: {targetFunEvaluation}");
 
-            ////var grasp = new GRASP();
-            ////model = grasp.Run(model);
+            Console.WriteLine(model.Results.Count);
 
+            //Sett.calls = 0;
 
-            //var ga = new GeneticAlgorithm();
-            //model = ga.Run(model);
-
-            //obtained = model.GetPercentajes();
-            //obtained3 = obtained.Item1;
-            //obtained4 = obtained.Item2;
-
-            //Console.WriteLine($"Model 3: {obtained3}%");
-            //Console.WriteLine($"Model 4: {obtained4}%");
-            //targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
+            //var grasp = new GRASP();
+            //model = grasp.Run(model);
 
 
-            //Console.WriteLine(model.Results.Count);
+            var ga = new GeneticAlgorithm();
+            model = ga.Run(model);
+
+            obtained = model.GetPercentajes();
+            obtained3 = obtained.Item1;
+            obtained4 = obtained.Item2;
+
+            Console.WriteLine($"Model 3: {obtained3}%");
+            Console.WriteLine($"Model 4: {obtained4}%");
+            targetFunEvaluation = Sett.TargetFunc(obtained3, obtained4);
+
+
+            Console.WriteLine(model.Results.Count);
 
             //Helper.CheckCases(model.Results.Values);
 
             //var finalCases = Helper.GetFinalCases(cases, model.Results.Keys);
             //Helper.WriteFinalCases(finalCases);
 
-            //Console.WriteLine(string.Join("\n",finalCases));
+            //Console.WriteLine(string.Join("\n", finalCases));
 
             //int i = 0;
             //string p = Directory.GetCurrentDirectory() + @"\" + "3.txt";

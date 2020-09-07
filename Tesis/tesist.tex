@@ -11,7 +11,6 @@
 			\vspace*{-1in}
 			Universidad de La Habana \\
 			Facultad de Matemática y Computación \\
-			Departamento de Programación \\
 			\vspace*{0.15in}
 			\begin{figure}[htb]
 				\begin{center}
@@ -20,9 +19,8 @@
 			\end{figure}
 			
 			\vspace*{0.3in}
-			\textbf{Título} \\
 			\begin{large}
-			Selección automática de casos de prueba con aprendizaje de la medida de calidad \\
+			\textbf{Selección automática de casos de prueba con aprendizaje de la medida de calidad} \\
 			\end{large}
 			\vspace*{0.6in}
 			Autor: \textbf{Marcel Ernesto Sánchez Aguilar} \\
@@ -40,25 +38,60 @@
 
 \tableofcontents
 
+\chapter*{Dedicatoria}
+	A mi maravillosa familia de la cual me siento muy orgulloso, en especial de mis padres.
+
+\chapter*{Agradecimientos}
+	A mis padres, que me ha dado la educación que tengo y han forjado todo en mí. Son mi fuente de inspiración y mi ejemplo a seguir.
+	
+	A mi abuelo, con el cual tengo buena parte de los recuerdos más traviesos y hermosos de mi niñez. Ojalá yo pueda llegar a ser para mis nietos tan importante como lo ha sido Abu para mí.
+	
+	A mis dos abuelas, que tanto me cuidaron y mimaron. Por cumplir su rol de abuela a la perfección y darme tantos recuerdos inmejorables.
+	
+	A mi bisabuela Mima, que me picaba los caramelos para que no me ahogara de niño.
+	
+	A mis tíos Liss y Ale, los quiero un montón y son los mejores médicos del mundo.
+	
+	A mi primo Derly, al cual quiero como a un hermano. Que ha sido mi amigo, mi compañero de juego, mi rival; para el cual hago para que se sienta orgulloso de mí.
+	
+	A Dios por permitir que toda mi familia sea testigo de este momento.
+	
+	A mis amigos de la infancia Yorlan y Kevin, que juntos hemos vivido momentos épicos y no los cambio por nada en este mundo, con los cuales he reído en las buenas y sufrido en las malas.
+	
+	A mis profesores de la primaria, que me enseñaron a leer y escribir, que me inculcaron el amor por la matemática y la pasión por el ajedrez.
+	
+	A todos los profesores que me han educado y enseñan con una pasión que da gusto y enamora. He tenido la suerte de conocer a muchos, como a mis abuelos en Física y Química, a Disodado en Histoira, a María del Carmen en Biología, a Enma en Matemática, a María Antonia en Español y a Somoza en Discreta.
+	
+	A mis profesores de la universidad que tan bien me enseñaron y prepararon para ser un profesional.
+	
+	A mis compañeros de universidad con los cuales me divertí, estudié y estresé en la travesía de la carrera. 
+	
+	Al profesor y tutor Ludwig por permitirme ser alumno ayudante y vivir la maravillosa experiencia que resultó.
+	
+	Al profesor, compañero de trabajo, amigo y tutor Carlos; con quién aprendí de bases de datos, de cómo dar clases y a quien debo mucho y agradezco por el apoyo que me brindó durante la tesis, su ayuda fue vital.
+	
+	
+
 \chapter*{Resumen}
-	La confección de los casos de prueba para evaluar un algoritmo, a menudo es tarea difícil. Es necesario cubrir varios aspectos sin sobre incidir de más en alguno. Además, muchas veces se requiere de tener un conjunto de casos bien representativo para que, a pesar de fallar en algún aspecto, se considere de aprobada la solución en algún examen.
+	La confección de los casos de prueba para evaluar un algoritmo, a menudo es tarea difícil. Es necesario cubrir varios aspectos sin sobre incidir de más en alguno. Además, muchas veces se requiere de tener un conjunto representativo de casos  para que, a pesar de fallar en algún aspecto, se considere de aprobada la solución en algún examen.
 	
-	Dependiendo del problema, los evaluadores confeccionan un conjunto de casos tratando de que al menos esté representado el universo de los mismos en este, con la aspiración de lograr una evaluación justa. Esto es algo que resulta de gran complejidad, pues existen muchos detalles que, por omisión, pudieran traer una mala calificación.
+	Dependiendo del problema, los evaluadores confeccionan un conjunto de casos tratando de que al menos esté representado el universo de los mismos, con la aspiración de lograr una evaluación justa. Esto es algo que resulta de gran complejidad, pues existen muchos detalles que, por omisión, pudieran traer una mala calificación.
 	
-	Sin embargo, el implementar una solución correcta o el percatarse de los errores más comunes es mucho más tratable. En este trabajo se propone una solución a esta problemática. Teniendo el criterio de un especialista que provea una solución (o varias) que sean de una calidad especificada y con ella, se confeccionará un conjunto representativo de casos de prueba a partir de un generador de estos. Lo cual representaría una mejorar sustancial en el tiempo invertido por los evaluadores en el diseño de los casos de prueba, en su lugar han proveer implementaciones correctas; algo con que es usual contar. Además, se evitarán errores comunes en la generación de casos en aras de una evaluación más imparcial.
-	Para ello se abordan métodos metaheurísticos en la resolución de problemas de optimización combinatoria. \\
+	Sin embargo, el implementar una solución correcta o el percatarse de los errores más comunes es mucho más tratable. En este trabajo se propone una solución a esta problemática. Teniendo el criterio de un especialista que provea una solución que sean de una calidad especificada, se confeccionará un conjunto representativo de casos de prueba para evaluar un algoritmo.
 	
-	\textbf{Palabras clave:} casos de prueba, conjunto representativo, métodos metaheurísticos, optimización combinatoria.
+%	 a partir de un generador de estos. Lo cual representaría una mejorar sustancial en el tiempo invertido por los evaluadores en el diseño de los casos de prueba, en su lugar han proveer implementaciones correctas; algo con que es usual contar. Además, se evitarán errores comunes en la generación de casos en aras de una evaluación más imparcial.
+%	Para ello se abordan métodos metaheurísticos en la resolución de problemas de optimización combinatoria. \\
+	
+	\textbf{Palabras clave:} casos de prueba, algoritmo, conjunto representativo, solución de calidad.
 	
 \chapter*{Abstract}
-	Making the test cases to evaluate an algorithm is often a difficult task. It is necessary to cover several aspects without over-influencing any one. In addition, many times it is required to have a well representative set of cases so that, despite failing in some aspect, the solution is considered approved in an exam.
+	Making the test cases to evaluate an algorithm is often a difficult task. It is necessary to cover several aspects without over-influencing any. In addition, many times it is required to have a representative set of cases so that, despite failing in some aspect, the solution is considered approved in some examination.
 	
-	Depending on the problem, the evaluators make a set of cases that try to ensure that at least the universe of the same is represented in it, with the aspiration of achieving a fair evaluation. This is something that is highly complex, as there are many details that, by default, can lead to a bad rating.
+	Depending on the problem, the evaluators make a set of cases trying to at least represent their universe, with the aspiration of achieving a fair evaluation. This is something that is highly complex, as there are many details that, by default, could lead to a bad rating.
 	
-	However, implementing a correct solution or noticing the most common mistakes is much more treatable. In this work a solution to this problem is proposed. Having the criteria of a specialist who provides a solution (or several) that are of a specified quality and with it, a representative set of test cases will be made from a generator of these. Which would represent a substantial improvement in the time invested by the testers in the design of the test cases, instead they have provided correct implementations; something that is common to count on. In addition, common mistakes in case generation will be avoided for the sake of a more impartial evaluation.
-	For this, metaheuristic methods are approached in solving combinatorial optimization problems. \\
+	However, implementing a correct solution or noticing the most common mistakes is much more treatable. In this work a solution to this problem is proposed. Having the criteria of a specialist who provides a solution that is of a specified quality, a representative set of test cases will be made to evaluate an algorithm.
 	
-	\textbf{Keywords:} test cases, representative set, metaheuristic methods, combinatorial optimization.
+	\textbf{Keywords:} test cases, algorithm, representative set, quality solution.
 
 \chapter*{Glosario}
 	\begin{itemize}
@@ -69,52 +102,27 @@
 		\item Algoritmo: Secuencia ordenada y finita de operaciones que permiten resolver un problema.
 		\item Correctitud de un algoritmo: Se dice que un algoritmo es correcto si resuelve el problema para el cual fue diseñado, si produce la salida deseada acorde a la entrada suministrada y si termina en un tiempo admisible.
 	\end{itemize}
-
-
 	
 \chapter{Introducción}
 
 	La Ciencia de la Computación estudia los fundamentos teóricos de la información y la computación \cite{montero2017computacion}, así como su aplicación en la implementación de sistemas computacionales en correspondencia con el desarrollo vertiginoso de la propia ciencia y las tecnologías computacionales. El origen de esta ciencia es anterior a la invención del primer computador moderno, pues desde la antigüedad han existido procedimientos y algoritmos para realizar cómputos, solo que estos eran llevados a cabo por personas y no por un ente digital. Gracias a los trabajos de Alan Turing \cite{Turing} -considerado el padre de esta ciencia- y otros investigadores, se abrió el camino a nuevas ramas como la computabilidad y se profundizó en otras como la Inteligencia Artificial.
 	
-	Hoy en día la Computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Sin embargo, expresar en términos de calidad \cite{callejas2017modelos} el buen funcionamiento de un software \cite{lopez2016definicion} resulta complejo. Para ilustrar el concepto de calidad de manera más profunda, es necesario considerar algunos aspectos fundamentales como son : solidez, exactitud, completitud, mantenibilidad, reutilizabilidad, entre otros.
+	Hoy en día la computación ayuda al hombre en casi todas las áreas y muchas tareas que antes se hacían de forma manual, se realizan ahora mediante un equipo de cómputo. Sin embargo, expresar en términos de calidad el buen funcionamiento de un software \cite{lopez2016definicion} resulta complejo. Para ilustrar el concepto de calidad de manera más profunda, es necesario considerar algunos aspectos fundamentales como son: solidez, exactitud, completitud, mantenibilidad, reutilizabilidad, entre otros.
 	
-	El presente trabajo se enfoca en dar solución a un subconjunto de esta problemática: evaluar el correcto funcionamiento de un algoritmo presente en una aplicación.
-	
-	La aceptación de cualquier software pasa siempre por la lógica detrás del código y su correcta implementación. Esto es fundamental para el buen funcionamiento de cualquier programa. Un buen diseño de la misma puntúa de manera favorable el criterio de calidad, pero es difícil de medir, pues están estrechamente ligados y muchas veces no se sabe a simple vista dónde hay un fallo. Una buena lógica y una mala ejecución en el código o viceversa, empañan el funcionamiento del programa. Sería ideal poder discernir entre uno, otro u ambos a la hora de analizar un error. De manera general y siendo este el objetivo a evaluar en esta tesis, quedaría por designar las métricas a utilizar para dicho fin. Cómo evaluar la aplicación y en base a cuáles aspectos se mide la calidad de estos sistemas de cómputo serán interrogantes a responder.
+	La aceptación de cualquier software pasa siempre por la lógica detrás del código y su correcta implementación. Esto es fundamental para el buen funcionamiento de cualquier programa. Un buen diseño de la misma puntúa de manera favorable el criterio de calidad, pero es difícil de medir, pues están estrechamente ligados y muchas veces no se sabe a simple vista dónde hay un fallo. Una buena lógica y un mal desempeño del código o viceversa, empañan el funcionamiento del programa. Sería ideal poder discernir entre uno, otro u ambos a la hora de analizar un error.
 		
 	\section{Contexto del problema}
 		
-		En la Facultad de Matemática y Computación de la Universidad de La Habana, los estudiantes de primer año que cursan la asignatura de Programación de la carrera Ciencia de la Computación se enfrentan a tres evaluaciones parciales y a una prueba final. Estos exámenes tienen la peculiaridad de que se realizan a través de un equipo de cómputo. Una vez entregadas las soluciones digitales (códigos) de los estudiantes al problema propuesto, se procede a evaluar las implementaciones de los mismos. El proceso de calificación de un examen en ninguna asignatura es trivial, por ejemplo, muchas veces lo que separa un ``buen" $3$ (a veces denominado $3+$) de un ``mal" $4$ (o $4-$) es la subjetividad del evaluador. En la práctica de esta asignatura en específica puede darse el caso de dos estudiantes con el mismo porciento de casos aceptados pero distinta nota debido a la dificultad de los casos fallidos, o con la misma nota pero porcientos distintos debido a la calidad del diseño presentado. Esto es algo extremadamente difícil de definir formalmente, pues esa subjetividad depende de los objetivos a vencer en las asignaturas y de experiencias en la enseñanza.
+		En la Facultad de Matemática y Computación de la Universidad de La Habana, los estudiantes de primer año que cursan la asignatura de Programación de la carrera Ciencia de la Computación se enfrentan a tres evaluaciones parciales y a una prueba final. Estos exámenes tienen la peculiaridad de que se realizan a través de un equipo de cómputo. Una vez entregadas las soluciones digitales (códigos) de los estudiantes al problema propuesto, se procede a evaluar las implementaciones de los mismos. El proceso de calificación de un examen en ninguna asignatura es trivial, por ejemplo, muchas veces lo que separa un ``buen"\ $3$ (a veces denominado $3^+$) de un ``mal"\ $4$ (o $4^- $) es la subjetividad del evaluador. En la práctica de esta asignatura en específica puede darse el caso de dos estudiantes con el mismo porciento de casos aceptados pero distinta nota debido a la dificultad de los casos fallidos, o con la misma nota pero porcientos distintos debido a la calidad del diseño presentado. Esto es algo extremadamente difícil de definir formalmente, pues esa subjetividad depende de los objetivos a vencer en las asignaturas y de experiencias en la enseñanza.
 		
 		Otro aspecto a señalar en estas pruebas particulares, es que la evaluación no se realiza directamente sobre los códigos de los estudiantes. Profesores de la asignatura se empeñan en confeccionar casos de prueba representativos que puedan dar una medida de la correctitud del algoritmo propuesto. La anterior tarea puede resultar engorrosa, diseñar esos casos de prueba puede llegar a ser incluso más difícil que la solución al problema, pues es necesario cubrir la mayor cantidad de aspectos a evaluar sin incidir de más en algún rasgo para no afectar la calificación.
 		
-		La solución de esta problemática tendría un notable impacto en la forma en que se califican estos exámenes. Los profesores verían anulado el tiempo que le dedican la generación de un conjunto lo suficientemente abarcador para lograr una evaluación adecuada, en su lugar han de proveer al sistema las soluciones que consideren correctas. Por otra parte, se haría una contribución al intento de lograr una evaluación más justa, pues se omiten errores humanos que pueden surgir durante la confección del conjunto de casos de prueba.
+		Dado que no existe una herramienta que permita seleccionar un conjunto representativo de casos de prueba, la solución de esta problemática tendría un notable impacto en la forma en que se califican estos exámenes. Los profesores verían anulado el tiempo que le dedican la generación de un conjunto lo suficientemente abarcador para lograr una evaluación adecuada. Por otra parte, se haría una contribución al intento de lograr una evaluación más justa, pues se omiten errores humanos que pueden surgir durante la confección del conjunto de casos de prueba.
+		
+		Este es un problema que tiene un espacio de búsqueda discreto, el de obtener todos los subconjuntos posibles. Puede resolverse por la enumeración de las soluciones, pero es necesario aplicar métodos de búsqueda eficientes que puedan  reducir  el  tamaño efectivo del espacio y explorar de manera inteligente. Por lo tanto, este es un problema de optimización combinatoria.
 
+%		Entre los principales aspectos a evaluar están la correctitud del código, el uso adecuado de los recursos del lenguaje de programación y el manejo eficiente del tiempo y la memoria (en términos computacionales).
 		
-		Entre los principales aspectos a evaluar están la correctitud del código, el uso adecuado de los recursos del lenguaje de programación y el manejo eficiente del tiempo y la memoria (en términos computacionales).
-		
-%		La idea es proveer al sistema de algunas implementaciones para las cuales se conoce de antemano las evaluaciones y luego se debe encontrar el mejor subconjunto de casos de prueba respecto a las soluciones de referencia.. Luego, si dos soluciones obtienen los mismos resultados al usar idénticos casos de prueba, es muy probable que ambas implementaciones tengan la misma calificación. Este es un problema de optimización combinatoria que será abordado con métodos de optimización meta-heurísticos.
-
-	\section{Resultados esperados, importancia y herramientas a utilizar}
-	
-		El objetivo general de esta tesis es la generación automática de casos de prueba y la selección o ponderación de los mismos que permita utilizarlos como medida de calidad para la evaluación de algoritmos.  El objeto de investigación es la optimización combinatoria \cite{baykasouglu2014testing} abordada por meta-heurísticas \cite{OptimizacionCombinatoria} para ser aplicado en la definición de los casos de pruebas de las evaluaciones de los estudiantes de Programación en la Facultad de Matemática y Computación.
-		
-		El algoritmo a implementar y el uso de metaheurísticas y la aplicación o no de un modelo de optimización serán aspectos abordados a lo largo de este documento.
-		
-		Esta solución sería extensible a cualquier algoritmo de programación. Existe abstracción sobre los algoritmos a evaluar, pero se diseñó particularmente para los tipos de exámenes que se aplican en primer año. Con solo tener en cuenta otros factores como el tiempo de ejecución y la memoria consumida, se podría ampliar el marco de algoritmos evaluables por esta propuesta.
-		
-		La generación de casos será parte trabajos futuros, no se proponen procesos o metodologías genéricas de generación automática de casos debido a su complejidad. Para la selección de casos de prueba, la generación realizada fue con fines experimentales.
-		
-	% Objetivos, qué es lo que pienso hacer (app web, herramienta), evaluar la propuesta y compararla con otras 
-	% La implementación de la propuesta sería una aplicación de escritorio. \\
-	
-	% Párrafo que diga la estructura del artículo
-    % Este artículo se divide en... \\
-	
-	% Después viene trabajos relacionados (los que tratan los mismos temas que yo y se utiliza para comparar ideas) y estado del arte (análisis de lo que se ha hecho). Cerrar con una breve crítica.  \\
-	% Artículos relacionados, estado del arte, ... \\
-	
-	% Dar una propuesta
 	\section{Estado del Arte}
 	Es común ver problemas de optimización combinatoria resueltos con la aplicación de metaheurísticas \cite{marti2003procedimientos}. Las tendencias actuales respecto a su uso para la resolución de dicha familia de problemas, arrojaron los resultados expuestos en la Figura \ref{EoAmetaheuristicas}. Los algoritmos genéticos son los más utilizados por los investigadores, ya sea en solitario o en combinación con otros algoritmos. \\
 	
@@ -125,70 +133,50 @@
 		\label{EoAmetaheuristicas}
 	\end{figure}
 	
-	No obstante, mientras se siguen desarrollando las metaheurísticas en la resolución de problemas, ya sea en la  creación  de nuevos algoritmos o mediante el perfeccionamiento de los ya existentes, ha surgido un nuevo concepto, se trata de las denominadas hiperheurísticas. Las mismas son definidas como métodos que inteligentemente controlan la selección de la heurística subordinada que debiera ser aplicada en cada punto de decisión del problema, dependiendo de las características del mismo y de las asociadas al espacio de búsqueda de la solución, mediante un mecanismo de aprendizaje. De esta forma, las hiperheurísticas buscan  tener una mayor vinculación entre la calidad de la solución y la rapidez de la implementación y la ejecución. Algunas de las metaheurísticas utilizadas por las hiperheurísticas son  la búsqueda  tabú  incremental,  algoritmos  genéticos evolucionados, colonia de hormigas, recocido simulado incremental, entre otras. \\
+	No obstante, mientras se siguen desarrollando las metaheurísticas en la resolución de problemas, ya sea en la  creación  de nuevos algoritmos o mediante el perfeccionamiento de los ya existentes, ha surgido un nuevo concepto, se trata de las denominadas hiperheurísticas. Las mismas son definidas como métodos que inteligentemente controlan la selección de la heurística subordinada que debiera ser aplicada en cada punto de decisión del problema, dependiendo de las características del mismo y de las asociadas al espacio de búsqueda de la solución, mediante un mecanismo de aprendizaje. De esta forma, las hiperheurísticas buscan  tener una mayor vinculación entre la calidad de la solución y la rapidez de la implementación y la ejecución. Algunas de las metaheurísticas utilizadas por las hiperheurísticas son  la búsqueda  tabú  incremental, algoritmos genéticos, colonia de hormigas, recocido simulado incremental, entre otras. \\
 	
-	Otras de las técnicas usadas en la resolución de problemas de optimización combinatoria, son los algoritmos aproximados \cite{vasiliev2018algoritmos}\cite{johnson1974approximation}. Se dice que un algoritmo es $\alpha$-aproximado, si para un problema de minimización, computa una solución factible de costo a lo sumo $\alpha$-veces el costo óptimo en tiempo polinomial. A diferencia de las heurísticas, que encuentran buenas soluciones en un tiempo razonable pero no siempre calculable, los algoritmos aproximados se basan en encontrar soluciones cuyo tiempo de ejecución está acotado por una cota conocida.
+	Otras de las técnicas usadas en la resolución de problemas de optimización combinatoria, son los algoritmos aproximados \cite{vasiliev2018algoritmos}. Se dice que un algoritmo es $\alpha$-aproximado \cite{johnson1974approximation}, si para un problema de minimización, computa una solución factible de costo a lo sumo $\alpha$-veces el costo óptimo en tiempo polinomial. A diferencia de las heurísticas, que encuentran buenas soluciones en un tiempo razonable pero no siempre calculable, los algoritmos aproximados se basan en encontrar soluciones cuyo tiempo de ejecución está acotado por una cota conocida.
 	
 	Entre las técnicas más usadas se encuentran los algoritmos golosos, la técnica de Baker para grafos planares y \emph{fractional local ratio}.
 	
-	Los algoritmos golosos son aquellos en cada iteración buscan maximizar el beneficio. Las demostraciones de los factores de aproximación se basan muchas veces en relacionar directamente una solución óptima con la computada.
+	Los algoritmos golosos son aquellos donde en cada iteración buscan maximizar el beneficio. Las demostraciones de los factores de aproximación se basan muchas veces en relacionar directamente una solución óptima con la computada.
 	
-	La técnica de Baker para grafos planares permite obtener algoritmos con factor $(1+ \epsilon)^2$ para todo $\epsilon > 0$ fijo. A pesar de ser costosos estos algoritmos en cuanto a complejidad temporal, permiten definir un problema como “fácil” en grafos planares a pesar de ser difícil de resolver.
+	La técnica de Baker para grafos planares permite obtener algoritmos con factor $(1+ \epsilon)^2$ para todo $\epsilon > 0$ fijo. La idea es descomponer el grafo en componentes y resolver el problema de manera óptima en cada una de las mismas.
 	
 	\emph{Fractional local ratio} es una técnica que se basa en encontrar una solución factible y una descomposición de los costos de forma que se puedan acotar los errores incurridos por la solución computada respecto a cada componente.
+		
+	\section{Resultados esperados, importancia y herramientas a utilizar}
 	
-	
-%	\section{Ejemplos}
-%	
-%	\subsection{Funcionamiento General}
-%	
-%		Consideremos el algoritmo de Euclides para hallar el máximo común divisor entre dos números.\\
-%		
-%		\textbf{Definición.} Máximo Común Divisor de dos números enteros: Es el mayor entero que los divide a ambos sin dejar resto. \\
-%		
-%		Entrada: entero $A$, entero $B$ 
-%		
-%		Método a implementar: Algoritmo de Euclides.
-%		
-%		Salida: $MCD(A, b)$ \\
-%		
-%		En este ejemplo, nuestra propuesta en la fase de aprendizaje debería generar un conjunto de entrada lo suficientemente abarcador, que permita evaluar de forma justa el algoritmo. Por ejemplo, la entrada debería contemplar el cero, los números primos, negativos, de Fibonacci, entre otros.
-%		
-%	\subsection{Funcionamiento Detallado}
-%	
-%		Consideremos el problema de la multiplicación de polinomios. Algunos aspectos a destacar serían los siguientes.
-%		\begin{itemize}
-%			\item La entrada al algoritmo serían 2 polinomios y su salida el resultado de su multiplicación.
-%			\item Se pasa como entrada a la propuesta un generador de polinomios y 3 respuestas al problema (implementaciones) asociadas a una nota (5, 4 o 3), además de los porcentajes de acierto esperados por cada solución. (5:100\%, 4:90\% y 3:75\% por ejemplo).
-%			\item La función objetivo será minimizar la sumatoria de los errores, donde error es el valor absoluto entre lo que se espera y lo obtenido en términos del porcentaje para cada nota.
-%		\end{itemize}
-%	
-%		Nuestra propuesta deberá generar $n$ casos aleatorios con ayuda del generador y reducirlos a un $k <= n$ representativo que se ajuste a los porcentajes esperados por cada solución. Para ello se aplicarán algoritmos metaheurísticos que se describen posteriormente.
+		El objetivo general de esta tesis es la generación automática de casos de prueba y la selección o ponderación de los mismos que permita utilizarlos como medida de calidad para la evaluación de algoritmos.  El objeto de investigación es la optimización combinatoria \cite{baykasouglu2014testing} abordada por meta-heurísticas \cite{OptimizacionCombinatoria} para ser aplicado en la definición de los casos de pruebas de las evaluaciones de los estudiantes de Programación en la Facultad de Matemática y Computación.
+		
+		El algoritmo a implementar y el uso de metaheurísticas y la aplicación o no de un modelo de optimización serán aspectos abordados a lo largo de este documento.
+		
+		Esta solución sería extensible a cualquier algoritmo de programación. Existe abstracción sobre los algoritmos a evaluar, pero se diseñó particularmente para los tipos de exámenes que se aplican en primer año. Con solo tener en cuenta otros factores como el tiempo de ejecución y la memoria consumida, se podría ampliar el marco de algoritmos evaluables por esta propuesta.
+		
+		La generación de casos será parte de trabajos futuros, no se proponen procesos o metodologías genéricas de generación automática de casos debido a su complejidad. Para la selección de casos de prueba, la generación realizada fue con fines experimentales.
+		
+		Quedaría por designar las métricas a utilizar para dicho fin. Cómo evaluar la aplicación y en base a cuáles aspectos se mide la calidad de estos sistemas de cómputo serán interrogantes a responder.
 
 \chapter{Optimización Combinatoria}
 	Los problemas de optimización combinatoria que involucran una extensa, pero finita, lista de posibles soluciones son muy comunes en la vida diaria. Por mencionar algunos, entre los más destacados se encuentran el diseño de redes de comunicación y la planificación de rutas de vuelo. Debido a la gran envergadura de estos problemas en cuanto a la cantidad de datos, resulta imposible enumerar las posibles soluciones y quedarnos con la mejor, pues no es factible en tiempo tal enumeración; incluso con los poderes de cómputo actuales, pues dicha lista crece de manera exponencial respecto al tamaño del problema.
 	
 	En los últimos 50 años se han desarrollado varios métodos de búsqueda, los cuales arrojan una solución factible cercana al óptimo del problema sin necesidad de explorar cada alternativa. Esto es lo que se conoce como Optimización Combinatoria. Los resultados han sido notorios, avances significativos en problemas de importancia para la ciencia como lo son el viajante y el enrutamiento de vehículos ya son palpables.
 	
-	Sin embargo, una buena parte de los problemas encontrados son computacionalmente intratables por su naturaleza o porque son lo suficientemente grandes como para impedir el uso de algoritmos exactos. En tales casos, los métodos heurísticos generalmente se emplean para encontrar soluciones buenas, pero no necesariamente óptimas. La efectividad de estos métodos depende de su capacidad para adaptarse a un ambiente particular, evitar el atrapamiento en los óptimos locales y explotar la estructura básica del problema.
+	Sin embargo, una buena parte de los problemas encontrados son computacionalmente intratables por su naturaleza o porque son lo suficientemente grandes como para impedir el uso de algoritmos exactos. En tales casos, los métodos heurísticos generalmente se emplean para encontrar soluciones buenas, pero no necesariamente óptimas. La efectividad de estos métodos depende de su capacidad para adaptarse a un ambiente particular, evitar el estancamiento en los óptimos locales y explotar la estructura básica del problema.
 	
 	Sobre la base de estas nociones, se han desarrollado diversas técnicas de búsqueda basadas en heurísticas, las cuales han mejorado la capacidad de obtener buenas soluciones a diversos problemas de optimización combinatoria. Algunos de los principales métodos son: Recocido Simulado \cite{dowsland2003diseno}, Búsqueda Tabú \cite{cunquero2003algoritmos}, Algoritmos Genéticos \cite{jimenez2009busquedas} y GRASP (Procedimiento Codicioso de Búsqueda Adaptativa Aleatoria) \cite{resende2003grasp}.
 	
 	\section{Metaheurísticas}
 	
-	\textbf{Definición.} Heurística: técnica o método inteligente, para realizar una tarea que no es producto de un riguroso análisis formal, sino del conocimiento experto sobre un tema a solucionar, la cual aporta soluciones con cierto grado de confianza y calidad. \\
+	Una heurística \cite{gonzalez2001evaluacion} es una técnica o método inteligente para realizar una tarea que no es producto de un riguroso análisis formal, sino del conocimiento experto sobre un tema a solucionar, la cual aporta soluciones con cierto grado de confianza y calidad. Un método heurístico es la parte práctica del concepto de heurística. Es un enfoque para la resolución de problemas que emplea un método práctico no garantizado para ser óptimo o perfecto, pero suficiente para los objetivos inmediatos.
 	
-	\textbf{Definición.} Método Heurístico: parte práctica del concepto de heurística. Es un enfoque para la resolución de problemas, aprendizaje o descubrimiento que emplea un método práctico no garantizado para ser óptimo o perfecto, pero suficiente para los objetivos inmediatos. \\
-	
-	\textbf{Definición.} Metaheurística: son una clase de métodos aproximados que están diseñados para resolver problemas difíciles de optimización combinatoria, en los que los heurísticos clásicos no son efectivos. Las metaheurísticas proporcionan un marco general para crear nuevos algoritmos híbridos combinando diferentes conceptos derivados de la inteligencia artificial, la evolución biológica y los procedimientos estadísticos. \\
-	
-	Las metaheurísticas \cite{gandomi2013metaheuristic}\cite{yagiura2001metaheuristic} generalmente se aplican cuando se desconoce de un algoritmo que resuelva de manera satisfactoria dichos problemas. Muchas veces lo anterior se debe a que no es factible explorar en su totalidad el campo de soluciones en busca de un óptimo global, por lo que se emplean heurísticas o métodos aproximados. Los problemas de optimización combinatoria son usuales escenarios en la aplicación de una metaheurística.
+	Las metaheurísticas \cite{yagiura2001metaheuristic} son una clase de métodos aproximados que están diseñados para resolver problemas difíciles de optimización combinatoria, en los que los heurísticos clásicos no son efectivos. Proporcionan un marco general para crear nuevos algoritmos híbridos combinando diferentes conceptos derivados de la inteligencia artificial, la evolución biológica y los procedimientos estadísticos. Generalmente se aplican cuando se desconoce de un algoritmo que resuelva de manera satisfactoria dichos problemas. Muchas veces lo anterior se debe a que no es factible explorar en su totalidad el espacio de soluciones en busca de un óptimo global, por lo que se emplean heurísticas o métodos aproximados. En los problemas de optimización combinatoria \cite{gandomi2013metaheuristic} usualmente se aplican metaheurísticas. \\
 	
 	La optimización combinatoria se basa en encontrar una configuración de bits (selección), respecto a la entrada del problema, que maximice o minimice una función objetivo específica. A los pasos intermedios anteriores a la solución se les denomina estados, y al conjunto de todos los estados candidatos se le llama espacio de búsqueda. La función objetivo, los estados y el espacio de búsqueda son definidos en función del problema.
 	
-	Existen metaheurísticas que mantienen un único estado actual durante cada instante de ejecución, el cual es actualizado en cada iteración. Este paso se conoce como función de transición. Otras metaheurísticas más sofisticadas mantienen, en vez de un único estado actual, un conjunto de estados candidatos. Así, la función de transición añade o elimina estados de este conjunto. Otros procedimientos pueden guardar información del óptimo actual, escogiendo el estado óptimo entre todos los óptimos locales obtenidos en varias etapas del algoritmo.
+	Existen metaheurísticas que mantienen un único estado actual durante cada instante de ejecución, el cual es actualizado en cada iteración. Este paso se conoce como función de transición. Otras metaheurísticas más sofisticadas mantienen, en vez de un único estado actual, un conjunto de estados candidatos. Así, la función de transición añade o elimina estados de este conjunto. Otros procedimientos pueden guardar información del óptimo actual, escogiendo el estado óptimo entre todos los óptimos locales obtenidos en varias etapas del algoritmo. \\
 	
-	Como se hizo mención anteriormente, el espacio de búsqueda puede resultar extremadamente grande o incluso infinito, por lo cual es necesario definir algunos criterios de parada para la ejecución del algoritmo. Entre los más usuales podemos encontrar el efectuar un número de iteraciones especificadas por el usuario, el alcance de un determinado tiempo de ejecución o el cumplimiento de una condición específica del problema. \\
+	Como se mencionó anteriormente, el espacio de búsqueda puede resultar extremadamente extenso o incluso infinito, por lo cual es necesario definir algunos criterios de parada para la ejecución del algoritmo. Entre los más comunes podemos encontrar el efectuar un número de iteraciones especificadas por el usuario, el alcance de un determinado tiempo de ejecución o el cumplimiento de una condición específica del problema.
 	
 	Existen muchos métodos heurísticos con comportamientos y objetivos diferentes, por lo que resulta complicado clasificarlos. Esto se debe en parte a que muchos de  ellos  han  sido  diseñados para un problema específico sin posibilidad de generalización o aplicación a otros problemas similares. Sin embargo, algunas situaciones pueden resultar tener un parecido en cuanto al tipo de idea a seguir para su solución, de ahí surge una especie de clasificación entre estos algoritmos.
 	
@@ -207,7 +195,7 @@
 		Los métodos constructivos y los de búsqueda local resaltan entre los procedimientos metaheurísticos más empleados y con mejores resultados en la práctica, por lo que para la confección de nuestra propuesta fueron seleccionados algunos de los que resultan aplicables a nuestro problema. 
 	
 		\subsection{Greedy Randomized Adaptive Search Procedures} \label{sub:GRASP}
-		GRASP \cite{GRASP} es una técnica de muestreo aleatorio iterativo. Tiene la invariante de que en cada iteración proporciona una solución factible al problema en cuestión. Hay dos fases dentro de cada iteración del algoritmo: la primera construye inteligentemente una solución a través de una función codiciosa aleatoria; la segunda aplica un procedimiento de búsqueda local a la solución construida con la esperanza de encontrar una mejora. Esto se repite mientras no se alcance una condición de parada, que pudiera ser el cumplimiento de un número de iteraciones o el alcance de un valor en la función objetivo.
+		GRASP \cite{GRASP} es una técnica de muestreo aleatorio iterativo. Tiene la invariante de que en cada iteración proporciona una solución factible al problema en cuestión. Hay dos fases dentro de cada iteración del algoritmo: la primera construye inteligentemente una solución a través de una función golosa aleatoria; la segunda aplica un procedimiento de búsqueda local a la solución construida con la esperanza de encontrar una mejora. Esto se repite mientras no se alcance una condición de parada, que pudiera ser el cumplimiento de un número de iteraciones o el alcance de un valor en la función objetivo.
 		
 		En la Figura \ref{GRASPgeneral} se muestra el procedimiento general del GRASP
 		
@@ -218,7 +206,7 @@
 			\label{GRASPgeneral}
 		\end{figure}
 		
-		Ahora se construye iterativamente una solución factible. En cada iteración de construcción, la elección del siguiente elemento a agregar se determina respecto a una función codiciosa. Para reflejar los cambios provocados por la selección del elemento anterior, los beneficios asociados con cada elemento se actualizan en cada iteración. El componente probabilístico de un GRASP se caracteriza por elegir aleatoriamente uno de los candidatos de la lista, pero no necesariamente el mejor candidato. La lista de los candidatos se denomina lista de candidatos restringidos (RCL). Esta técnica de elección permite obtener diferentes soluciones en cada iteración GRASP.
+		Ahora se construye iterativamente una solución factible. En cada iteración de construcción, la elección del siguiente elemento a agregar se determina respecto a una función golosa. Para reflejar los cambios provocados por la selección del elemento anterior, los beneficios asociados con cada elemento se actualizan en cada iteración. El componente probabilístico de un GRASP se caracteriza por elegir aleatoriamente uno de los candidatos de la lista, pero no necesariamente el mejor candidato. La lista de los candidatos se denomina lista de candidatos restringidos (RCL). Esta técnica de elección permite obtener diferentes soluciones en cada iteración GRASP.
 		
 		La Figura \ref{GRASPconstructionphase} muestra el pseudocódigo para la fase de construcción de GRASP.
 	
@@ -253,7 +241,7 @@
 		\label{OptLocalRS}
 		\end{figure}
 		
-		Aunque S no necesita ser una solución óptima cuando finalmente se cierra el ciclo, será localmente óptima ya que ninguno de sus vecinos tiene un costo menor. La esperanza es que localmente óptimo sea lo suficientemente bueno. \\
+		Aunque S no necesita ser una solución óptima cuando finalmente se termina el ciclo, será localmente óptima ya que ninguno de sus vecinos tiene un costo menor. La esperanza es que localmente óptimo sea lo suficientemente bueno. \\
 		
 		La dificultad de la optimización local es que no tiene forma de retirarse de los óptimos locales poco atractivos. Nunca se pasa a una nueva solución a menos que la dirección sea cuesta abajo, es decir, a un mejor valor de la función de costo. El Recocido Simulado es un enfoque que intenta evitar dicho atrapamiento. Esto se realiza bajo la influencia de un generador de números aleatorios y un parámetro de control llamado temperatura. Como se implementa típicamente, el enfoque de Recocido Simulado involucra un par de ciclos anidados y dos parámetros adicionales, una relación de enfriamiento $r$, $0 < r <1$, y una longitud de temperatura entera $L$ (ver Figura \ref{RecocidoSimulado}). En el Paso 3 del algoritmo, el término congelado se refiere a un estado en el que no parece probable una mejora adicional en el costo ($S$).
 		
@@ -267,7 +255,7 @@
 		$e ^{-\Delta / T}$ será un número en el intervalo $(0, 1)$ donde $\Delta$ y $T$ son positivos. La probabilidad de que un movimiento cuesta arriba de tamaño $\Delta$ sea aceptado disminuye proporcionalmente a la temperatura y, para una temperatura fija $T$, los movimientos ascendentes pequeños tienen mayores probabilidades de aceptación que los grandes. Este método particular de operación está motivado por una analogía física.
 		
 	\subsection{Algoritmos Genéticos} \label{sub:Genetico}
-		Un Algoritmo Genético \cite{AlgGen} consiste en un conjunto de soluciones codificadas, que hacen una analogía con los cromosomas.  Cada uno  de  estos tendrá  asociado  un  ajuste o valor de bondad, que expresa una medida de su valor como solución al problema. En función de este valor se le darán más o menos oportunidades de ``reproducción". John Holland, investigador de la Universidad de Michigan, es uno de los principales precursores del desarrollo de los Algoritmos Genéticos. Sus trabajos a finales de la década de los 60 mostraron una técnica que imitaba en su funcionamiento a la selección natural.
+		Un Algoritmo Genético \cite{AlgGen} consiste en un conjunto de soluciones codificadas, que hacen una analogía con los cromosomas.  Cada uno  de  estos tendrá  asociado  un  ajuste o valor de aptitud, que expresa una medida de su valor como solución al problema. En función de este valor se le darán más o menos oportunidades de ``reproducción". John Holland, investigador de la Universidad de Michigan, es uno de los principales precursores del desarrollo de los Algoritmos Genéticos. Sus trabajos a finales de la década de los 60 mostraron una técnica que imitaba en su funcionamiento a la selección natural.
 		
 		La reproducción en estos algoritmos puede darse de dos formas:
 		
@@ -280,7 +268,7 @@
 	
 		\begin{figure}[h]
 			\centering
-			\includegraphics[width=10cm]{./Graphics/AlgoritmoGenetico.png}
+			\includegraphics[width=9cm]{./Graphics/Genetic-Algorithm-pseudocode.png}
 			\caption{Algoritmo Genético}
 			\label{AlgoritmoeGenetico}
 		\end{figure}
@@ -297,21 +285,21 @@
 		
 		%En el esquema general, solo los descendientes originados a partir de un cruce son mutados. Otra opción habitual es la selección aleatoria del individuo a mutar entre todos los que forman parte de la población.
 		
-\chapter{Evaluación de Código}
+\chapter{Diseño de la Propuesta}
+		
+\section{Evaluación de Código}
 
-	La calidad de una herramienta digital se establece en base a la escritura del código fuente y la arquitectura diseñada. Que una aplicación esté libre de fallos y que además facilite la comprensión en la lectura y reusabilidad del código resulta de importancia para su aprobación.
+	La calidad de una herramienta digital se establece en base a la escritura del código fuente y la arquitectura diseñada. Que una aplicación esté libre de fallos y que además facilite la comprensión en la lectura y reusabilidad del código resulta de gran importancia para su aprobación.
 
 	En la actualidad existen numerosas herramientas que de alguna manera permiten expresar una métrica en cuanto a evaluación de un código. En lo adelante se hará mención de algunas de las mismas.
 	
 	\begin{itemize}
 		\item SonarQube es una plataforma desarrollada en Java que permite realizar análisis de la calidad de código de forma automatizada, para lo cual se usan diversas herramientas de análisis estático de código fuente como Checkstyle, PMD o FindBugs que permiten obtener métricas que ayudan a mejorar la calidad. Resulta una herramienta de utilidad en durante el testing de código en una aplicación.
 		
-		\item Beyond Compare es una herramienta que permite comparar ficheros. Si al examinar 2 códigos, resulta que tienen una estructura similar, es probable que que hayan seguido la misma idea pero con diferente ejecución para la solución de un problema.
-		
 		\item HP Quality Center es una herramienta de gestión de pruebas que tiene como objetivo el control de la calidad software. Entre los mismo incluye la gestión de requisitos, gestión de pruebas y los procesos de negocio.
 	\end{itemize}
 	
-	Existen algunas métricas presentes en el código que nos permiten evaluar la calidad del mismo. Estas son ajenas al lenguaje de programación que se use. Algunas de las principales categorías son las siguientes.
+	Existen algunas métricas presentes en el código que nos permiten evaluar la calidad del mismo. Estas son ajenas al lenguaje de programación que se use. Algunas de las principales categorías son las siguientes \cite{callejas2017modelos}.
 	
 	\begin{itemize}
 		\item Reusabilidad. Se refiere a la utilización en varios lugares del programa de un mismo código, evitando así volverlo a escribir y posibles errores. Un ejemplo sencillo de esto es la separación del programa en proyectos y las funcionalidades en métodos.
@@ -339,7 +327,7 @@
 	\end{itemize}
 		
 		
-\chapter{Diseño de la Propuesta}
+\section{Aplicación de metaheurísticas}
 
 	Para poder aplicar alguna metaheurística al problema que se intenta dar solución, es necesario definir nuestro espacio de búsqueda, así como las entradas, salidas y adaptaciones hechas a las implementaciones.
 	
@@ -365,14 +353,14 @@
 
 	Nuestra propuesta deberá de los $n$ casos de prueba aleatorios proporcionados por el generador, reducirlos a un $k$ representativo que se ajuste a los porcentajes esperados por cada solución. Para ello se aplicarán algoritmos metaheurísticos descritos anteriormente. \\
 	
-	A continuación, se explican las adaptaciones hechas a los dos algoritmos implementados: GRASP y Genético, los cuales reciben la misma entrada y aplican un proceder diferente. La selección de estos dos se debe que, por un lado, el Algoritmo Genético tiene los mejores resultados en la práctica cuando se trabaja con problemas de optimización combinatoria, lo cual se evidencia en la figura \ref{EoAmetaheuristicas} al ser el más utilizado. Por otro lado, GRASP, a pesar figurar en la quinta posición, resulta intuitivo y fácil de implementar; además, puede servir de referencia para otras implementaciones, las cuales deberían obtener un mejor resultado.
+	A continuación, se explican las adaptaciones hechas a los dos algoritmos implementados: GRASP y Genético, los cuales reciben la misma entrada y aplican un proceder diferente. La selección de estos dos se debe que, por un lado, el Algoritmo Genético tiene los mejores resultados en la práctica cuando se trabaja con problemas de optimización combinatoria, lo cual se evidencia en la Figura \ref{EoAmetaheuristicas} al ser el más utilizado. Por otro lado, GRASP, a pesar figurar en la quinta posición, resulta intuitivo y fácil de implementar; además, puede servir de referencia para otras implementaciones, las cuales deberían obtener un mejor resultado.
 	
 	\section{Adaptación de GRASP}
-		Como mencionábamos en el apartado \ref{sub:GRASP}, en cada iteración de GRASP Se hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En este problema en particular, se tienen inicialmente los $n$ casos de prueba, de donde se selecciona un subconjunto que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Esto se aprecia en la figura \ref{GRASP. Candidatos}. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$. La figura \ref{GRASP. General} muestra el funcionamiento general.
+		Como mencionábamos en el apartado \ref{sub:GRASP}, en cada iteración de GRASP Se hace una búsqueda local, la cual brinda otra solución factible al algoritmo. En este problema en particular, se tienen inicialmente los $n$ casos de prueba, de donde se selecciona un subconjunto que será la lista de candidatos de eliminar, los cuales representan una mejora (menor evaluación) de la función objetivo si no se les considerara en la solución final del problema. Esto se aprecia en la Figura \ref{GRASP. Candidatos}. Una vez conformada dicha selección se toma uno de la misma al azar y se retira, posteriormente se hace otra iteración del algoritmo pero ahora con un conjunto de tamaño $n-1$. La figura \ref{GRASP. General} muestra el funcionamiento general.
 		
 		\begin{figure}[!]
 			\centering
-			\includegraphics[width=10cm]{./Graphics/FiltrodeGRASP1.png}
+			\includegraphics[width=12cm]{./Graphics/FiltrodeGRASP1.png}
 			\caption{GRASP. Selección de Candidatos}
 			\label{GRASP. Candidatos}
 		\end{figure}
@@ -395,7 +383,7 @@
 		Para un mayor rendimiento de este algoritmo, se deben hacer varias pasadas con el conjunto inicial de los $n$ casos de prueba brindados por el generador, pues en la aleatoriedad de seleccionar el candidato a eliminar, puede que no siempre se esté caminando hacia el óptimo global. Por lo que varias corridas deberían lanzar un mejor rendimiento del algoritmo, el cual se quedará con la mejor de todas. La estimación del parámetro $k$ se hace de forma experimental y es posible que dos pasadas brinden la misma solución, pero esto último es muy poco probable.
 		
 	\section{Adaptación del Genético}
-		En el Algoritmo Genético mencionado en el apartado \ref{sub:Genetico}, se definen varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto). La figura \ref{Genetico. General} muestra el funcionamiento general.
+		En el Algoritmo Genético mencionado en el apartado \ref{sub:Genetico}, se definen varios operadores genéticos a efectuar sobre una población inicial de individuos, que serán métodos que reciben dos soluciones al problema. La entrada al procedimiento será el mismo subconjunto de tamaño $n$ que recibe GRASP. La diferencia está en que este último solo da pasos de tamaño $1$ en cada iteración, pues se visita una solución vecina que difiere en solo un caso ($1$ bit si se ven como máscaras booleanas sobre un conjunto). La Figura \ref{Genetico. General} muestra el funcionamiento general.
 		
 		\begin{figure}[h]
 			\centering
@@ -412,7 +400,7 @@
 			\item individuos $r_1, r_2$: dos seleccionados de forma aleatoria.
 		\end{itemize} 
 	
-		Operadores genéticos definidos donde $i1, i2$ son individuos de la población, o sea, soluciones al problema. La figura \ref{OperadorGenetico} muestra un ejemplo de operador aplicado.
+		Operadores genéticos definidos donde $i1, i2$ son individuos de la población, o sea, soluciones al problema. La Figura \ref{OperadorGenetico} muestra un ejemplo de operador aplicado.
 		
 		\begin{figure}[h]
 			\centering
@@ -499,7 +487,7 @@
 
 	Debido a la información que se tiene ahora mismo sobre cada caso de prueba, el vector que se construye de estos es binario y de dimensión 2. Por tanto, el máximo número de tipos de casos posibles presentes en el problema general es 4.\\
 
-	\textbf{Nota}: Por lo general no existen los casos de la forma $(1, 0)$. En la práctica puede que surjan de manera muy aislada. Se supone que una implementación de 4 debería acertar en los mismos casos que una de 3 y más, que no tenga un aspecto en el que quede por detrás de otra que obtenga una nota inferior. Sin embargo es posible que no se provea al sistema de una implementación de 4 puntos, por lo que los casos de tipo $cuatro$ serían los únicos presentes.\\
+	\textbf{Nota}: Por lo general no existen los casos de la forma $(1, 0)$. En la práctica puede que surjan de manera muy aislada. Se supone que una implementación de 4 debería acertar en los mismos casos que una de 3 y más, que no tenga un aspecto en el que quede por detrás de otra que obtenga una nota inferior. Sin embargo es posible que no se provea al sistema de una implementación de 4 puntos, por lo que los casos de tipo $cuatro$ u $uno$ serían los únicos presentes.\\
  
  	Una vez fijado el conjunto inicial de casos de prueba, ya la función objetivo toma un valor (ver definición de la misma en el Capítulo \ref{fo}). Supongamos que el porciento de acierto de la implementación de 3 es 75\% de un 80\% esperado y la de 4 es 90\% de un 95\% esperado. El algoritmo debe reducir en alguna medida los casos en que fallan ambas implementaciones, por lo cual la lista de candidatos a eliminar definida por GRASP en cada iteración serán solamente los casos de la forma $cero$. Por tanto de esa lista, que no va a variar en cuanto a grupos de casos, pues el tipo de un caso es invariable, se seleccionarán tantos casos a eliminar como la evaluación de la función objetivo lo permita (mientras mejore) y según la cantidad de casos del tipo objetivo presentes en el conjunto inicial.
  	
@@ -528,7 +516,7 @@
 	
  	Variante 1: Que el usuario proporcione varias implementaciones de cada nota. De esta forma ya estaría conformado el tribunal encargado desde el inicio. Sin embargo, resulta poco práctica. El objetivo de esta tesis es reducir a un conjunto representativo de casos de prueba dado un conjunto inicial e implementaciones de 3 y 4. Con ello se pondría fin al problema de generar estos casos a mano como se hace hasta ahora. Si esta variante se convierte en solución final, el usuario se vería sometido a un problema que resultaría igual, mayor o incluso imposible de resolver en algunas situaciones. Por lo que no es del todo factible. \\
 	
-	Variante 2: Añadir soluciones automáticamente según el grado de similitud con las soluciones ``canónicas" proveídas por el profesor. Así se resuelve el problema de no tener que garantizar el jurado desde un inicio, pero por otro lado puede que este no se llegue a conformar nunca. Se necesita cierta variedad entre las soluciones, esto tal vez no sea posible encontrarlo debido a que entre las implementaciones candidatas, ninguna cumple los requisitos o por las características del problema particular que no lo permita. \\
+	Variante 2: Añadir soluciones automáticamente según el grado de similitud con las soluciones ``canónicas" provistas por el profesor. Así se resuelve el problema de no tener que garantizar el jurado desde un inicio, pero por otro lado puede que este no se llegue a conformar nunca. Se necesita cierta variedad entre las soluciones, esto tal vez no sea posible encontrarlo debido a que entre las implementaciones candidatas, ninguna cumple los requisitos o por las características del problema particular que no lo permita. \\
 	
 	Vale destacar que la variante 2 también está condicionada por el espacio de búsqueda, muchas veces infinito. Por lo que resulta infactible su total exploración. Una vez más se insiste en la importancia de contar con una muestra representativa de la población en el conjunto inicial de casos de prueba, para un óptimo funcionamiento de las metaheurísticas empleadas y de las propuestas de solución a este nuevo problema generado. \\
 	
@@ -593,8 +581,14 @@
 		\end{center}
 	\end{table}
 
-	A modo de conclusión, este experimento 1 arroja como resultado que el algoritmo genético, al lograr una mejor reducción de la función objetivo, es más efectivo, al menos con las implementaciones actuales y en el espacio de búsqueda de los polinomios.
-
+	El rendimiento de ambos algoritmos en el experimento 1 se muestra en la Figura \ref{CallsMP}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/Calls-MP.png}
+		\caption{Rendimiento Experimento 1}
+		\label{CallsMP}
+	\end{figure}
 
 	\section{Experimento 2}
 		Para probar estas metaheurísticas con casos reales se seleccionó el problema Anagramas, el cual fue aplicado en el curso 2018-2019 como primer examen de programación en la facultad de Matemática y Computación de la Universidad de La Habana. El mismo consiste en dado un $string$ $s$, obtener la cantidad de pares de $substrings$ de $s$ que son anagramas entre sí. Un anagrama es una palabra que resulta de la transposición de letras de otra palabra. Dicho de otra forma, una palabra es anagrama de otra si las dos tienen las mismas letras, con el mismo número de ocurrencias. Un $substring$ es una secuencia contigua de caracteres de al menos longitud uno.
@@ -662,9 +656,24 @@
 		\end{center}
 	\end{table}
 
-	Como observación respecto, a la cantidad de casos originales aplicados en el problema (70) y a la aplicada en esta experimentación (468), hubo un notado aumento en el porciento de acierto de los estudiantes. Esto se debe a que resuelven más casos satisfactoriamente pero que pueden resultar triviales o ser una combinación lineal entre sí, pero no la suficiente cantidad como para mejorar la nota. Por lo cual el tamaño del conjunto de casos finales, a pesar de lograr una buena evaluación de la función objetivo, debe tenerse en cuenta para futuras experimentaciones. \\
+	Como observación, respecto a la cantidad de casos originales aplicados en el problema (70) y a la aplicada en esta experimentación (468), hubo un notado aumento en el porciento de acierto de los estudiantes. Esto se debe a que resuelven más casos satisfactoriamente pero que pueden resultar triviales o ser una combinación lineal entre sí, pero no la suficiente cantidad como para mejorar la nota. Por lo cual el tamaño del conjunto de casos finales, a pesar de lograr una buena evaluación de la función objetivo, debe tenerse en cuenta para futuras experimentaciones. \\
 	
-	A modo de conclusión general, este experimento 2 reafirma que el algoritmo genético es muy efectivo, no presentó error (cambio de nota) respecto a las mediciones iniciales. Por lo cual, en estos tipos de problemas de optimización combinatoria a resolver con metaheurísticas, si lo que se desea es encontrar una solución tan cercana al óptimo como sea posible, entonces es recomendable aplicar el algoritmo genético. En caso de que se pueda contar con un margen de error, daba la simpleza en la implementación de GRASP, resulta muy factible de aplicar para la resolución de estos problemas.
+	El rendimiento de ambos algoritmos en el experimento 2 se muestra en la Figura \ref{CallsAna}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=10cm]{./Graphics/Calls-Anagramas.png}
+		\caption{Rendimiento Experimento 2}
+		\label{CallsAna}
+	\end{figure}
+	
+	\section{Conclusiones}
+	
+	Quedó en evidencia mediante el experimento 1, que el algoritmo genético, al lograr una mejor reducción de la función objetivo, es más efectivo; al menos con las implementaciones actuales y en el espacio de búsqueda de los polinomios.
+	
+	Resulta poco sorprendente al anterior resultado, pues se hizo alusión que es la metaheurística más usada por los investigadores y en el diseño de la implementación, se plantearon operadores genéticos que garantizaron una aleatoriedad que permitió una adecuada exploración. Por lo tanto se visitaron muchas soluciones y se llegó a una que difiere poco del óptimo global y es aceptable como respuesta al problema.
+	
+	En el experimento 2 se reafirma que el algoritmo genético es muy útil, no presentó error (cambio de nota) respecto a las mediciones iniciales. Por lo cual, en estos tipos de problemas de optimización combinatoria a resolver con metaheurísticas, si lo que se desea es encontrar una solución tan cercana al óptimo como sea posible, entonces es recomendable aplicar el algoritmo genético. En caso de que se pueda contar con un margen de error, dada la simpleza en la implementación de GRASP, resulta muy factible de aplicar para la resolución de estos problemas.
 	
 	\section*{Recomendaciones y Trabajos Futuros}
 	
@@ -684,14 +693,14 @@
 	Como trabajo derivado de esta tesis se tiene:
 	\begin{itemize}
 		
+		\item Hacer más extensible la calificación con notas.
+		
 		\item La generación automática de casos de prueba.
 		
 	\end{itemize}
 
-	Este tema fue un elemento que se tuvo en cuenta durante la experimentación. Como se ha hecho alusión anteriormente, una entrada representativa de casos de prueba, favorece el rendimiento de las metaheurísticas que se puedan aplicar. La generación hecha fue asistida, se trató de representar el universo de casos de prueba en dependencia del problema.
+	Este último elemento fue un tema que se tuvo en cuenta durante la experimentación. Como se ha hecho alusión anteriormente, una entrada representativa de casos de prueba, favorece el rendimiento de las metaheurísticas que se puedan aplicar. La generación hecha fue asistida, se trató de representar el universo de casos de prueba en dependencia del problema.
 	
-	
-	 
 
 \bibliography{bibliography}
 \bibliographystyle{ieeetr}

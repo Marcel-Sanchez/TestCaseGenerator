@@ -22,18 +22,12 @@ namespace Metaheuristic
             var percentajes = solutionsList.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
-            int n = 1000;
+            int n = 500;
             while (n-- > 0)
             {
-                //string p = Directory.GetCurrentDirectory() + @"\" + "GenFO1.txt";
-                //using (StreamWriter file = new StreamWriter(p, true))
-                //{
-                //    file.WriteLine($"Menor evaluación {evals.Min()}");
-                //    file.WriteLine($"Evaluación media {evals.Average()}");
-                //    file.WriteLine($"Iteración {n}");
-
-                //    file.WriteLine();
-                //}
+                
+                //p = Directory.GetCurrentDirectory() + @"\" + "fitness Y Gen2.txt";
+                
 
                 percentajes = solutionsList.Select(k => k.GetPercentajes());
                 evals = percentajes.Select(k => Sett.TargetFunc(k)).ToArray();
@@ -82,14 +76,27 @@ namespace Metaheuristic
                     solutionsList.RemoveAt(index);
                     newEvals.RemoveAt(index);
                 }
-                
+
                 //Console.WriteLine($"Menor evaluación {evals.Min()}");
                 //Console.WriteLine($"Evaluación media {evals.Average()}");
                 //Console.WriteLine();
+                //string p0 = Directory.GetCurrentDirectory() + @"\" + "Calls Gen.txt";
+                //using (StreamWriter file = new StreamWriter(p0, true))
+                //{
+                //    file.Write($"{Sett.calls - Sett.callsAux}, ");
+                //    Sett.callsAux = Sett.calls;
+                //}
+                //string p1 = Directory.GetCurrentDirectory() + @"\" + "Evals f Gen.txt";
+                //using (StreamWriter file = new StreamWriter(p1, true))
+                //{
+                //    file.Write($"{evals.Min()}, ");
+                //}
             }
             var min = evals.Min();
             Console.WriteLine($"Menor evaluación {min}");
             return model = solutionsList.First(p => Sett.TargetFunc(p.GetPercentajes()) == min);
+            
+
             //foreach (var item in Solutions)
             //{
 

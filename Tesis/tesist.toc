@@ -1,17 +1,19 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{5}% 
-\contentsline {section}{\numberline {1.1}Contexto del problema}{6}% 
-\contentsline {section}{\numberline {1.2}Resultados esperados, importancia y herramientas a utilizar}{7}% 
-\contentsline {section}{\numberline {1.3}Estado del Arte}{7}% 
-\contentsline {chapter}{\numberline {2}Optimizaci\IeC {\'o}n Combinatoria}{10}% 
-\contentsline {section}{\numberline {2.1}Metaheur\IeC {\'\i }sticas}{11}% 
-\contentsline {subsection}{\numberline {2.1.1}Greedy Randomized Adaptive Search Procedures}{12}% 
-\contentsline {subsection}{\numberline {2.1.2}Recocido Simulado}{14}% 
-\contentsline {subsection}{\numberline {2.1.3}Algoritmos Gen\IeC {\'e}ticos}{15}% 
-\contentsline {chapter}{\numberline {3}Evaluaci\IeC {\'o}n de C\IeC {\'o}digo}{18}% 
-\contentsline {chapter}{\numberline {4}Dise\IeC {\~n}o de la Propuesta}{20}% 
-\contentsline {section}{\numberline {4.1}Adaptaci\IeC {\'o}n de GRASP}{21}% 
-\contentsline {section}{\numberline {4.2}Adaptaci\IeC {\'o}n del Gen\IeC {\'e}tico}{23}% 
-\contentsline {chapter}{\numberline {5}Resultados Obtenidos}{26}% 
-\contentsline {section}{\numberline {5.1}Experimento 1}{26}% 
-\contentsline {section}{\numberline {5.2}Experimento 2}{31}% 
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{7}% 
+\contentsline {section}{\numberline {1.1}Contexto del problema}{7}% 
+\contentsline {section}{\numberline {1.2}Estado del Arte}{8}% 
+\contentsline {section}{\numberline {1.3}Resultados esperados, importancia y herramientas a utilizar}{10}% 
+\contentsline {chapter}{\numberline {2}Optimizaci\IeC {\'o}n Combinatoria}{11}% 
+\contentsline {section}{\numberline {2.1}Metaheur\IeC {\'\i }sticas}{12}% 
+\contentsline {subsection}{\numberline {2.1.1}Greedy Randomized Adaptive Search Procedures}{13}% 
+\contentsline {subsection}{\numberline {2.1.2}Recocido Simulado}{15}% 
+\contentsline {subsection}{\numberline {2.1.3}Algoritmos Gen\IeC {\'e}ticos}{16}% 
+\contentsline {chapter}{\numberline {3}Dise\IeC {\~n}o de la Propuesta}{19}% 
+\contentsline {section}{\numberline {3.1}Evaluaci\IeC {\'o}n de C\IeC {\'o}digo}{19}% 
+\contentsline {section}{\numberline {3.2}Aplicaci\IeC {\'o}n de metaheur\IeC {\'\i }sticas}{21}% 
+\contentsline {section}{\numberline {3.3}Adaptaci\IeC {\'o}n de GRASP}{22}% 
+\contentsline {section}{\numberline {3.4}Adaptaci\IeC {\'o}n del Gen\IeC {\'e}tico}{23}% 
+\contentsline {chapter}{\numberline {4}Resultados Obtenidos}{26}% 
+\contentsline {section}{\numberline {4.1}Experimento 1}{26}% 
+\contentsline {section}{\numberline {4.2}Experimento 2}{32}% 
+\contentsline {section}{\numberline {4.3}Conclusiones}{34}% 

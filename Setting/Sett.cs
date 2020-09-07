@@ -37,15 +37,20 @@ namespace Setting
         // Número de casos Totales
         public static int CaseNumber = 0;
 
+        //public static int calls = 0;
+        //public static int callsAux = 0;
+
         public static float TargetFunc(float obtained3, float obtained4)
         {
+            //calls++;
             return Math.Abs(Excepted3 - obtained3) + Math.Abs(Excepted4 - obtained4);
         }
         public static float TargetFunc(ValueTuple<float, float> percentajes)
         {
+            //calls++;
             return Math.Abs(Excepted3 - percentajes.Item1) + Math.Abs(Excepted4 - percentajes.Item2);
         }
-
-        public static Random Rnd = new Random();
+        public static DateTime currentDate = DateTime.Now;
+        public static Random Rnd = new Random((int)currentDate.Ticks);
     }
 }

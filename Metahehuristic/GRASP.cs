@@ -12,6 +12,7 @@ namespace Metaheuristic
     {
         public override UniqueModelCase Run(UniqueModelCase model)
         {
+            
             var result = new UniqueModelCase(model.Results, model._eq);
             Helper.CheckCases(result.Results.Values);
             //Console.WriteLine();
@@ -27,8 +28,8 @@ namespace Metaheuristic
             //Console.WriteLine($"Count candidates: {candidates.Count}");
 
             // Mientras pueda mejorar la evalución de la función (> 0) y tenga candidatos a eliminar.
-            //int i = 0;
-            while (candidates.Count > 0 && funcEval != 0)
+            int n = 500;
+            while (candidates.Count > 0 && n-- > 0)
             {
                 // Selecciono un candidato random a eliminar.
                 var caseToDelete = candidates[Sett.Rnd.Next(candidates.Count)];
@@ -43,19 +44,8 @@ namespace Metaheuristic
 
                 //var s = "";
 
-                //string p = Directory.GetCurrentDirectory() + @"\" + "f3.txt";
-                //using (StreamWriter file = new StreamWriter(p, true))
-                //{
-                //    //file.WriteLine($"percentajes: {percentajes}");
-                //    file.Write($"{funcEval.ToString("00.00")}  ");
-                //    i++;
-                //    if (i == 20)
-                //    {
-                //        i = 0;
-                //        file.WriteLine();
-                //    }
-                //    //file.WriteLine($"caseToDelete: {caseToDelete}");
-                //}
+                
+                
 
                 //Console.WriteLine($"Después de eliminar: {funcEval}");
                 //Console.WriteLine($"Current diference: {Setting.TargetFunc(models[0].Percentaje, models[1].Percentaje)}");
@@ -64,10 +54,41 @@ namespace Metaheuristic
                 // Obtengo la nueva lista de candidatos.
                 candidates = GetCandidates(result, funcEval);
                 //Console.WriteLine($"Count candidates: {candidates.Count}");
+
+                //string p = Directory.GetCurrentDirectory() + @"\" + "Calls GRASP.txt";
+                //using (StreamWriter file = new StreamWriter(p, true))
+                //{
+                //    file.Write($"{Sett.calls - Sett.callsAux}, ");
+                //    Sett.callsAux = Sett.calls;
+                //}
+                //p = Directory.GetCurrentDirectory() + @"\" + "Evals f GRASP.txt";
+                //using (StreamWriter file = new StreamWriter(p, true))
+                //{
+                //    file.Write($"{funcEval}, ");
+                //}
             }
             percentajes = result.GetPercentajes();
             funcEval = Sett.TargetFunc(percentajes.Item1, percentajes.Item2);
             Console.WriteLine($"Final diference: {funcEval}");
+            //Sett.calls = Sett.callsAux;
+
+            string px = Directory.GetCurrentDirectory() + @"\" + "Calls GRASP.txt";
+            string py = Directory.GetCurrentDirectory() + @"\" + "Evals f GRASP.txt";
+            //while (n-- > 0)
+            //{
+
+            //    using (StreamWriter file = new StreamWriter(px, true))
+            //    {
+            //        file.Write($"{0}, ");
+            //    }
+
+
+            //    using (StreamWriter file = new StreamWriter(py, true))
+            //    {
+            //        file.Write($"{funcEval}, ");
+            //    }
+            //}
+
             Helper.CheckCases(result.Results.Values);
             return result;
         }

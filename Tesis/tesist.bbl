@@ -68,15 +68,21 @@ M.~G. Resende and J.~L. Gonz{\'a}lez~Velarde, ``Grasp: Greedy randomized
   adaptive search procedures,'' {\em Inteligencia Artificial, Revista
   Iberoamericana de Inteligencia Artificial}, vol.~19, no.~1, pp.~61--76, 2003.
 
-\bibitem{gandomi2013metaheuristic}
-A.~H. Gandomi, X.-S. Yang, S.~Talatahari, and A.~H. Alavi, ``Metaheuristic
-  algorithms in modeling and optimization,'' {\em Metaheuristic applications in
-  structures and infrastructures}, pp.~1--24, 2013.
+\bibitem{gonzalez2001evaluacion}
+M.~P. Gonz{\'a}lez, A.~Pascual, and J.~Lor{\'e}s, ``Evaluaci{\'o}n
+  heur{\'\i}stica,'' {\em 2001). Introducci{\'o}n a la Interacci{\'o}n
+  Persona-Ordenador. AIPO: Asociaci{\'o}n Interacci{\'o}n Persona-Ordenador},
+  2001.
 
 \bibitem{yagiura2001metaheuristic}
 M.~Yagiura and T.~Ibaraki, ``On metaheuristic algorithms for combinatorial
   optimization problems,'' {\em Systems and Computers in Japan}, vol.~32,
   no.~3, pp.~33--55, 2001.
+
+\bibitem{gandomi2013metaheuristic}
+A.~H. Gandomi, X.-S. Yang, S.~Talatahari, and A.~H. Alavi, ``Metaheuristic
+  algorithms in modeling and optimization,'' {\em Metaheuristic applications in
+  structures and infrastructures}, pp.~1--24, 2013.
 
 \bibitem{GRASP}
 T.~Feo and M.~Resende, ``Greedy randomized adaptive search procedures,'' {\em
