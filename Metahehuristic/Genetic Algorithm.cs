@@ -12,8 +12,6 @@ namespace Metaheuristic
 {
     public class GeneticAlgorithm : CaseSolver
     {
-        //public static List<UniqueModelCase> Solutions;
-
         public override UniqueModelCase Run(UniqueModelCase model)
         {
             var modelSplited = SplitModel(model);
@@ -25,13 +23,10 @@ namespace Metaheuristic
             int n = 500;
             while (n-- > 0)
             {
-                
-                //p = Directory.GetCurrentDirectory() + @"\" + "fitness Y Gen2.txt";
-                
-
                 percentajes = solutionsList.Select(k => k.GetPercentajes());
                 evals = percentajes.Select(k => Sett.TargetFunc(k)).ToArray();
 
+                // Selección de los individuos.
                 var couple1Indexs = MergeAndFind.Find2Bests(evals);
                 var couple2Indexs = MergeAndFind.Find2Random(evals);
 
@@ -41,6 +36,7 @@ namespace Metaheuristic
                 var c2x = solutionsList[couple2Indexs.Item1];
                 var c2y = solutionsList[couple2Indexs.Item2];
 
+                // Aplicación de operadores.
                 var resultc1A = MergeAndFind.Merge1(c1x.Results, c1y.Results);
                 var resultc1B = MergeAndFind.Merge2(c1x.Results, c1y.Results);
                 var resultc1C = MergeAndFind.Merge3(c1x.Results, c1y.Results);
@@ -52,7 +48,6 @@ namespace Metaheuristic
                 var resultc2D = MergeAndFind.Merge4(c2x.Results, c2y.Results, (int)((float)c2x.Results.Count * 80 / 100), (int)((float)c2y.Results.Count * 20 / 100));
 
                 var currentComparer = model._eq;
-                //var currentComparer = SolutionComparer.EqAna;
 
                 var c1 = new UniqueModelCase(resultc1A, currentComparer);
                 var c2 = new UniqueModelCase(resultc1B, currentComparer);
@@ -76,32 +71,10 @@ namespace Metaheuristic
                     solutionsList.RemoveAt(index);
                     newEvals.RemoveAt(index);
                 }
-
-                //Console.WriteLine($"Menor evaluación {evals.Min()}");
-                //Console.WriteLine($"Evaluación media {evals.Average()}");
-                //Console.WriteLine();
-                //string p0 = Directory.GetCurrentDirectory() + @"\" + "Calls Gen.txt";
-                //using (StreamWriter file = new StreamWriter(p0, true))
-                //{
-                //    file.Write($"{Sett.calls - Sett.callsAux}, ");
-                //    Sett.callsAux = Sett.calls;
-                //}
-                //string p1 = Directory.GetCurrentDirectory() + @"\" + "Evals f Gen.txt";
-                //using (StreamWriter file = new StreamWriter(p1, true))
-                //{
-                //    file.Write($"{evals.Min()}, ");
-                //}
             }
             var min = evals.Min();
             Console.WriteLine($"Menor evaluación {min}");
             return model = solutionsList.First(p => Sett.TargetFunc(p.GetPercentajes()) == min);
-            
-
-            //foreach (var item in Solutions)
-            //{
-
-            //    Console.WriteLine($"{item.GetPercentajes()}");
-            //}
         }
 
         private static IEnumerable<UniqueModelCase> SplitModel(UniqueModelCase model)
