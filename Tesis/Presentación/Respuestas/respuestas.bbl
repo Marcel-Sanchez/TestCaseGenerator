@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{ambuludi2018aplicacion}
+J.~A. Ambuludi~Olmedo, {\em Aplicaci{\'o}n de Algoritmos Gen{\'e}ticos para la
+  optimizaci{\'o}n de problemas combinatorios}.
+\newblock PhD thesis, 2018.
+
+\bibitem{cicerchia2017problemas}
+L.~B. Cicerchia, L.~M. Esnaola, J.~P. Tessore, H.~D. Ram{\'o}n, C.~C. Russo,
+  and C.~A. Mart{\'\i}nez, ``Problemas de optimizaci{\'o}n combinatoria: una
+  propuesta que combina algoritmos gen{\'e}ticos y metaheur{\'\i}sticas,''
+  2017.
+
+\bibitem{rodriguez2016generacion}
+J.~Rodriguez and G.~Rodriguez, ``Generaci{\'o}n autom{\'a}tica de casos de
+  prueba para test de una gui usando colonia de hormigas y metaheur{\'\i}stica
+  golosa,'' 2016.
+
+\bibitem{macias2016generador}
+A.~Mac{\'\i}as-Rojas, M.~D. Delgado-Dapena, J.~Fajardo-Calder{\'\i}n, and
+  D.~Larrosa-Uribazo, ``Generador de valores de casos de prueba funcionales,''
+  {\em L{\'a}mpsakos}, no.~15, pp.~51--58, 2016.
+
+\bibitem{aprendizaje}
+``Algoritmos de aprendizaje automático.''
+  url{https://azure.microsoft.com/es-es/overview/machine-learning-algorithms}.
+
+\end{thebibliography}

@@ -8,26 +8,11 @@ C.~L. Montero, ``La computaci{\'o}n y soluci{\'o}n de problemas
 B.~J. Copeland, {\em The Essential Turing}.
 \newblock Oxford University Press, 2004.
 
-\bibitem{callejas2017modelos}
-M.~Callejas-Cuervo, A.~C. Alarc{\'o}n-Aldana, and A.~M.
-  {\'A}lvarez-Carre{\~n}o, ``Modelos de calidad del software, un estado del
-  arte,'' {\em Entramado}, vol.~13, no.~1, pp.~236--250, 2017.
-
 \bibitem{lopez2016definicion}
 A.~V. L{\'o}pez, A.~S{\'a}nchez, and G.~A. Montejano, ``Definici{\'o}n de
   m{\'e}tricas de calidad para productos de software,'' in {\em XVIII Workshop
   de Investigadores en Ciencias de la Computaci{\'o}n (WICC 2016, Entre
   R{\'\i}os, Argentina)}, 2016.
-
-\bibitem{baykasouglu2014testing}
-A.~Baykaso{\u{g}}lu, A.~Hamzadayi, and S.~Y. K{\"o}se, ``Testing the
-  performance of teaching--learning based optimization (tlbo) algorithm on
-  combinatorial problems: Flow shop and job shop scheduling cases,'' {\em
-  Information Sciences}, vol.~276, pp.~204--218, 2014.
-
-\bibitem{OptimizacionCombinatoria}
-J.~P. García, ``Optimizacion combinatoria,'' {\em Universidad Politécnica de
-  Valencia}, 2006.
 
 \bibitem{marti2003procedimientos}
 R.~Mart{\'i}, ``Procedimientos metaheur{\'i}sticos en optimizaci{\'o}n
@@ -47,6 +32,47 @@ S.~Vasiliev, {\em Algoritmos aproximados para problemas de optimizaci{\'o}n
 \bibitem{johnson1974approximation}
 D.~S. Johnson, ``Approximation algorithms for combinatorial problems,'' {\em
   Journal of computer and system sciences}, vol.~9, no.~3, pp.~256--278, 1974.
+
+\bibitem{jungnickel2005graphs}
+D.~Jungnickel and D.~Jungnickel, {\em Graphs, networks and algorithms}.
+\newblock Springer, 2005.
+
+\bibitem{SonarQube}
+``Code inspection with sonarqube.''
+  url{https://axibase.com/use-cases/workshop/sonar.html}.
+
+\bibitem{HPQualityCenter}
+``Hp quality center.'' url{https://www.globetesting.com/hp-quality-center}.
+
+\bibitem{callejas2017modelos}
+M.~Callejas-Cuervo, A.~C. Alarc{\'o}n-Aldana, and A.~M.
+  {\'A}lvarez-Carre{\~n}o, ``Modelos de calidad del software, un estado del
+  arte,'' {\em Entramado}, vol.~13, no.~1, pp.~236--250, 2017.
+
+\bibitem{hernandez2017feedback}
+J.~Hern{\'a}ndez~B{\'e}cares, ``Feedback en jueces online,'' 2017.
+
+\bibitem{COJ}
+``Caribbean online judge.'' url{https://coj.uci.cu/index.xhtml}.
+
+\bibitem{codechef}
+``Codechef.'' url{https://www.codechef.com}.
+
+\bibitem{hackerRank}
+``Hackerrank.'' url{https://www.hackerrank.com}.
+
+\bibitem{codeSignal}
+``Codesignal.'' url{https://app.codesignal.com}.
+
+\bibitem{baykasouglu2014testing}
+A.~Baykaso{\u{g}}lu, A.~Hamzadayi, and S.~Y. K{\"o}se, ``Testing the
+  performance of teaching--learning based optimization (tlbo) algorithm on
+  combinatorial problems: Flow shop and job shop scheduling cases,'' {\em
+  Information Sciences}, vol.~276, pp.~204--218, 2014.
+
+\bibitem{OptimizacionCombinatoria}
+J.~P. García, ``Optimización combinatoria,'' {\em Universidad Politécnica de
+  Valencia}, 2006.
 
 \bibitem{dowsland2003diseno}
 K.~A. Dowsland and B.~A. D{\'\i}az, ``Dise{\~n}o de heur{\'\i}stica y
@@ -88,6 +114,11 @@ A.~H. Gandomi, X.-S. Yang, S.~Talatahari, and A.~H. Alavi, ``Metaheuristic
 T.~Feo and M.~Resende, ``Greedy randomized adaptive search procedures,'' {\em
   Journal of Global Optimization}, vol.~6, pp.~109--133, 03 1995.
 
+\bibitem{binato2001greedy}
+S.~Binato, G.~C. De~Oliveira, and J.~L. De~Ara{\'u}jo, ``A greedy randomized
+  adaptive search procedure for transmission expansion planning,'' {\em IEEE
+  Transactions on Power Systems}, vol.~16, no.~2, pp.~247--253, 2001.
+
 \bibitem{RecocidoSimulado}
 D.~S. Johnson, C.~R. Aragon, L.~A. McGeoch, and C.~Schevon, ``Optimization by
   simulated annealing: An experimental evaluation; part i, graph
@@ -100,7 +131,14 @@ J.~P.~A. Marcos; Rivero Gestal (Daniel;~Rabu{\~n}al, Juan Ram{\'o}n;~Dorado and
   programaci{\'o}n gen{\'e}tica}.
 \newblock Universidade da Coru{\~n}a, 2010.
 
-\bibitem{hernandez2017feedback}
-J.~Hern{\'a}ndez~B{\'e}cares, ``Feedback en jueces online,'' 2017.
+\bibitem{melian2009algoritmos}
+M.~B. Meli{\'a}n, J.~A. Moreno, and J.~M. Moreno, ``algoritmos gen{\'e}ticos.
+  una visi{\'o}n pr{\'a}ctica,'' {\em N{\'u}meros. Revista de Did{\'a}ctica de
+  las Matem{\'a}ticas}, vol.~71, pp.~29--47, 2009.
+
+\bibitem{ferentinos2002heuristic}
+K.~P. Ferentinos, K.~G. Arvanitis, and N.~Sigrimis, ``Heuristic optimization
+  methods for motion planning of autonomous agricultural vehicles,'' {\em
+  Journal of Global Optimization}, vol.~23, no.~2, pp.~155--170, 2002.
 
 \end{thebibliography}

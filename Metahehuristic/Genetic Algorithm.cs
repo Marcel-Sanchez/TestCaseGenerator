@@ -20,6 +20,19 @@ namespace Metaheuristic
             var percentajes = solutionsList.Select(p => p.GetPercentajes());
             var evals = percentajes.Select(p => Sett.TargetFunc(p)).ToArray();
 
+            string fo = Directory.GetCurrentDirectory() + @"\" + "fo " + Sett.i + ".txt";
+            string calls = Directory.GetCurrentDirectory() + @"\" + "calls " + Sett.i + ".txt";
+
+            using (StreamWriter file = new StreamWriter(fo, true))
+            {
+                file.Write(evals.Min() + ", ");
+            }
+            using (StreamWriter file = new StreamWriter(calls, true))
+            {
+                file.Write(Sett.calls - Sett.callsAux + ", ");
+                Sett.callsAux = Sett.calls;
+            }
+
             int n = 500;
             while (n-- > 0)
             {
@@ -70,6 +83,16 @@ namespace Metaheuristic
                     int index = Filter(newEvals);
                     solutionsList.RemoveAt(index);
                     newEvals.RemoveAt(index);
+                }
+
+                using (StreamWriter file = new StreamWriter(fo, true))
+                {
+                    file.Write(evals.Min() + ", ");
+                }
+                using (StreamWriter file = new StreamWriter(calls, true))
+                {
+                    file.Write(Sett.calls - Sett.callsAux + ", ");
+                    Sett.callsAux = Sett.calls;
                 }
             }
             var min = evals.Min();
